@@ -68,7 +68,7 @@
         .modal-content {
             background: white;
             border-radius: 1.5rem;
-            max-width: 500px;
+            max-width: 420px;
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
@@ -119,65 +119,65 @@
         <div class="modal-content">
             <div class="relative">
                 <!-- Close button -->
-                <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors z-10">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button onclick="closeModal()" class="absolute top-3 right-3 text-slate-400 hover:text-slate-600 transition-colors z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
 
                 <!-- Modal Header -->
-                <div class="bg-gradient-to-br from-red-600 to-orange-600 text-white p-8 rounded-t-3xl">
+                <div class="bg-gradient-to-br from-red-600 to-orange-600 text-white p-6 rounded-t-3xl">
                     <div class="text-center">
-                        <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-2">Quase lá!</h3>
-                        <p class="text-white/90 text-sm">Preencha seus dados para garantir seu acesso ao curso</p>
+                        <h3 class="text-xl font-bold mb-1">Almost there!</h3>
+                        <p class="text-white/90 text-sm">Fill in your details to secure your spot</p>
                     </div>
                 </div>
 
                 <!-- Modal Body -->
-                <div class="p-8">
-                    <form id="leadForm" class="space-y-5">
+                <div class="p-6">
+                    <form id="leadForm" class="space-y-4">
                         <input type="hidden" id="selectedPlan" name="plan" value="">
                         
                         <div>
-                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">Nome Completo</label>
+                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label>
                             <input 
                                 type="text" 
                                 id="name" 
                                 name="name" 
                                 required
-                                class="form-input w-full px-4 py-3 border-2 border-slate-200 rounded-xl transition-all"
-                                placeholder="Digite seu nome completo"
+                                class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
+                                placeholder="Enter your full name"
                             >
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">E-mail</label>
+                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address</label>
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email" 
                                 required
-                                class="form-input w-full px-4 py-3 border-2 border-slate-200 rounded-xl transition-all"
-                                placeholder="seu@email.com"
+                                class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
+                                placeholder="your@email.com"
                             >
                         </div>
 
                         <div>
-                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Celular (WhatsApp)</label>
+                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number</label>
                             <div class="flex gap-2">
                                 <select 
                                     id="countryCode" 
                                     name="countryCode" 
                                     required
-                                    class="form-input w-32 px-3 py-3 border-2 border-slate-200 rounded-xl transition-all bg-white"
+                                    class="form-input w-28 px-2 py-2.5 border-2 border-slate-200 rounded-xl transition-all bg-white text-sm"
                                 >
+                                    <option value="+1" data-country="US" selected>🇺🇸 +1</option>
                                     <option value="+55" data-country="BR">🇧🇷 +55</option>
-                                    <option value="+1" data-country="US">🇺🇸 +1</option>
                                     <option value="+44" data-country="GB">🇬🇧 +44</option>
                                     <option value="+351" data-country="PT">🇵🇹 +351</option>
                                     <option value="+34" data-country="ES">🇪🇸 +34</option>
@@ -202,8 +202,8 @@
                                     id="phone" 
                                     name="phone" 
                                     required
-                                    class="form-input flex-1 px-4 py-3 border-2 border-slate-200 rounded-xl transition-all"
-                                    placeholder="Digite seu número"
+                                    class="form-input flex-1 px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
+                                    placeholder="Enter your number"
                                 >
                             </div>
                         </div>
@@ -212,29 +212,29 @@
                             <button 
                                 type="submit" 
                                 id="submitBtn"
-                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2"
+                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2 text-sm"
                             >
-                                <span id="btnText">Garantir Minha Vaga Agora</span>
+                                <span id="btnText">Secure My Spot Now</span>
                                 <span id="btnSpinner" class="spinner hidden"></span>
                             </button>
                         </div>
 
-                        <p class="text-xs text-center text-slate-500 pt-2">
-                            🔒 Seus dados estão seguros e não serão compartilhados com terceiros
+                        <p class="text-xs text-center text-slate-500 pt-1">
+                            🔒 Your data is safe and won't be shared with third parties
                         </p>
                     </form>
 
                     <!-- Success Message (hidden by default) -->
-                    <div id="successMessage" class="hidden text-center py-8">
-                        <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div id="successMessage" class="hidden text-center py-6">
+                        <div class="inline-flex items-center justify-center w-14 h-14 bg-green-100 rounded-full mb-3">
+                            <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Cadastro realizado!</h4>
-                        <p class="text-slate-600 mb-6">Você será redirecionado para a página de pagamento em instantes...</p>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Registration successful!</h4>
+                        <p class="text-slate-600 text-sm mb-5">You'll be redirected to the payment page in a moment...</p>
                         <div class="flex justify-center">
-                            <div class="spinner" style="border-color: #dc2626; border-top-color: transparent; width: 30px; height: 30px;"></div>
+                            <div class="spinner" style="border-color: #dc2626; border-top-color: transparent; width: 28px; height: 28px;"></div>
                         </div>
                     </div>
                 </div>
@@ -894,7 +894,7 @@
             
             // Disable button and show loading
             submitBtn.disabled = true;
-            btnText.textContent = 'Processando...';
+            btnText.textContent = 'Processing...';
             btnSpinner.classList.remove('hidden');
             
             // Collect form data
@@ -902,6 +902,7 @@
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
+                countryCode: document.getElementById('countryCode').value,
                 plan: document.getElementById('selectedPlan').value,
                 timestamp: new Date().toISOString()
             };
@@ -933,11 +934,11 @@
                 
             } catch (error) {
                 console.error('Error:', error);
-                alert('Ocorreu um erro ao processar seu cadastro. Por favor, tente novamente.');
+                alert('An error occurred while processing your registration. Please try again.');
                 
                 // Re-enable button
                 submitBtn.disabled = false;
-                btnText.textContent = 'Garantir Minha Vaga Agora';
+                btnText.textContent = 'Secure My Spot Now';
                 btnSpinner.classList.add('hidden');
             }
         });
