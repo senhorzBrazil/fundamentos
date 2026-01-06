@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mandarin Fundamentals - Aprende chino desde cero absoluto hasta el nivel HSK 1.">
+    <meta name="description" content="Mandarin Fundamentals - Learn Chinese from absolute zero to HSK 1 level.">
     
-    <title>Mandarin Fundamentals - Aprende Chino Rápido</title>
+    <title>Mandarin Fundamentals - Learn Chinese Fast</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
@@ -130,8 +130,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-1">¡Ya casi estás ahí!</h3>
-                        <p class="text-white/90 text-sm">Completa tus datos para asegurar tu lugar</p>
+                        <h3 class="text-xl font-bold mb-1">Almost there!</h3>
+                        <p class="text-white/90 text-sm">Fill in your details to secure your spot</p>
                     </div>
                 </div>
 
@@ -140,31 +140,31 @@
                         <input type="hidden" id="selectedPlan" name="plan" value="">
                         
                         <div>
-                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Nombre Completo</label>
+                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label>
                             <input 
                                 type="text" 
                                 id="name" 
                                 name="name" 
                                 required
                                 class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
-                                placeholder="Ingresa tu nombre completo"
+                                placeholder="Enter your full name"
                             >
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Correo Electrónico</label>
+                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address</label>
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email" 
                                 required
                                 class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
-                                placeholder="tu@email.com"
+                                placeholder="your@email.com"
                             >
                         </div>
 
                         <div>
-                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Número de Teléfono</label>
+                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number</label>
                             <div class="flex gap-2">
                                 <select 
                                     id="countryCode" 
@@ -172,16 +172,26 @@
                                     required
                                     class="form-input w-28 px-2 py-2.5 border-2 border-slate-200 rounded-xl transition-all bg-white text-sm"
                                 >
-                                    <option value="+34" data-country="ES" selected>🇪🇸 +34</option>
+                                    <option value="+1" data-country="US" selected>🇺🇸 +1</option>
+                                    <option value="+55" data-country="BR">🇧🇷 +55</option>
+                                    <option value="+44" data-country="GB">🇬🇧 +44</option>
+                                    <option value="+351" data-country="PT">🇵🇹 +351</option>
+                                    <option value="+34" data-country="ES">🇪🇸 +34</option>
+                                    <option value="+33" data-country="FR">🇫🇷 +33</option>
+                                    <option value="+49" data-country="DE">🇩🇪 +49</option>
+                                    <option value="+39" data-country="IT">🇮🇹 +39</option>
+                                    <option value="+86" data-country="CN">🇨🇳 +86</option>
+                                    <option value="+81" data-country="JP">🇯🇵 +81</option>
+                                    <option value="+82" data-country="KR">🇰🇷 +82</option>
+                                    <option value="+91" data-country="IN">🇮🇳 +91</option>
+                                    <option value="+61" data-country="AU">🇦🇺 +61</option>
+                                    <option value="+64" data-country="NZ">🇳🇿 +64</option>
+                                    <option value="+27" data-country="ZA">🇿🇦 +27</option>
                                     <option value="+52" data-country="MX">🇲🇽 +52</option>
                                     <option value="+54" data-country="AR">🇦🇷 +54</option>
                                     <option value="+56" data-country="CL">🇨🇱 +56</option>
                                     <option value="+57" data-country="CO">🇨🇴 +57</option>
                                     <option value="+51" data-country="PE">🇵🇪 +51</option>
-                                    <option value="+1" data-country="US">🇺🇸 +1</option>
-                                    <option value="+55" data-country="BR">🇧🇷 +55</option>
-                                    <option value="+44" data-country="GB">🇬🇧 +44</option>
-                                    <option value="+351" data-country="PT">🇵🇹 +351</option>
                                 </select>
                                 <input 
                                     type="tel" 
@@ -189,7 +199,7 @@
                                     name="phone" 
                                     required
                                     class="form-input flex-1 px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
-                                    placeholder="Ingresa tu número"
+                                    placeholder="Enter your number"
                                 >
                             </div>
                         </div>
@@ -200,13 +210,13 @@
                                 id="submitBtn"
                                 class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2 text-sm"
                             >
-                                <span id="btnText">Asegurar Mi Lugar Ahora</span>
+                                <span id="btnText">Secure My Spot Now</span>
                                 <span id="btnSpinner" class="spinner hidden"></span>
                             </button>
                         </div>
 
                         <p class="text-xs text-center text-slate-500 pt-1">
-                            🔒 Tus datos están seguros y no se compartirán con terceros
+                            🔒 Your data is safe and won't be shared with third parties
                         </p>
                     </form>
 
@@ -216,8 +226,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-2">¡Registro exitoso!</h4>
-                        <p class="text-slate-600 text-sm mb-5">Serás redirigido a la página de pago en un momento...</p>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Registration successful!</h4>
+                        <p class="text-slate-600 text-sm mb-5">You'll be redirected to the payment page in a moment...</p>
                         <div class="flex justify-center">
                             <div class="spinner" style="border-color: #dc2626; border-top-color: transparent; width: 28px; height: 28px;"></div>
                         </div>
@@ -226,12 +236,21 @@
             </div>
         </div>
     </div>
+    
+    <div class="bg-yellow-400 text-slate-900 text-sm font-bold py-2.5 text-center px-4 z-[70] relative border-b border-yellow-500">
+        <div class="flex items-center justify-center gap-2 max-w-6xl mx-auto">
+            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>As aulas do curso são ministradas no idioma inglês.</span>
+        </div>
+    </div>
 
     <div class="bg-slate-900 text-white text-xs md:text-sm font-semibold py-3 text-center px-4 sticky top-0 z-[60] shadow-md">
         <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
-            <span>⚡ Este precio estará disponible hasta: <span id="top-timer" class="text-yellow-400 font-bold tabular-nums ml-1 text-base">CARGANDO...</span></span>
+            <span>⚡ This price will remain available until: <span id="top-timer" class="text-yellow-400 font-bold tabular-nums ml-1 text-base">LOADING...</span></span>
             <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-colors">
-                Asegurar mi lugar
+                Secure my spot
             </a>
         </div>
     </div>
@@ -245,7 +264,7 @@
                 </div>
                 <div class="hidden md:block">
                     <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                        Empezar Ahora
+                        Get Started Now
                     </a>
                 </div>
             </div>
@@ -262,26 +281,26 @@
             
             <div class="inline-flex items-center gap-3 bg-white border border-slate-200 rounded-full pl-2 pr-4 py-1.5 shadow-sm mb-8 hover:shadow-md transition-shadow cursor-default">
                 <div class="flex -space-x-3">
-                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Estudiante">
-                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Estudiante">
+                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Student">
+                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Student">
                     <div class="w-8 h-8 rounded-full border-2 border-white bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">
                         +3k
                     </div>
                 </div>
-                <span class="text-xs font-bold text-slate-700">Estudiantes inscritos</span>
+                <span class="text-xs font-bold text-slate-700">Students enrolled</span>
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-                Aprende Chino con el <br class="hidden md:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">Método usado por +3,000 Estudiantes</span>
+                Learn Chinese with the <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">Method used by 3,000+ Students</span>
             </h1>
             
             <p class="mt-4 text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                ¿Quieres empezar desde cero absoluto y alcanzar el nivel HSK 1? Únete al primer curso accesible para cualquiera que quiera aprender el idioma más hablado del mundo.
+                Do you want to start from absolute zero and reach HSK 1 level? Join the first affordable course for anyone who wants to learn the world's most spoken language.
             </p>
             
             <div class="mt-2 text-red-600 font-bold text-lg animate-pulse">
-                De <span class="line-through text-slate-400">$89.90</span> → <span class="text-2xl">$9.90</span> (pago único)
+                From <span class="line-through text-slate-400">$89.90</span> → <span class="text-2xl">$9.90</span> (one-time payment)
             </div>
 
             <div class="mt-10 relative max-w-3xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-white bg-black aspect-video group cursor-pointer">
@@ -291,14 +310,14 @@
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                 </div>
-                <div class="absolute bottom-4 left-4 text-white font-bold text-shadow">🎧 Mira la explicación en video</div>
+                <div class="absolute bottom-4 left-4 text-white font-bold text-shadow">🎧 Watch the video explanation</div>
             </div>
 
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#pricing" class="group relative bg-red-600 hover:bg-red-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-xl shadow-red-200 transition-all hover:scale-105 active:scale-95">
-                    QUIERO APRENDER CHINO
+                    I WANT TO LEARN CHINESE
                     <span class="absolute -top-3 -right-3 bg-yellow-400 text-slate-900 text-xs font-bold px-2 py-1 rounded-full shadow-sm transform rotate-12 group-hover:rotate-0 transition-transform">
-                        90% OFF Hoy
+                        90% OFF Today
                     </span>
                 </a>
             </div>
@@ -309,17 +328,17 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <span class="text-red-600 font-bold tracking-widest text-sm uppercase">La Oportunidad Silenciosa</span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">¿Sabías que China es el mayor socio comercial de Latinoamérica?</h2>
+                    <span class="text-red-600 font-bold tracking-widest text-sm uppercase">The Silent Opportunity</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">Did you know that China is Brazil's largest trading partner?</h2>
                     
                     <div class="prose text-slate-600 text-lg leading-relaxed">
-                        <p>El comercio bilateral entre la región y China mueve <strong>miles de millones de dólares cada año</strong>.</p>
-                        <p>Es un mercado enorme. Pero muy pocas personas lo están aprovechando debido a la barrera del idioma.</p>
-                        <p class="font-bold text-slate-800">¿Qué tiene que ver aprender chino con tu futuro?</p>
+                        <p>The partnership between the two countries moves nearly <strong>$18 billion USD every year</strong>.</p>
+                        <p>That's a huge market. But very few people are taking advantage of it because of the language barrier.</p>
+                        <p class="font-bold text-slate-800">What does learning Chinese have to do with your future?</p>
                     </div>
 
                     <a href="#pricing" class="inline-flex items-center text-red-600 font-bold hover:underline">
-                        Asegura tu lugar en el mercado del futuro &rarr;
+                        Secure your spot in the future market &rarr;
                     </a>
                 </div>
 
@@ -327,9 +346,9 @@
                     <div class="bg-slate-50 rounded-3xl p-2 border border-slate-200 shadow-xl rotate-2 hover:rotate-0 transition-all duration-500">
                         
                         <div class="p-6 text-center">
-                            <p class="text-sm text-slate-500 font-semibold uppercase">Volumen de Comercio Bilateral</p>
-                            <p class="text-4xl font-extrabold text-slate-900 mt-2">$450 Billones+</p>
-                            <p class="text-xs text-green-600 font-bold bg-green-100 inline-block px-2 py-1 rounded-full mt-2">📈 Creciendo Anualmente</p>
+                            <p class="text-sm text-slate-500 font-semibold uppercase">Bilateral Trade Volume</p>
+                            <p class="text-4xl font-extrabold text-slate-900 mt-2">$18 Billion+</p>
+                            <p class="text-xs text-green-600 font-bold bg-green-100 inline-block px-2 py-1 rounded-full mt-2">📈 Growing Annually</p>
                         </div>
                     </div>
                 </div>
@@ -344,84 +363,84 @@
         
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-                Una Puerta Silenciosa está Abierta — <br />
-                <span class="text-red-600">Y La Mayoría Nunca lo Notará</span>
+                A Silent Door Is Open — <br />
+                <span class="text-red-600">And Most People Will Never Notice</span>
             </h2>
             <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
         </div>
 
         <div class="prose prose-lg prose-slate mx-auto text-lg md:text-xl leading-relaxed text-slate-700">
             
-            <p class="font-medium text-slate-900">Cada generación tiene un momento así.</p>
-            <p>Un cambio que ocurre silenciosamente.</p>
-            <p>Sin titulares.<br>Sin advertencias.</p>
+            <p class="font-medium text-slate-900">Every generation has a moment like this.</p>
+            <p>A shift that happens quietly.</p>
+            <p>No headlines.<br>No warnings.</p>
             
             <p class="border-l-4 border-red-500 pl-6 italic text-slate-600 my-8">
-                Y cuando la gente finalmente se da cuenta... ya es demasiado tarde.
+                And when people finally realize it… it's already too late.
             </p>
 
-            <p>Justo ahora, China está remodelando los negocios globales, la tecnología y la cultura.</p>
-            <p>Y mientras la mayoría sigue enfocándose en las mismas habilidades de siempre...</p>
+            <p>Right now, China is reshaping global business, technology, and culture.</p>
+            <p>And while most people keep focusing on the same old skills…</p>
             
-            <p><strong>Un pequeño grupo está haciendo algo diferente.</strong></p>
-            <p>Están aprendiendo mandarín.</p>
+            <p><strong>A small group is doing something different.</strong></p>
+            <p>They are learning Mandarin.</p>
             
             <ul class="list-none pl-0 space-y-2 my-8">
                 <li class="flex items-center gap-3">
                     <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
-                    No porque sea "fácil".
+                    Not because it's "easy."
                 </li>
                 <li class="flex items-center gap-3">
                     <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
-                    No porque sea "popular".
+                    Not because it's "popular."
                 </li>
                 <li class="flex items-center gap-3 font-bold text-slate-900">
                     <span class="w-2 h-2 bg-red-600 rounded-full"></span>
-                    Sino porque cambia cómo te encuentran las oportunidades.
+                    But because it changes how opportunities find you.
                 </li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">La Mayoría Espera. Otros se Preparan.</h3>
-            <p>No necesitas mudarte a China. No necesitas años de estudio. No necesitas ser "bueno con los idiomas".</p>
-            <p>Lo que necesitas es un <span class="bg-yellow-100 px-1 font-bold text-slate-900">punto de partida.</span></p>
-            <p>Un método que elimine la confusión. Un camino que te lleve de cero → comunicación real. Un sistema creado para adultos con vidas ocupadas.</p>
-            <p class="text-red-600 font-bold">Por eso existe Mandarin Fundamentals.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Most People Wait. Others Prepare.</h3>
+            <p>You don't need to move to China. You don't need years of study. You don't need to be "good at languages."</p>
+            <p>What you need is a <span class="bg-yellow-100 px-1 font-bold text-slate-900">starting point.</span></p>
+            <p>A method that removes confusion. A path that takes you from zero → real communication. A system built for adults with busy lives.</p>
+            <p class="text-red-600 font-bold">That's why Mandarin Fundamentals exists.</p>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">De "No Puedo" a "Puedo Hablar"</h3>
-            <p>Al principio, parece imposible. Los sonidos son nuevos. La escritura parece intimidante.</p>
-            <p>Pero entonces algo cambia.</p>
-            <p>Reconoces palabras. Entiendes oraciones simples. <br><strong>Hablas — y alguien te entiende.</strong></p>
-            <p>Ese momento lo cambia todo. Porque ya no estás fuera de la conversación.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">From "I Can't" to "I Can Speak"</h3>
+            <p>At first, it feels impossible. The sounds are new. The writing looks intimidating.</p>
+            <p>But then something shifts.</p>
+            <p>You recognize words. You understand simple sentences. <br><strong>You speak — and someone understands you.</strong></p>
+            <p>That moment changes everything. Because now you're no longer outside the conversation.</p>
             <p class="text-xl font-serif italic text-slate-800 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
-                "Estás dentro."
+                "You're inside."
             </p>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">No se Trata del Idioma. Se Trata de Posicionamiento.</h3>
-            <p>El mandarín no es solo un idioma. <strong>Es una ventaja estratégica.</strong></p>
-            <p>En los negocios. En los viajes. En la cultura. En tu carrera.</p>
-            <p>Mientras la mayoría compite por las mismas oportunidades... Tú entras en salas donde pocos pueden comunicarse.</p>
-            <p>Y esa diferencia se acumula con el tiempo.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">This Is Not About Language. It's About Positioning.</h3>
+            <p>Mandarin is not just a language. <strong>It's a strategic advantage.</strong></p>
+            <p>In business. In travel. In culture. In your career.</p>
+            <p>While most people compete for the same opportunities… You step into rooms where few can communicate.</p>
+            <p>And that difference compounds over time.</p>
 
             <div class="mt-16 pt-8 border-t border-slate-200">
                 <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6">
-                    El Mejor Momento para Empezar Fue Hace Años.<br>
-                    <span class="text-red-600">El Segundo Mejor Momento Es Ahora.</span>
+                    The Best Time to Start Was Years Ago.<br>
+                    <span class="text-red-600">The Second Best Time Is Now.</span>
                 </h3>
                 
-                <p class="mb-8">No necesitas motivación. Necesitas impulso. Y el impulso comienza con una decisión.</p>
+                <p class="mb-8">You don't need motivation. You need momentum. And momentum starts with one decision.</p>
                 
                 <div class="space-y-4 font-bold text-lg">
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
                         <span class="text-2xl group-hover:translate-x-1 transition-transform">👉</span>
-                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Únete a Mandarin Fundamentals hoy</span>
+                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Join Mandarin Fundamentals today</span>
                     </a>
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
                         <span class="text-2xl group-hover:translate-x-1 transition-transform">👉</span>
-                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Empieza a aprender ahora</span>
+                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Start learning now</span>
                     </a>
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
                         <span class="text-2xl group-hover:translate-x-1 transition-transform">👉</span>
-                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Prepárate para cuando la oportunidad toque silenciosamente</span>
+                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Be ready when opportunity knocks quietly</span>
                     </a>
                 </div>
             </div>
@@ -438,7 +457,7 @@
             
             <div class="relative group cursor-pointer">
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-black aspect-video transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-red-900/20">
-                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80" alt="Vista Previa de Lección" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80" alt="Mandarin Lesson Preview" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity">
                     
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="relative">
@@ -452,7 +471,7 @@
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                        <p class="text-sm font-bold text-white">Lección 01: Los 4 Tonos y Saludos Básicos</p>
+                        <p class="text-sm font-bold text-white">Lesson 01: The 4 Tones & Basic Greetings</p>
                         <div class="w-full h-1 bg-slate-700 rounded-full mt-2 overflow-hidden">
                             <div class="w-1/3 h-full bg-red-600"></div>
                         </div>
@@ -464,19 +483,19 @@
                 </div>
                 
                 <p class="text-center text-slate-400 text-sm mt-4">
-                    👆 Clic para ver una vista previa de 5 minutos del Módulo 1
+                    👆 Click to watch a 5-minute preview of Module 1
                 </p>
             </div>
 
             <div class="space-y-8">
                 <div>
-                    <span class="text-red-500 font-bold tracking-widest text-sm uppercase mb-2 block">Mira Dentro</span>
+                    <span class="text-red-500 font-bold tracking-widest text-sm uppercase mb-2 block">Look Inside</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
-                        Experimenta el Método <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Antes de Comprometerte</span>
+                        Experience the Method <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Before You Commit</span>
                     </h2>
                     <p class="text-slate-400 mt-4 text-lg leading-relaxed">
-                        No solo te enseñamos listas de palabras. Te enseñamos la **lógica** detrás del idioma para que construyas tus propias oraciones desde el Día 1.
+                        We don't just teach you lists of words. We teach you the <strong>logic</strong> behind the language so you can build your own sentences from Day 1.
                     </p>
                 </div>
 
@@ -486,8 +505,8 @@
                             01
                         </div>
                         <div>
-                            <h4 class="font-bold text-white">Pronunciación Nativa</h4>
-                            <p class="text-sm text-slate-400">Escucha exactamente cómo deben sonar los tonos de un hablante nativo que entiende las dificultades de los hispanohablantes.</p>
+                            <h4 class="font-bold text-white">Native Pronunciation</h4>
+                            <p class="text-sm text-slate-400">Hear exactly how tones should sound from a native speaker who understands Portuguese speakers' difficulties.</p>
                         </div>
                     </div>
 
@@ -496,8 +515,8 @@
                             02
                         </div>
                         <div>
-                            <h4 class="font-bold text-white">Ayudas de Memoria Visual</h4>
-                            <p class="text-sm text-slate-400">Olvida los libros de gramática aburridos. Usamos visuales en pantalla para fijar los caracteres en tu memoria al instante.</p>
+                            <h4 class="font-bold text-white">Visual Memory Aids</h4>
+                            <p class="text-sm text-slate-400">Forget boring grammar books. We use on-screen visuals to lock characters into your memory instantly.</p>
                         </div>
                     </div>
 
@@ -506,15 +525,15 @@
                             03
                         </div>
                         <div>
-                            <h4 class="font-bold text-white">Aplicación Práctica</h4>
-                            <p class="text-sm text-slate-400">No aprenderás "La manzana es roja". Aprenderás "¿Dónde está el baño?" y "¿Cuánto cuesta esto?" inmediatamente.</p>
+                            <h4 class="font-bold text-white">Practical Application</h4>
+                            <p class="text-sm text-slate-400">You won't learn "The apple is red." You will learn "Where is the bathroom?" and "How much does this cost?" immediately.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="pt-4">
                     <a href="#pricing" class="inline-flex items-center justify-center gap-2 bg-white text-slate-900 hover:bg-red-50 font-bold py-3 px-8 rounded-full transition-all hover:scale-105 active:scale-95">
-                        Comienza Tu Curso Completo Ahora
+                        Start Your Full Course Now
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                 </div>
@@ -527,50 +546,50 @@
     <section class="py-24 bg-slate-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">¿Qué dicen nuestros estudiantes?</h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">What do our students say?</h2>
                 <div class="flex justify-center items-center gap-2 mt-4 text-yellow-500 text-xl">
-                    ★★★★★ <span class="text-slate-500 text-sm font-medium ml-2">(3,000+ Estudiantes)</span>
+                    ★★★★★ <span class="text-slate-500 text-sm font-medium ml-2">(3,000+ Students)</span>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Tengo 59 años, soy enfermera... Ayer pedí mi comida en chino e hice nuevos amigos. ¡No puedo agradecerles lo suficiente!"</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"I'm 59 years old, a nurse... Yesterday I ordered my food in Chinese and made new friends. I can't thank you enough!"</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">MA</div>
                         <div>
                             <p class="font-bold text-slate-900 text-sm">Maria Aparecida</p>
-                            <p class="text-xs text-slate-500">Estudiante</p>
+                            <p class="text-xs text-slate-500">Student</p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Me encanta estudiar chino. Realmente admiro la cultura china."</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"I'm loving studying Chinese. I really admire Chinese culture."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">LO</div>
                         <div>
                             <p class="font-bold text-slate-900 text-sm">Luciana Oliveira</p>
-                            <p class="text-xs text-slate-500">Estudiante</p>
+                            <p class="text-xs text-slate-500">Student</p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Compré el curso y estoy estudiando. Lo recomiendo mucho."</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"I bought the course and I'm studying. I highly recommend it."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">FL</div>
                         <div>
                             <p class="font-bold text-slate-900 text-sm">Fernando Lúcio</p>
-                            <p class="text-xs text-slate-500">Estudiante</p>
+                            <p class="text-xs text-slate-500">Student</p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Esta fue la mejor compra que he hecho 🙏"</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"This was the best purchase I've ever made 🙏"</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">MF</div>
                         <div>
                             <p class="font-bold text-slate-900 text-sm">Maria Fernanda</p>
-                            <p class="text-xs text-slate-500">Estudiante</p>
+                            <p class="text-xs text-slate-500">Student</p>
                         </div>
                     </div>
                 </div>
@@ -582,12 +601,12 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
             <div class="text-center mb-16">
-                <span class="text-red-600 font-bold tracking-widest text-sm uppercase">Materiales y Contenido</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2">¿Qué está incluido?</h2>
+                <span class="text-red-600 font-bold tracking-widest text-sm uppercase">Materials & Content</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2">What is included?</h2>
                 <div class="mt-4 flex justify-center gap-4 text-sm font-bold text-slate-500">
-                    <span class="bg-slate-100 px-3 py-1 rounded-full">21 Módulos</span>
-                    <span class="bg-slate-100 px-3 py-1 rounded-full">Cuaderno de Trabajo PDF</span>
-                    <span class="bg-slate-100 px-3 py-1 rounded-full">Soporte de Por Vida</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full">21 Modules</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full">PDF Workbook</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full">Lifetime Support</span>
                 </div>
             </div>
 
@@ -596,21 +615,21 @@
                 <div class="order-2 lg:order-1">
                     <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                         <span class="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-sm">📚</span>
-                        Plan de Estudios
+                        Course Curriculum
                     </h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700">
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Introducción</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Primer Contacto</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Nombres y Nacionalidad</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Números y Hora</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Meses y Semanas</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Clasificadores</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Estructura de Oraciones</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Familia</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Profesiones y Trabajo</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Compras</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Lugares y Direcciones</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Coqueteo y Casual</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Introduction</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> First Contact</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Names & Nationality</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Numbers & Time</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Months & Weeks</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Classifiers</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Sentence Structure</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Family</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Professions & Work</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Shopping</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Places & Directions</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Flirting & Casual</div>
                     </div>
                 </div>
 
@@ -622,13 +641,13 @@
                         
                         <div class="relative bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden min-h-[400px] flex items-center justify-center">
                             
-                            <img src="folha.png" alt="Vista Previa del Material" class="w-full h-full object-cover">
+                            <img src="folha.png" alt="Course Material Preview" class="w-full h-full object-cover">
                             
                             <div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm border border-slate-200 px-4 py-2 rounded-lg shadow-lg flex items-center gap-3">
                                 <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                                 <div>
-                                    <p class="text-xs text-slate-500 font-bold uppercase">Formato</p>
-                                    <p class="text-sm font-bold text-slate-900">PDF de Alta Calidad</p>
+                                    <p class="text-xs text-slate-500 font-bold uppercase">Format</p>
+                                    <p class="text-sm font-bold text-slate-900">High Quality PDF</p>
                                 </div>
                             </div>
 
@@ -636,7 +655,7 @@
                     </div>
                     
                     <div class="mt-8 text-center">
-                        <p class="text-sm text-slate-400 italic">Ver en cualquier dispositivo (Móvil, Tablet o PC)</p>
+                        <p class="text-sm text-slate-400 italic">View on any device (Mobile, Tablet, or PC)</p>
                     </div>
                 </div>
 
@@ -655,19 +674,19 @@
                             <img src="Karina_cunha.jpg" alt="Karina Cunha - Shi Zhen Mei" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-slate-900 p-4 rounded-xl shadow-lg">
-                            <p class="font-bold text-xl">10+ Años</p>
-                            <p class="text-xs font-semibold uppercase">Experiencia</p>
+                            <p class="font-bold text-xl">10+ Years</p>
+                            <p class="text-xs font-semibold uppercase">Experience</p>
                         </div>
                     </div>
                 </div>
                 <div class="w-full md:w-2/3">
-                    <span class="text-red-400 font-bold uppercase tracking-widest mb-2 block">¿Quién será tu profesora?</span>
+                    <span class="text-red-400 font-bold uppercase tracking-widest mb-2 block">Who will be your teacher?</span>
                     <h2 class="text-4xl font-bold mb-6">Shi Zhen Mei <span class="text-slate-400 font-light">(Karina Cunha)</span></h2>
                     <p class="text-slate-300 text-lg mb-6 leading-relaxed">
-                        Una lingüista con más de 10 años de experiencia enseñando y traduciendo chino mandarín. Se mudó a China a los 2 años, se educó completamente en escuelas chinas y tiene un título en Administración de Empresas de la <strong>Universidad de Nacionalidades de Yunnan</strong>.
+                        A linguist with over 10 years of experience teaching and translating Mandarin Chinese. She moved to China at the age of 2, was fully educated in Chinese schools, and holds a degree in Business Administration from <strong>Yunnan University of Nationalities</strong>.
                     </p>
                     <p class="text-slate-300 text-lg mb-8">
-                        Fundadora del canal "Dominating Mandarin", es la referencia en la enseñanza del idioma chino para hablantes de portugués y español.
+                        Founder of the channel "Dominating Mandarin", she is the reference in Chinese language education for Portuguese speakers.
                     </p>
                 </div>
             </div>
@@ -676,28 +695,28 @@
 
     <section class="py-16 bg-slate-50 border-b border-slate-200">
         <div class="max-w-3xl mx-auto px-4 text-center">
-            <h3 class="text-xl font-bold text-slate-600 mb-6">Si te unieras SIN esta promoción, pagarías:</h3>
+            <h3 class="text-xl font-bold text-slate-600 mb-6">If you joined WITHOUT this promotion, you would pay:</h3>
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 inline-block text-left w-full md:w-auto">
                 <ul class="space-y-3 mb-6 text-slate-500">
-                    <li class="flex justify-between gap-8"><span>📘 Curso Mandarin Fundamentals</span> <span class="font-bold line-through">$119.00</span></li>
-                    <li class="flex justify-between gap-8"><span>📄 Cuaderno de Trabajo del Curso</span> <span class="font-bold line-through">$5.90</span></li>
-                    <li class="flex justify-between gap-8"><span>💬 Soporte Directo</span> <span class="font-bold line-through">$99.00</span></li>
+                    <li class="flex justify-between gap-8"><span>📘 Mandarin Fundamentals Course</span> <span class="font-bold line-through">$119.00</span></li>
+                    <li class="flex justify-between gap-8"><span>📄 Course Workbook</span> <span class="font-bold line-through">$5.90</span></li>
+                    <li class="flex justify-between gap-8"><span>💬 Direct Support</span> <span class="font-bold line-through">$99.00</span></li>
                 </ul>
                 <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                    <span class="text-lg font-bold text-slate-900">Valor Total:</span>
+                    <span class="text-lg font-bold text-slate-900">Total Value:</span>
                     <span class="text-2xl font-extrabold text-red-400 line-through">$223.90</span>
                 </div>
             </div>
-            <p class="mt-6 text-2xl font-bold text-red-600">❌ Pero no pagarás eso.</p>
+            <p class="mt-6 text-2xl font-bold text-red-600">❌ But you won't pay that.</p>
         </div>
     </section>
 
     <section id="pricing" class="py-24 px-4 bg-white relative">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Oferta por Tiempo Limitado</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Selecciona Tu Plan</h2>
-                <p class="text-slate-600 mt-4">Hasta el 23 de Diciembre, invierte menos de $0.10 al día.</p>
+                <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Limited-Time Offer</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Select Your Plan</h2>
+                <p class="text-slate-600 mt-4">Until December 23, invest less than $0.10 per day.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 items-end">
@@ -708,47 +727,47 @@
                         <span class="text-sm font-bold">$</span>
                         <span class="text-4xl font-extrabold text-slate-900">9.90</span>
                     </div>
-                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pago único</p>
+                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">One-time payment</p>
                     <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Certificado</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 20+ Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Soporte en Plataforma</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Acceso por 12 meses</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Certificate</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 20+ Modules</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Platform Support</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 12-month Access</li>
                     </ul>
-                    <button onclick="openModal('Mandarin Fundamentals - $9.90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">Quiero Aprender Chino</button>
+                    <button onclick="openModal('Mandarin Fundamentals - $9.90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">I Want to Learn Chinese</button>
                 </div>
 
                 <div class="bg-slate-900 rounded-3xl p-8 border-2 border-red-500 relative transform md:-translate-y-4 shadow-2xl">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Más Popular</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Acceso de Por Vida</h3>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Most Popular</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Lifetime Access</h3>
                     <div class="flex items-baseline gap-1 my-4 text-white">
                         <span class="text-sm font-bold">$</span>
                         <span class="text-5xl font-extrabold">19.90</span>
                     </div>
-                    <p class="text-xs text-slate-400 mb-6 font-semibold uppercase">Pago único</p>
+                    <p class="text-xs text-slate-400 mb-6 font-semibold uppercase">One-time payment</p>
                     <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Certificado Incluido</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Los 21 Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> <strong>Acceso de Por Vida</strong></li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Futuras Actualizaciones</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Certificate Included</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> All 21 Modules</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> <strong>Lifetime Access</strong></li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Future Updates</li>
                     </ul>
-                    <button onclick="openModal('Lifetime Access - $19.90')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">OBTENER ACCESO DE POR VIDA</button>
+                    <button onclick="openModal('Lifetime Access - $19.90')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">GET LIFETIME ACCESS</button>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 border border-purple-200 relative hover:shadow-lg transition-all">
-                    <h3 class="text-lg font-bold text-purple-900 mb-2">Mandarín + Inglés</h3>
+                    <h3 class="text-lg font-bold text-purple-900 mb-2">Mandarin + English</h3>
                     <div class="flex items-baseline gap-1 my-4">
                         <span class="text-sm font-bold">$</span>
                         <span class="text-4xl font-extrabold text-slate-900">29.90</span>
                     </div>
-                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pago único</p>
+                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">One-time payment</p>
                     <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Curso de Mandarín</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Curso de Inglés</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> 40+ Módulos en Total</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Acceso de Por Vida</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Mandarin Course</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> English Course</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> 40+ Modules Total</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Lifetime Access</li>
                     </ul>
-                    <button onclick="openModal('Mandarin + English - $29.90')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">Quiero Ambos Cursos</button>
+                    <button onclick="openModal('Mandarin + English - $29.90')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">I Want Both Courses</button>
                 </div>
 
             </div>
@@ -756,7 +775,7 @@
             <div class="mt-12 text-center">
                 <div class="inline-flex items-center gap-2 text-slate-500 text-sm">
                     <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span>Transacción 100% Segura vía Hotmart</span>
+                    <span>100% Secure Transaction via Hotmart</span>
                 </div>
             </div>
         </div>
@@ -764,31 +783,31 @@
 
     <section class="pb-24 pt-12 px-4 bg-white">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-8 text-slate-900">Preguntas Frecuentes</h2>
+            <h2 class="text-2xl font-bold text-center mb-8 text-slate-900">Frequently Asked Questions</h2>
             <div class="space-y-4">
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
-                    <summary class="font-bold list-none flex justify-between text-slate-800">¿Son lo mismo el Chino y el Mandarín? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">El mandarín es el dialecto estándar del idioma chino hablado en China. Es la versión que se enseña en este curso y la que se utiliza para negocios y comercio.</p>
+                    <summary class="font-bold list-none flex justify-between text-slate-800">Are Chinese and Mandarin the same? <span>+</span></summary>
+                    <p class="mt-4 text-sm text-slate-600">Mandarin is the standard dialect of the Chinese language spoken in China. It is the version taught in this course and used for business and trade.</p>
                 </details>
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
-                    <summary class="font-bold list-none flex justify-between text-slate-800">¿El pago es único? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">¡Sí! Sin cuotas mensuales. Pagas una vez y obtienes acceso según el plan que elegiste.</p>
+                    <summary class="font-bold list-none flex justify-between text-slate-800">Is the payment one-time? <span>+</span></summary>
+                    <p class="mt-4 text-sm text-slate-600">Yes! No monthly fees. You pay once and get access according to the plan you chose.</p>
                 </details>
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
-                    <summary class="font-bold list-none flex justify-between text-slate-800">¿Cómo recibo el acceso? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">Inmediatamente después de la confirmación del pago, recibirás un correo electrónico con tus datos de acceso a nuestra plataforma de aprendizaje.</p>
+                    <summary class="font-bold list-none flex justify-between text-slate-800">How do I receive access? <span>+</span></summary>
+                    <p class="mt-4 text-sm text-slate-600">Immediately after payment confirmation, you will receive an email with your login details to our learning platform.</p>
                 </details>
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
-                    <summary class="font-bold list-none flex justify-between text-slate-800">¿El curso incluye certificado? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">Sí, al completar las lecciones, puedes generar un certificado de finalización para agregar a tu currículum/CV.</p>
+                    <summary class="font-bold list-none flex justify-between text-slate-800">Does the course include a certificate? <span>+</span></summary>
+                    <p class="mt-4 text-sm text-slate-600">Yes, upon completing the lessons, you can generate a certificate of completion to add to your resume/CV.</p>
                 </details>
             </div>
 
             <div class="mt-12 text-center">
-                <p class="text-slate-600 mb-4">¿Necesitas ayuda o tienes preguntas?</p>
+                <p class="text-slate-600 mb-4">Need help or have questions?</p>
                 <a href="#" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold transition-all">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    Hablar con Soporte Humano
+                    Speak with Human Support
                 </a>
             </div>
         </div>
@@ -796,7 +815,7 @@
 
     <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm border-t border-slate-800">
         <p class="font-bold text-white text-lg mb-2">Mestres do Mandarim</p>
-        <p>© 2024 Todos los derechos reservados.</p>
+        <p>© 2024 All rights reserved.</p>
     </footer>
 
     <script>
@@ -820,7 +839,7 @@
             const sStr = seconds.toString().padStart(2, '0');
 
             const topTimer = document.getElementById('top-timer');
-            if(topTimer) topTimer.innerText = `${dStr} Días : ${hStr} Horas : ${mStr} Min : ${sStr} Seg`;
+            if(topTimer) topTimer.innerText = `${dStr} Days : ${hStr} Hours : ${mStr} Min : ${sStr} Sec`;
         }
 
         setInterval(updateTimer, 1000);
@@ -879,7 +898,7 @@
             
             // Disable button and show loading
             submitBtn.disabled = true;
-            btnText.textContent = 'Procesando...';
+            btnText.textContent = 'Processing...';
             btnSpinner.classList.remove('hidden');
             
             // Collect form data
@@ -919,11 +938,11 @@
                 
             } catch (error) {
                 console.error('Error:', error);
-                alert('Ocurrió un error al procesar tu registro. Por favor intenta de nuevo.');
+                alert('An error occurred while processing your registration. Please try again.');
                 
                 // Re-enable button
                 submitBtn.disabled = false;
-                btnText.textContent = 'Asegurar Mi Lugar Ahora';
+                btnText.textContent = 'Secure My Spot Now';
                 btnSpinner.classList.add('hidden');
             }
         });
