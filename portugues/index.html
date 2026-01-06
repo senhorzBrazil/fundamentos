@@ -739,63 +739,157 @@
     </section>
 
     
-    <section id="pricing" class="py-24 px-4 bg-white relative">
-        <div class="max-w-6xl mx-auto">
+    <section id="pricing" class="py-24 px-4 bg-slate-50 font-sans">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Oferta por Tempo Limitado</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Selecione Seu Plano</h2>
-                <p class="text-slate-600 mt-4">Até 23 de Dezembro, invista menos de R$ 0,50 por dia.</p>
+                <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Oferta Limitada</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Escolha o Seu Plano Ideal</h2>
+                <p class="text-slate-600 mt-4">Comece hoje mesmo com garantia total de satisfação.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 items-end">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 
-                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative hover:border-slate-300 transition-all">
-                    <h3 class="text-lg font-bold text-slate-700 mb-2">Fundamentos do Mandarim</h3>
-                    <div class="flex items-baseline gap-1 my-4">
-                        <span class="text-sm font-bold">R$</span>
-                        <span class="text-4xl font-extrabold text-slate-900">9,90</span>
+                <div class="flex flex-col bg-white rounded-none shadow-xl relative overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="absolute top-0 left-0 w-32 h-32 overflow-hidden z-10">
+                        <div class="bg-blue-700 text-white text-[10px] font-bold py-1 text-center absolute w-[150%] top-[20px] left-[-35px] -rotate-45 shadow-md uppercase tracking-wider">
+                            Promocional
+                        </div>
                     </div>
-                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pagamento único</p>
-                    <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Certificado Incluso</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 20+ Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Suporte na Plataforma</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Acesso de 12 meses</li>
-                    </ul>
-                    <button onclick="openModal('Mandarin Fundamentals - R$ 9.90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">Eu Quero Aprender Chinês</button>
+
+                    <div class="bg-[#1a1a1a] p-8 text-center min-h-[140px] flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Fundamentos</h3>
+                        <p class="text-gray-400 text-sm leading-snug">Aprenda Chinês pagando pouco.</p>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-center mb-8">
+                            <div class="flex items-start justify-center text-[#22c55e] font-bold leading-none">
+                                <span class="text-xl mt-2 mr-1">R$</span>
+                                <span class="text-6xl tracking-tighter">47,90</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mt-2 font-medium">pagamento único</p>
+                        </div>
+
+                        <ul class="space-y-0 mb-8 flex-1">
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Certificado
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Mais de 20 módulos
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Suporte na plataforma
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                12 meses de acesso
+                            </li>
+                        </ul>
+
+                        <button onclick="openModal('Fundamentos - R$ 47,90')" class="w-full bg-[#ff3b3b] hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg uppercase text-sm tracking-wide mb-4">
+                            Eu Quero Aprender
+                        </button>
+                        
+                        <p class="text-center text-xs text-gray-400">Transação 100% segura</p>
+                    </div>
                 </div>
 
-                <div class="bg-slate-900 rounded-3xl p-8 border-2 border-red-500 relative transform md:-translate-y-4 shadow-2xl">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Mais Popular</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Acesso Vitalício</h3>
-                    <div class="flex items-baseline gap-1 my-4 text-white">
-                        <span class="text-sm font-bold">R$</span>
-                        <span class="text-5xl font-extrabold">19,90</span>
+                <div class="flex flex-col bg-white rounded-none shadow-xl relative overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl z-10 md:-mt-4 md:mb-4 border-2 border-slate-100">
+                    
+                    <div class="bg-[#1a1a1a] p-8 text-center min-h-[140px] flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Fundamentos Vitalício</h3>
+                        <p class="text-gray-400 text-xs leading-snug px-2">Tenha o Fundamentos para sempre. Pague uma única vez e tenha o curso por prazo indeterminado.</p>
                     </div>
-                    <p class="text-xs text-slate-400 mb-6 font-semibold uppercase">Pagamento único</p>
-                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Certificado Incluso</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Todos os 21 Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> <strong>Acesso Vitalício</strong></li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Atualizações Futuras</li>
-                    </ul>
-                    <button onclick="openModal('Lifetime Access - R$ 19.90')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">GARANTIR ACESSO VITALÍCIO</button>
+
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-center mb-8">
+                            <div class="flex items-start justify-center text-[#22c55e] font-bold leading-none">
+                                <span class="text-xl mt-2 mr-1">R$</span>
+                                <span class="text-6xl tracking-tighter">97,70</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mt-2 font-medium">pagamento único</p>
+                        </div>
+
+                        <ul class="space-y-0 mb-8 flex-1">
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Certificado
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Mais de 20 módulos
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Suporte na plataforma
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-bold">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Acesso vitalício
+                            </li>
+                        </ul>
+
+                        <button onclick="openModal('Fundamentos Vitalício - R$ 97,70')" class="w-full bg-[#ff3b3b] hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg uppercase text-sm tracking-wide mb-4 animate-pulse-slow">
+                            Eu Quero o Vitalício
+                        </button>
+                        
+                        <p class="text-center text-xs text-gray-400">Transação 100% segura</p>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 border border-purple-200 relative hover:shadow-lg transition-all">
-                    <h3 class="text-lg font-bold text-purple-900 mb-2">Mandarim + Inglês</h3>
-                    <div class="flex items-baseline gap-1 my-4">
-                        <span class="text-sm font-bold">R$</span>
-                        <span class="text-4xl font-extrabold text-slate-900">29,90</span>
+                <div class="flex flex-col bg-white rounded-none shadow-xl relative overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 overflow-hidden z-10">
+                        <div class="bg-[#ff0000] text-white text-[10px] font-bold py-1 text-center absolute w-[150%] top-[20px] right-[-35px] rotate-45 shadow-md uppercase tracking-wider">
+                            Últimas
+                        </div>
                     </div>
-                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pagamento único</p>
-                    <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Curso de Mandarim</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Curso de Inglês</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Total de 40+ Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Acesso Vitalício</li>
-                    </ul>
-                    <button onclick="openModal('Mandarin + English - R$ 29.90')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">Eu Quero os Dois Cursos</button>
+
+                    <div class="bg-[#1a1a1a] p-8 text-center min-h-[140px] flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-2 leading-tight">Mandarim + Inglês <br>(Vitalício)</h3>
+                        <p class="text-gray-400 text-xs leading-snug">Tenha dois cursos vitalícios, um de Chinês e outro de Inglês.</p>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-center mb-8">
+                            <div class="flex items-start justify-center text-[#22c55e] font-bold leading-none">
+                                <span class="text-xl mt-2 mr-1">R$</span>
+                                <span class="text-6xl tracking-tighter">147,90</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mt-2 font-medium">pagamento único</p>
+                        </div>
+
+                        <ul class="space-y-0 mb-8 flex-1">
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-bold">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Fundamentos do Inglês
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Certificado
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Mais de 40 módulos
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-medium">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Suporte na plataforma
+                            </li>
+                            <li class="flex items-center justify-center gap-2 py-3 border-b border-dashed border-gray-200 text-gray-700 font-bold">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Acesso vitalício
+                            </li>
+                        </ul>
+
+                        <button onclick="openModal('Mandarim + Inglês - R$ 147,90')" class="w-full bg-[#ff3b3b] hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg uppercase text-sm tracking-wide mb-4">
+                            Eu Quero Aprender
+                        </button>
+                        
+                        <p class="text-center text-xs text-gray-400">Transação 100% segura</p>
+                    </div>
                 </div>
 
             </div>
@@ -803,7 +897,7 @@
             <div class="mt-12 text-center">
                 <div class="inline-flex items-center gap-2 text-slate-500 text-sm">
                     <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span>Transação 100% Segura via Hotmart</span>
+                    <span>Ambiente Seguro e Criptografado</span>
                 </div>
             </div>
         </div>
