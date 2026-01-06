@@ -44,9 +44,203 @@
             background-size: 32px 32px;
         }
         .tabular-nums { font-variant-numeric: tabular-nums; }
+        
+        /* Modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 9998;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 1.5rem;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease-out;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            width: 20px;
+            height: 20px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-slate-50 selection:bg-red-500 selection:text-white">
+
+    <!-- Pop-up Modal -->
+    <div id="leadModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="relative">
+                <!-- Close button -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <!-- Modal Header -->
+                <div class="bg-gradient-to-br from-red-600 to-orange-600 text-white p-8 rounded-t-3xl">
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Quase lá!</h3>
+                        <p class="text-white/90 text-sm">Preencha seus dados para garantir seu acesso ao curso</p>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-8">
+                    <form id="leadForm" class="space-y-5">
+                        <input type="hidden" id="selectedPlan" name="plan" value="">
+                        
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">Nome Completo</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                class="form-input w-full px-4 py-3 border-2 border-slate-200 rounded-xl transition-all"
+                                placeholder="Digite seu nome completo"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">E-mail</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                class="form-input w-full px-4 py-3 border-2 border-slate-200 rounded-xl transition-all"
+                                placeholder="seu@email.com"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Celular (WhatsApp)</label>
+                            <div class="flex gap-2">
+                                <select 
+                                    id="countryCode" 
+                                    name="countryCode" 
+                                    required
+                                    class="form-input w-32 px-3 py-3 border-2 border-slate-200 rounded-xl transition-all bg-white"
+                                >
+                                    <option value="+55" data-country="BR">🇧🇷 +55</option>
+                                    <option value="+1" data-country="US">🇺🇸 +1</option>
+                                    <option value="+44" data-country="GB">🇬🇧 +44</option>
+                                    <option value="+351" data-country="PT">🇵🇹 +351</option>
+                                    <option value="+34" data-country="ES">🇪🇸 +34</option>
+                                    <option value="+33" data-country="FR">🇫🇷 +33</option>
+                                    <option value="+49" data-country="DE">🇩🇪 +49</option>
+                                    <option value="+39" data-country="IT">🇮🇹 +39</option>
+                                    <option value="+86" data-country="CN">🇨🇳 +86</option>
+                                    <option value="+81" data-country="JP">🇯🇵 +81</option>
+                                    <option value="+82" data-country="KR">🇰🇷 +82</option>
+                                    <option value="+91" data-country="IN">🇮🇳 +91</option>
+                                    <option value="+61" data-country="AU">🇦🇺 +61</option>
+                                    <option value="+64" data-country="NZ">🇳🇿 +64</option>
+                                    <option value="+27" data-country="ZA">🇿🇦 +27</option>
+                                    <option value="+52" data-country="MX">🇲🇽 +52</option>
+                                    <option value="+54" data-country="AR">🇦🇷 +54</option>
+                                    <option value="+56" data-country="CL">🇨🇱 +56</option>
+                                    <option value="+57" data-country="CO">🇨🇴 +57</option>
+                                    <option value="+51" data-country="PE">🇵🇪 +51</option>
+                                </select>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    required
+                                    class="form-input flex-1 px-4 py-3 border-2 border-slate-200 rounded-xl transition-all"
+                                    placeholder="Digite seu número"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <button 
+                                type="submit" 
+                                id="submitBtn"
+                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2"
+                            >
+                                <span id="btnText">Garantir Minha Vaga Agora</span>
+                                <span id="btnSpinner" class="spinner hidden"></span>
+                            </button>
+                        </div>
+
+                        <p class="text-xs text-center text-slate-500 pt-2">
+                            🔒 Seus dados estão seguros e não serão compartilhados com terceiros
+                        </p>
+                    </form>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage" class="hidden text-center py-8">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Cadastro realizado!</h4>
+                        <p class="text-slate-600 mb-6">Você será redirecionado para a página de pagamento em instantes...</p>
+                        <div class="flex justify-center">
+                            <div class="spinner" style="border-color: #dc2626; border-top-color: transparent; width: 30px; height: 30px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="bg-slate-900 text-white text-xs md:text-sm font-semibold py-3 text-center px-4 sticky top-0 z-[60] shadow-md">
         <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
@@ -131,11 +325,11 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <span class="text-red-600 font-bold tracking-widest text-sm uppercase">The Silent Opportunity</span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">Did you know that China is Brazil’s largest trading partner?</h2>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">Did you know that China is Brazil's largest trading partner?</h2>
                     
                     <div class="prose text-slate-600 text-lg leading-relaxed">
                         <p>The partnership between the two countries moves nearly <strong>$18 billion USD every year</strong>.</p>
-                        <p>That’s a huge market. But very few people are taking advantage of it because of the language barrier.</p>
+                        <p>That's a huge market. But very few people are taking advantage of it because of the language barrier.</p>
                         <p class="font-bold text-slate-800">What does learning Chinese have to do with your future?</p>
                     </div>
 
@@ -178,7 +372,7 @@
             <p>No headlines.<br>No warnings.</p>
             
             <p class="border-l-4 border-red-500 pl-6 italic text-slate-600 my-8">
-                And when people finally realize it… it’s already too late.
+                And when people finally realize it… it's already too late.
             </p>
 
             <p>Right now, China is reshaping global business, technology, and culture.</p>
@@ -190,11 +384,11 @@
             <ul class="list-none pl-0 space-y-2 my-8">
                 <li class="flex items-center gap-3">
                     <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
-                    Not because it’s “easy.”
+                    Not because it's "easy."
                 </li>
                 <li class="flex items-center gap-3">
                     <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
-                    Not because it’s “popular.”
+                    Not because it's "popular."
                 </li>
                 <li class="flex items-center gap-3 font-bold text-slate-900">
                     <span class="w-2 h-2 bg-red-600 rounded-full"></span>
@@ -203,22 +397,22 @@
             </ul>
 
             <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Most People Wait. Others Prepare.</h3>
-            <p>You don’t need to move to China. You don’t need years of study. You don’t need to be “good at languages.”</p>
+            <p>You don't need to move to China. You don't need years of study. You don't need to be "good at languages."</p>
             <p>What you need is a <span class="bg-yellow-100 px-1 font-bold text-slate-900">starting point.</span></p>
             <p>A method that removes confusion. A path that takes you from zero → real communication. A system built for adults with busy lives.</p>
-            <p class="text-red-600 font-bold">That’s why Mandarin Fundamentals exists.</p>
+            <p class="text-red-600 font-bold">That's why Mandarin Fundamentals exists.</p>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">From “I Can’t” to “I Can Speak”</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">From "I Can't" to "I Can Speak"</h3>
             <p>At first, it feels impossible. The sounds are new. The writing looks intimidating.</p>
             <p>But then something shifts.</p>
             <p>You recognize words. You understand simple sentences. <br><strong>You speak — and someone understands you.</strong></p>
-            <p>That moment changes everything. Because now you’re no longer outside the conversation.</p>
+            <p>That moment changes everything. Because now you're no longer outside the conversation.</p>
             <p class="text-xl font-serif italic text-slate-800 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
-                "You’re inside."
+                "You're inside."
             </p>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">This Is Not About Language. It’s About Positioning.</h3>
-            <p>Mandarin is not just a language. <strong>It’s a strategic advantage.</strong></p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">This Is Not About Language. It's About Positioning.</h3>
+            <p>Mandarin is not just a language. <strong>It's a strategic advantage.</strong></p>
             <p>In business. In travel. In culture. In your career.</p>
             <p>While most people compete for the same opportunities… You step into rooms where few can communicate.</p>
             <p>And that difference compounds over time.</p>
@@ -229,7 +423,7 @@
                     <span class="text-red-600">The Second Best Time Is Now.</span>
                 </h3>
                 
-                <p class="mb-8">You don’t need motivation. You need momentum. And momentum starts with one decision.</p>
+                <p class="mb-8">You don't need motivation. You need momentum. And momentum starts with one decision.</p>
                 
                 <div class="space-y-4 font-bold text-lg">
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
@@ -366,7 +560,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"I’m loving studying Chinese. I really admire Chinese culture."</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"I'm loving studying Chinese. I really admire Chinese culture."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">LO</div>
                         <div>
@@ -376,7 +570,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"I bought the course and I’m studying. I highly recommend it."</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"I bought the course and I'm studying. I highly recommend it."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">FL</div>
                         <div>
@@ -386,7 +580,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"This was the best purchase I’ve ever made 🙏"</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"This was the best purchase I've ever made 🙏"</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">MF</div>
                         <div>
@@ -488,7 +682,7 @@
                         A linguist with over 10 years of experience teaching and translating Mandarin Chinese. She moved to China at the age of 2, was fully educated in Chinese schools, and holds a degree in Business Administration from <strong>Yunnan University of Nationalities</strong>.
                     </p>
                     <p class="text-slate-300 text-lg mb-8">
-                        Founder of the channel “Dominating Mandarin”, she is the reference in Chinese language education for Portuguese speakers.
+                        Founder of the channel "Dominating Mandarin", she is the reference in Chinese language education for Portuguese speakers.
                     </p>
                 </div>
             </div>
@@ -509,7 +703,7 @@
                     <span class="text-2xl font-extrabold text-red-400 line-through">$223.90</span>
                 </div>
             </div>
-            <p class="mt-6 text-2xl font-bold text-red-600">❌ But you won’t pay that.</p>
+            <p class="mt-6 text-2xl font-bold text-red-600">❌ But you won't pay that.</p>
         </div>
     </section>
 
@@ -536,7 +730,7 @@
                         <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Platform Support</li>
                         <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 12-month Access</li>
                     </ul>
-                    <a href="#" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">I Want to Learn Chinese</a>
+                    <button onclick="openModal('Mandarin Fundamentals - $9.90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">I Want to Learn Chinese</button>
                 </div>
 
                 <div class="bg-slate-900 rounded-3xl p-8 border-2 border-red-500 relative transform md:-translate-y-4 shadow-2xl">
@@ -553,7 +747,7 @@
                         <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> <strong>Lifetime Access</strong></li>
                         <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Future Updates</li>
                     </ul>
-                    <a href="#" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">GET LIFETIME ACCESS</a>
+                    <button onclick="openModal('Lifetime Access - $19.90')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">GET LIFETIME ACCESS</button>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 border border-purple-200 relative hover:shadow-lg transition-all">
@@ -569,7 +763,7 @@
                         <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> 40+ Modules Total</li>
                         <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Lifetime Access</li>
                     </ul>
-                    <a href="#" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">I Want Both Courses</a>
+                    <button onclick="openModal('Mandarin + English - $29.90')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">I Want Both Courses</button>
                 </div>
 
             </div>
@@ -621,11 +815,10 @@
     </footer>
 
     <script>
+        // Timer function
         function updateTimer() {
             const now = new Date();
             let target = new Date();
-
-            // Set to end of day
             target.setHours(23, 59, 59, 999);
 
             const diff = target - now;
@@ -646,7 +839,108 @@
         }
 
         setInterval(updateTimer, 1000);
-        updateTimer(); 
+        updateTimer();
+
+        // Modal functions
+        function openModal(planName) {
+            const modal = document.getElementById('leadModal');
+            const selectedPlan = document.getElementById('selectedPlan');
+            selectedPlan.value = planName;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('leadModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Reset form
+            document.getElementById('leadForm').reset();
+            document.getElementById('leadForm').style.display = 'block';
+            document.getElementById('successMessage').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('leadModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Phone mask
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            if (value.length > 6) {
+                value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+            } else if (value.length > 2) {
+                value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+            } else if (value.length > 0) {
+                value = value.replace(/^(\d{0,2})/, '($1');
+            }
+            
+            e.target.value = value;
+        });
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processando...';
+            btnSpinner.classList.remove('hidden');
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                plan: document.getElementById('selectedPlan').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            try {
+                // TODO: Replace with your actual webhook URL
+                const WEBHOOK_URL = 'YOUR_WEBHOOK_URL_HERE';
+                
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('leadForm').style.display = 'none';
+                    document.getElementById('successMessage').classList.remove('hidden');
+                    
+                    // Redirect after 3 seconds (you can change the URL)
+                    setTimeout(() => {
+                        window.location.href = 'https://pay.hotmart.com/YOUR_PRODUCT_LINK';
+                    }, 3000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Ocorreu um erro ao processar seu cadastro. Por favor, tente novamente.');
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                btnText.textContent = 'Garantir Minha Vaga Agora';
+                btnSpinner.classList.add('hidden');
+            }
+        });
     </script>
 </body>
 </html>
