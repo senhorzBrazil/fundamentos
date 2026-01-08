@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fundamentos do Mandarim - Aprenda Chinês do zero absoluto ao nível HSK 1.">
+    <meta name="description" content="Mandarim Fundamentals - Aprenda Chinês do absoluto zero ao nível HSK 1.">
     
-    <title>Fundamentos do Mandarim - Aprenda Chinês Rápido</title>
+    <title>Mandarim Fundamentals - Aprenda Chinês Rápido</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
@@ -45,7 +45,7 @@
         }
         .tabular-nums { font-variant-numeric: tabular-nums; }
         
-        /* Estilos do Modal */
+        /* Modal styles */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -152,7 +152,7 @@
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Endereço de Email</label>
+                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">E-mail</label>
                             <input 
                                 type="email" 
                                 id="email" 
@@ -164,7 +164,7 @@
                         </div>
 
                         <div>
-                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">WhatsApp / Celular</label>
+                            <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Telefone</label>
                             <div class="flex gap-2">
                                 <select 
                                     id="countryCode" 
@@ -174,12 +174,24 @@
                                 >
                                     <option value="+55" data-country="BR" selected>🇧🇷 +55</option>
                                     <option value="+1" data-country="US">🇺🇸 +1</option>
-                                    <option value="+351" data-country="PT">🇵🇹 +351</option>
                                     <option value="+44" data-country="GB">🇬🇧 +44</option>
+                                    <option value="+351" data-country="PT">🇵🇹 +351</option>
                                     <option value="+34" data-country="ES">🇪🇸 +34</option>
                                     <option value="+33" data-country="FR">🇫🇷 +33</option>
+                                    <option value="+49" data-country="DE">🇩🇪 +49</option>
+                                    <option value="+39" data-country="IT">🇮🇹 +39</option>
                                     <option value="+86" data-country="CN">🇨🇳 +86</option>
                                     <option value="+81" data-country="JP">🇯🇵 +81</option>
+                                    <option value="+82" data-country="KR">🇰🇷 +82</option>
+                                    <option value="+91" data-country="IN">🇮🇳 +91</option>
+                                    <option value="+61" data-country="AU">🇦🇺 +61</option>
+                                    <option value="+64" data-country="NZ">🇳🇿 +64</option>
+                                    <option value="+27" data-country="ZA">🇿🇦 +27</option>
+                                    <option value="+52" data-country="MX">🇲🇽 +52</option>
+                                    <option value="+54" data-country="AR">🇦🇷 +54</option>
+                                    <option value="+56" data-country="CL">🇨🇱 +56</option>
+                                    <option value="+57" data-country="CO">🇨🇴 +57</option>
+                                    <option value="+51" data-country="PE">🇵🇪 +51</option>
                                 </select>
                                 <input 
                                     type="tel" 
@@ -187,7 +199,7 @@
                                     name="phone" 
                                     required
                                     class="form-input flex-1 px-3 py-2.5 border-2 border-slate-200 rounded-xl transition-all text-sm"
-                                    placeholder="(DDD) 99999-9999"
+                                    placeholder="Digite seu número"
                                 >
                             </div>
                         </div>
@@ -204,7 +216,7 @@
                         </div>
 
                         <p class="text-xs text-center text-slate-500 pt-1">
-                            🔒 Seus dados estão seguros e não serão compartilhados
+                            🔒 Seus dados estão seguros e não serão compartilhados com terceiros
                         </p>
                     </form>
 
@@ -214,8 +226,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-2">Inscrição realizada com sucesso!</h4>
-                        <p class="text-slate-600 text-sm mb-5">Você será redirecionado para o pagamento em instantes...</p>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Cadastro realizado com sucesso!</h4>
+                        <p class="text-slate-600 text-sm mb-5">Você será redirecionado para a página de pagamento em instantes...</p>
                         <div class="flex justify-center">
                             <div class="spinner" style="border-color: #dc2626; border-top-color: transparent; width: 28px; height: 28px;"></div>
                         </div>
@@ -227,7 +239,7 @@
 
     <div class="bg-slate-900 text-white text-xs md:text-sm font-semibold py-3 text-center px-4 sticky top-0 z-[60] shadow-md">
         <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
-            <span>⚡ Este preço permanecerá disponível até: <span id="top-timer" class="text-yellow-400 font-bold tabular-nums ml-1 text-base">CARREGANDO...</span></span>
+            <span>⚡ Este preço ficará disponível até: <span id="top-timer" class="text-yellow-400 font-bold tabular-nums ml-1 text-base">CARREGANDO...</span></span>
             <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-colors">
                 Garantir minha vaga
             </a>
@@ -239,7 +251,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">M</div>
-                    <span class="font-bold text-slate-900 tracking-tight text-lg">Mestres do<span class="text-red-600">Mandarim</span></span>
+                    <span class="font-bold text-slate-900 tracking-tight text-lg">Mandarim<span class="text-red-600">Fundamentals</span></span>
                 </div>
                 <div class="hidden md:block">
                     <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
@@ -260,10 +272,10 @@
             
             <div class="inline-flex items-center gap-3 bg-white border border-slate-200 rounded-full pl-2 pr-4 py-1.5 shadow-sm mb-8 hover:shadow-md transition-shadow cursor-default">
                 <div class="flex -space-x-3">
-                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Estudante">
-                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Estudante">
+                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Aluno">
+                    <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Aluno">
                     <div class="w-8 h-8 rounded-full border-2 border-white bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">
-                        +3k
+                        +3mil
                     </div>
                 </div>
                 <span class="text-xs font-bold text-slate-700">Alunos matriculados</span>
@@ -271,24 +283,24 @@
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
                 Aprenda Chinês com o <br class="hidden md:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">Método usado por +3.000 Alunos</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">Método usado por mais de 3.000 Alunos</span>
             </h1>
             
             <p class="mt-4 text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Você quer sair do zero absoluto e chegar ao nível HSK 1? Junte-se ao primeiro curso acessível para quem quer aprender a língua mais falada do mundo.
+                Você quer sair do zero absoluto e chegar ao nível HSK 1? Participe do primeiro curso acessível para qualquer pessoa que deseja aprender o idioma mais falado do mundo.
             </p>
             
             <div class="mt-2 text-red-600 font-bold text-lg animate-pulse">
-                De <span class="line-through text-slate-400">R$ 89,90</span> por <span class="text-2xl">R$ 9,90</span> (pagamento único)
+                De <span class="line-through text-slate-400">R$ 497,00</span> → <span class="text-2xl">R$ 49,90</span> (pagamento único)
             </div>
 
-            <div class="mt-10 relative max-w-3xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-white bg-black aspect-video group cursor-pointer" onclick="openVideoModal('QrpltPjbJ_w')">
+            <div class="mt-10 relative max-w-3xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-white bg-black aspect-video group cursor-pointer">
+                
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                     <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center pl-2 shadow-lg group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                 </div>
-                <img src="https://img.youtube.com/vi/QrpltPjbJ_w/maxresdefault.jpg" class="w-full h-full object-cover -z-10" alt="Thumbnail video">
                 <div class="absolute bottom-4 left-4 text-white font-bold text-shadow">🎧 Assista à explicação em vídeo</div>
             </div>
 
@@ -311,21 +323,22 @@
                     <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">Você sabia que a China é o maior parceiro comercial do Brasil?</h2>
                     
                     <div class="prose text-slate-600 text-lg leading-relaxed">
-                        <p>A parceria entre os dois países movimenta quase <strong>US$ 150 bilhões todos os anos</strong>.</p>
-                        <p>É um mercado gigantesco. Mas pouquíssimas pessoas estão aproveitando isso por causa da barreira do idioma.</p>
+                        <p>A parceria entre os dois países movimenta quase <strong>US$ 18 bilhões por ano</strong>.</p>
+                        <p>É um mercado enorme. Mas pouquíssimas pessoas estão aproveitando isso por causa da barreira do idioma.</p>
                         <p class="font-bold text-slate-800">O que aprender chinês tem a ver com o seu futuro?</p>
                     </div>
 
                     <a href="#pricing" class="inline-flex items-center text-red-600 font-bold hover:underline">
-                        Garanta seu lugar no mercado do futuro &rarr;
+                        Garanta sua vaga no mercado do futuro &rarr;
                     </a>
                 </div>
 
                 <div class="relative">
                     <div class="bg-slate-50 rounded-3xl p-2 border border-slate-200 shadow-xl rotate-2 hover:rotate-0 transition-all duration-500">
+                        
                         <div class="p-6 text-center">
                             <p class="text-sm text-slate-500 font-semibold uppercase">Volume de Comércio Bilateral</p>
-                            <p class="text-4xl font-extrabold text-slate-900 mt-2">US$ 150 Bilhões+</p>
+                            <p class="text-4xl font-extrabold text-slate-900 mt-2">US$ 18 Bilhões+</p>
                             <p class="text-xs text-green-600 font-bold bg-green-100 inline-block px-2 py-1 rounded-full mt-2">📈 Crescendo Anualmente</p>
                         </div>
                     </div>
@@ -342,7 +355,7 @@
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
                 Uma Porta Silenciosa Está Aberta — <br />
-                <span class="text-red-600">E A Maioria Nunca Vai Perceber</span>
+                <span class="text-red-600">E A Maioria Das Pessoas Nunca Vai Perceber</span>
             </h2>
             <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
         </div>
@@ -354,11 +367,11 @@
             <p>Sem manchetes.<br>Sem avisos.</p>
             
             <p class="border-l-4 border-red-500 pl-6 italic text-slate-600 my-8">
-                E quando as pessoas finalmente percebem... já é tarde demais.
+                E quando as pessoas finalmente percebem… já é tarde demais.
             </p>
 
-            <p>Agora mesmo, a China está redefinindo os negócios globais, tecnologia e cultura.</p>
-            <p>E enquanto a maioria continua focando nas mesmas habilidades de sempre...</p>
+            <p>Neste momento, a China está reformulando os negócios globais, a tecnologia e a cultura.</p>
+            <p>E enquanto a maioria das pessoas continua focando nas mesmas habilidades antigas…</p>
             
             <p><strong>Um pequeno grupo está fazendo algo diferente.</strong></p>
             <p>Eles estão aprendendo Mandarim.</p>
@@ -366,51 +379,51 @@
             <ul class="list-none pl-0 space-y-2 my-8">
                 <li class="flex items-center gap-3">
                     <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
-                    Não porque é "fácil".
+                    Não porque é "fácil."
                 </li>
                 <li class="flex items-center gap-3">
                     <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
-                    Não porque é "moda".
+                    Não porque é "popular."
                 </li>
                 <li class="flex items-center gap-3 font-bold text-slate-900">
                     <span class="w-2 h-2 bg-red-600 rounded-full"></span>
-                    Mas porque isso muda como as oportunidades encontram você.
+                    Mas porque isso muda como as oportunidades te encontram.
                 </li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">A Maioria Espera. Outros se Preparam.</h3>
-            <p>Você não precisa se mudar para a China. Não precisa de anos de estudo. Não precisa ter "dom para línguas".</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">A Maioria Das Pessoas Espera. Outras Se Preparam.</h3>
+            <p>Você não precisa se mudar para a China. Você não precisa de anos de estudo. Você não precisa ser "bom em idiomas."</p>
             <p>O que você precisa é de um <span class="bg-yellow-100 px-1 font-bold text-slate-900">ponto de partida.</span></p>
-            <p>Um método que remove a confusão. Um caminho que te leva do zero → comunicação real. Um sistema feito para adultos com vidas ocupadas.</p>
-            <p class="text-red-600 font-bold">É por isso que o Fundamentos do Mandarim existe.</p>
+            <p>Um método que remove a confusão. Um caminho que te leva do zero → comunicação real. Um sistema construído para adultos com vidas ocupadas.</p>
+            <p class="text-red-600 font-bold">É por isso que o Mandarim Fundamentals existe.</p>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Do "Eu Não Consigo" ao "Eu Falo"</h3>
-            <p>No começo, parece impossível. Os sons são novos. A escrita parece intimidante.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">De "Eu Não Consigo" para "Eu Consigo Falar"</h3>
+            <p>No início, parece impossível. Os sons são novos. A escrita parece intimidante.</p>
             <p>Mas então algo muda.</p>
-            <p>Você reconhece palavras. Entende frases simples. <br><strong>Você fala — e alguém te entende.</strong></p>
+            <p>Você reconhece palavras. Você entende frases simples. <br><strong>Você fala — e alguém te entende.</strong></p>
             <p>Esse momento muda tudo. Porque agora você não está mais fora da conversa.</p>
             <p class="text-xl font-serif italic text-slate-800 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
                 "Você está dentro."
             </p>
 
-            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Não é Sobre Língua. É Sobre Posicionamento.</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Isso Não É Sobre Idioma. É Sobre Posicionamento.</h3>
             <p>Mandarim não é apenas um idioma. <strong>É uma vantagem estratégica.</strong></p>
             <p>Nos negócios. Em viagens. Na cultura. Na sua carreira.</p>
-            <p>Enquanto a maioria compete pelas mesmas oportunidades... Você entra em salas onde poucos conseguem se comunicar.</p>
-            <p>E essa diferença se multiplica com o tempo.</p>
+            <p>Enquanto a maioria das pessoas compete pelas mesmas oportunidades… Você entra em ambientes onde poucos conseguem se comunicar.</p>
+            <p>E essa diferença se acumula com o tempo.</p>
 
             <div class="mt-16 pt-8 border-t border-slate-200">
                 <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6">
-                    O Melhor Momento para Começar Foi Há Anos.<br>
-                    <span class="text-red-600">O Segundo Melhor é Agora.</span>
+                    A Melhor Época Para Começar Foi Anos Atrás.<br>
+                    <span class="text-red-600">A Segunda Melhor Época É Agora.</span>
                 </h3>
                 
-                <p class="mb-8">Você não precisa de motivação. Você precisa de movimento. E o movimento começa com uma decisão.</p>
+                <p class="mb-8">Você não precisa de motivação. Você precisa de impulso. E o impulso começa com uma decisão.</p>
                 
                 <div class="space-y-4 font-bold text-lg">
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
                         <span class="text-2xl group-hover:translate-x-1 transition-transform">👉</span>
-                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Junte-se ao Fundamentos do Mandarim hoje</span>
+                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Entre no Mandarim Fundamentals hoje</span>
                     </a>
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
                         <span class="text-2xl group-hover:translate-x-1 transition-transform">👉</span>
@@ -418,7 +431,7 @@
                     </a>
                     <a href="#pricing" class="flex items-center gap-3 text-slate-800 hover:text-red-600 transition-colors group">
                         <span class="text-2xl group-hover:translate-x-1 transition-transform">👉</span>
-                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Esteja pronto quando a oportunidade bater</span>
+                        <span class="underline decoration-red-300 decoration-2 underline-offset-4 group-hover:decoration-red-600">Esteja pronto quando a oportunidade bater silenciosamente</span>
                     </a>
                 </div>
             </div>
@@ -433,7 +446,8 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             
-            <div class="relative group cursor-pointer" onclick="openVideoModal('VIDEO_ID_PREVIEW')"> <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-black aspect-video transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-red-900/20">
+            <div class="relative group cursor-pointer">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-black aspect-video transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-red-900/20">
                     <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80" alt="Prévia da Aula de Mandarim" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity">
                     
                     <div class="absolute inset-0 flex items-center justify-center">
@@ -448,7 +462,7 @@
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                        <p class="text-sm font-bold text-white">Aula 01: Os 4 Tons & Saudações Básicas</p>
+                        <p class="text-sm font-bold text-white">Aula 01: Os 4 Tons e Saudações Básicas</p>
                         <div class="w-full h-1 bg-slate-700 rounded-full mt-2 overflow-hidden">
                             <div class="w-1/3 h-full bg-red-600"></div>
                         </div>
@@ -460,19 +474,19 @@
                 </div>
                 
                 <p class="text-center text-slate-400 text-sm mt-4">
-                    👆 Clique para ver uma prévia de 5 minutos do Módulo 1
+                    👆 Clique para assistir a uma prévia de 5 minutos do Módulo 1
                 </p>
             </div>
 
             <div class="space-y-8">
                 <div>
-                    <span class="text-red-500 font-bold tracking-widest text-sm uppercase mb-2 block">Por Dentro</span>
+                    <span class="text-red-500 font-bold tracking-widest text-sm uppercase mb-2 block">Veja por Dentro</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
                         Experimente o Método <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Antes de Se Comprometer</span>
                     </h2>
                     <p class="text-slate-400 mt-4 text-lg leading-relaxed">
-                        Nós não ensinamos apenas listas de palavras. Ensinamos a <strong>lógica</strong> por trás do idioma para que você possa construir suas próprias frases desde o Dia 1.
+                        Nós não apenas ensinamos listas de palavras. Ensinamos a <strong>lógica</strong> por trás do idioma para que você possa construir suas próprias frases desde o Dia 1.
                     </p>
                 </div>
 
@@ -492,8 +506,8 @@
                             02
                         </div>
                         <div>
-                            <h4 class="font-bold text-white">Memória Visual</h4>
-                            <p class="text-sm text-slate-400">Esqueça livros de gramática chatos. Usamos recursos visuais na tela para fixar os caracteres na sua memória instantaneamente.</p>
+                            <h4 class="font-bold text-white">Ajudas de Memória Visual</h4>
+                            <p class="text-sm text-slate-400">Esqueça os livros chatos de gramática. Usamos recursos visuais na tela para fixar os caracteres na sua memória instantaneamente.</p>
                         </div>
                     </div>
 
@@ -503,7 +517,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-white">Aplicação Prática</h4>
-                            <p class="text-sm text-slate-400">Você não vai aprender "A maçã é vermelha". Você aprenderá "Onde é o banheiro?" e "Quanto custa isso?" imediatamente.</p>
+                            <p class="text-sm text-slate-400">Você não vai aprender "A maçã é vermelha." Você vai aprender "Onde fica o banheiro?" e "Quanto custa isso?" imediatamente.</p>
                         </div>
                     </div>
                 </div>
@@ -523,15 +537,15 @@
     <section class="py-24 bg-slate-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">O que dizem nossos alunos?</h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">O que nossos alunos dizem?</h2>
                 <div class="flex justify-center items-center gap-2 mt-4 text-yellow-500 text-xl">
-                    ★★★★★ <span class="text-slate-500 text-sm font-medium ml-2">(+3.000 Alunos)</span>
+                    ★★★★★ <span class="text-slate-500 text-sm font-medium ml-2">(Mais de 3.000 Alunos)</span>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Tenho 59 anos, sou enfermeira... Ontem pedi minha comida em chinês e fiz novos amigos. Não tenho palavras para agradecer!"</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"Tenho 59 anos, sou enfermeira... Ontem pedi minha comida em chinês e fiz novos amigos. Não tenho como agradecer!"</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">MA</div>
                         <div>
@@ -541,7 +555,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Estou adorando estudar chinês. Eu realmente admiro a cultura chinesa."</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"Estou amando estudar chinês. Admiro muito a cultura chinesa."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">LO</div>
                         <div>
@@ -561,7 +575,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <p class="text-slate-600 text-sm italic mb-4">"Foi a melhor compra que já fiz 🙏"</p>
+                    <p class="text-slate-600 text-sm italic mb-4">"Essa foi a melhor compra que eu já fiz 🙏"</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">MF</div>
                         <div>
@@ -578,7 +592,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
             <div class="text-center mb-16">
-                <span class="text-red-600 font-bold tracking-widest text-sm uppercase">Materiais e Conteúdo</span>
+                <span class="text-red-600 font-bold tracking-widest text-sm uppercase">Materiais & Conteúdo</span>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2">O que está incluído?</h2>
                 <div class="mt-4 flex justify-center gap-4 text-sm font-bold text-slate-500">
                     <span class="bg-slate-100 px-3 py-1 rounded-full">21 Módulos</span>
@@ -592,7 +606,7 @@
                 <div class="order-2 lg:order-1">
                     <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                         <span class="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-sm">📚</span>
-                        Grade Curricular
+                        Currículo do Curso
                     </h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700">
                         <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Introdução</div>
@@ -606,7 +620,7 @@
                         <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Profissões & Trabalho</div>
                         <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Compras</div>
                         <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Lugares & Direções</div>
-                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Paquera & Informal</div>
+                        <div class="flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-red-500 font-bold">✓</span> Paquera & Casual</div>
                     </div>
                 </div>
 
@@ -616,14 +630,9 @@
                     <div class="relative transform rotate-2 hover:rotate-0 transition-all duration-500 group">
                         <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                         
-                        <div class="relative bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden min-h-[400px] flex items-center justify-center p-8 text-center bg-slate-50">
+                        <div class="relative bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden min-h-[400px] flex items-center justify-center">
                             
-                            <div class="flex flex-col items-center">
-                                <svg class="w-24 h-24 text-slate-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                                <p class="text-slate-400 font-bold">Prévia da Apostila</p>
-                            </div>
+                            <img src="./images/folha.png" alt="Prévia do Material do Curso" class="w-full h-full object-cover">
                             
                             <div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm border border-slate-200 px-4 py-2 rounded-lg shadow-lg flex items-center gap-3">
                                 <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -645,18 +654,19 @@
         </div>
     </section>
     
+    
     <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-pulse"></div>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/3">
                     <div class="relative">
-                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-slate-800 flex items-center justify-center">
-                             <img src="https://yt3.googleusercontent.com/ytc/AIdro_k6-X7x6_E6-X7x6_E6-X7x6_E6-X7x6_E6=s900-c-k-c0x00ffffff-no-rj" alt="Shi Zhen Mei" class="w-full h-full object-cover">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800">
+                            <img src="./images/Karina_cunha.jpg" alt="Karina Cunha - Shi Zhen Mei" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-slate-900 p-4 rounded-xl shadow-lg">
-                            <p class="font-bold text-xl">10+ Anos</p>
-                            <p class="text-xs font-semibold uppercase">Experiência</p>
+                            <p class="font-bold text-xl">+10 Anos</p>
+                            <p class="text-xs font-semibold uppercase">de Experiência</p>
                         </div>
                     </div>
                 </div>
@@ -664,23 +674,22 @@
                     <span class="text-red-400 font-bold uppercase tracking-widest mb-2 block">Quem será sua professora?</span>
                     <h2 class="text-4xl font-bold mb-6">Shi Zhen Mei <span class="text-slate-400 font-light">(Karina Cunha)</span></h2>
                     <p class="text-slate-300 text-lg mb-6 leading-relaxed">
-                        Linguista com mais de 10 anos de experiência no ensino e tradução de mandarim. Mudou-se para a China aos 2 anos de idade, foi totalmente educada em escolas chinesas e é formada em Administração pela <strong>Yunnan University of Nationalities</strong>.
+                        Linguista com mais de 10 anos de experiência ensinando e traduzindo Mandarim. Ela se mudou para a China aos 2 anos de idade, foi totalmente educada em escolas chinesas e é formada em Administração de Empresas pela <strong>Universidade de Nacionalidades de Yunnan</strong>.
                     </p>
                     <p class="text-slate-300 text-lg mb-8">
-                        Fundadora do canal "Dominando o Mandarim", ela é a referência no ensino de língua chinesa para falantes de português.
+                        Fundadora do canal "Dominando o Mandarim", ela é a referência em educação de idioma chinês para falantes de português.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="py-16 bg-white border-t border-slate-100 relative">
+     <section class="py-16 bg-white border-t border-slate-100 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 pb-8 border-b border-slate-100">
                 <div class="flex items-center gap-4">
                     <div class="relative">
-                        <img src="https://yt3.googleusercontent.com/ytc/AIdro_k6-X7x6_E6-X7x6_E6-X7x6_E6-X7x6_E6=s900-c-k-c0x00ffffff-no-rj" alt="Avatar do Canal" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border border-slate-200">
+                        <img src="./images/Karina_cunha.jpg" alt="Avatar do Canal" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border border-slate-200">
                     </div>
                     
                     <div class="text-left">
@@ -693,7 +702,7 @@
                         <div class="text-slate-500 text-sm flex gap-2 flex-wrap">
                             <span>@DominandooMandarim</span>
                             <span class="hidden sm:inline">•</span>
-                            <span>143K inscritos</span>
+                            <span>143 mil inscritos</span>
                             <span class="hidden sm:inline">•</span>
                             <span>424 vídeos</span>
                         </div>
@@ -712,7 +721,7 @@
                 
                 <div class="group cursor-pointer" onclick="openVideoModal('QrpltPjbJ_w')">
                     <div class="relative aspect-video rounded-xl overflow-hidden mb-3 bg-black">
-                        <img src="https://img.youtube.com/vi/QrpltPjbJ_w/maxresdefault.jpg" alt="Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                        <img src="https://img.youtube.com/vi/QrpltPjbJ_w/maxresdefault.jpg" alt="Miniatura" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                         
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors shadow-lg">
@@ -727,7 +736,7 @@
                     <div class="flex gap-3">
                         <div class="flex-1">
                             <h4 class="text-slate-900 font-bold text-base leading-tight line-clamp-2 group-hover:text-blue-600">
-                                Chinês conta como é ser pobre na China
+                                Chinês conta como é ser pobre
                             </h4>
                             <div class="text-slate-500 text-sm mt-1">
                                 <p>Dominando o Mandarim</p>
@@ -739,7 +748,7 @@
 
                 <div class="group cursor-pointer" onclick="openVideoModal('3B_OxxHDVtY')">
                     <div class="relative aspect-video rounded-xl overflow-hidden mb-3 bg-black">
-                        <img src="https://img.youtube.com/vi/3B_OxxHDVtY/maxresdefault.jpg" alt="Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                        <img src="https://img.youtube.com/vi/3B_OxxHDVtY/maxresdefault.jpg" alt="Miniatura" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                         
                          <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors shadow-lg">
@@ -754,11 +763,11 @@
                     <div class="flex gap-3">
                         <div class="flex-1">
                             <h4 class="text-slate-900 font-bold text-base leading-tight line-clamp-2 group-hover:text-blue-600">
-                                CHINESES falam sobre AMOR e TRAIÇÃO
+                                CHINESES FALAM sobre AMOR e TRAIÇÃO
                             </h4>
                             <div class="text-slate-500 text-sm mt-1">
                                 <p>Dominando o Mandarim</p>
-                                <p>Entrevista na Rua</p>
+                                <p>Entrevista de Rua</p>
                             </div>
                         </div>
                     </div>
@@ -766,7 +775,7 @@
 
                 <div class="group cursor-pointer" onclick="openVideoModal('H_woWccLOQY')">
                     <div class="relative aspect-video rounded-xl overflow-hidden mb-3 bg-black">
-                        <img src="https://img.youtube.com/vi/H_woWccLOQY/maxresdefault.jpg" alt="Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                        <img src="https://img.youtube.com/vi/H_woWccLOQY/maxresdefault.jpg" alt="Miniatura" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                         
                          <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors shadow-lg">
@@ -781,7 +790,7 @@
                     <div class="flex gap-3">
                         <div class="flex-1">
                             <h4 class="text-slate-900 font-bold text-base leading-tight line-clamp-2 group-hover:text-blue-600">
-                                MÉDICA CHINESA fala das DIFICULDADES de morar na CHINA
+                                MÉDICA CHINESA fala sobre DIFICULDADES de VIVER NA CHINA
                             </h4>
                             <div class="text-slate-500 text-sm mt-1">
                                 <p>Dominando o Mandarim</p>
@@ -794,7 +803,7 @@
             </div>
 
             <div class="mt-12 text-center">
-                <p class="text-slate-600 mb-4">Gostou da didática? No curso completo você vai muito mais longe.</p>
+                <p class="text-slate-600 mb-4">Gostou do método de ensino? No curso completo, você vai muito mais longe.</p>
                 <a href="#pricing" class="text-red-600 font-bold hover:underline">
                     Ver todos os módulos do curso &rarr;
                 </a>
@@ -860,16 +869,16 @@
 
     <section class="py-16 bg-slate-50 border-b border-slate-200">
         <div class="max-w-3xl mx-auto px-4 text-center">
-            <h3 class="text-xl font-bold text-slate-600 mb-6">Se você entrasse SEM esta promoção, você pagaria:</h3>
+            <h3 class="text-xl font-bold text-slate-600 mb-6">Se você entrasse SEM essa promoção, pagaria:</h3>
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 inline-block text-left w-full md:w-auto">
                 <ul class="space-y-3 mb-6 text-slate-500">
-                    <li class="flex justify-between gap-8"><span>📘 Curso Fundamentos do Mandarim</span> <span class="font-bold line-through">R$ 119,00</span></li>
+                    <li class="flex justify-between gap-8"><span>📘 Curso Mandarim Fundamentals</span> <span class="font-bold line-through">R$ 597,00</span></li>
                     <li class="flex justify-between gap-8"><span>📄 Apostila do Curso</span> <span class="font-bold line-through">R$ 29,90</span></li>
-                    <li class="flex justify-between gap-8"><span>💬 Suporte Direto</span> <span class="font-bold line-through">R$ 99,00</span></li>
+                    <li class="flex justify-between gap-8"><span>💬 Suporte Direto</span> <span class="font-bold line-through">R$ 497,00</span></li>
                 </ul>
                 <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
                     <span class="text-lg font-bold text-slate-900">Valor Total:</span>
-                    <span class="text-2xl font-extrabold text-red-400 line-through">R$ 247,90</span>
+                    <span class="text-2xl font-extrabold text-red-400 line-through">R$ 1.123,90</span>
                 </div>
             </div>
             <p class="mt-6 text-2xl font-bold text-red-600">❌ Mas você não vai pagar isso.</p>
@@ -877,30 +886,32 @@
     </section>
 
  
+
+
     <section id="pricing" class="py-24 px-4 bg-white relative">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Oferta por Tempo Limitado</span>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Escolha Seu Plano</h2>
-                <p class="text-slate-600 mt-4">Até 23 de Dezembro, invista menos de R$ 0,50 por dia.</p>
+                <p class="text-slate-600 mt-4">Até 23 de dezembro, invista menos de R$ 0,50 por dia.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 items-end">
                 
                 <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative hover:border-slate-300 transition-all">
-                    <h3 class="text-lg font-bold text-slate-700 mb-2">Fundamentos do Mandarim</h3>
+                    <h3 class="text-lg font-bold text-slate-700 mb-2">Mandarim Fundamentals</h3>
                     <div class="flex items-baseline gap-1 my-4">
                         <span class="text-sm font-bold">R$</span>
-                        <span class="text-4xl font-extrabold text-slate-900">9,90</span>
+                        <span class="text-4xl font-extrabold text-slate-900">49,90</span>
                     </div>
                     <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pagamento único</p>
                     <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Certificado Incluso</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Certificado</li>
                         <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 20+ Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Suporte na Plataforma</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Acesso por 12 meses</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Suporte da Plataforma</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 12 meses de Acesso</li>
                     </ul>
-                    <button onclick="openModal('Fundamentos do Mandarim - R$ 9,90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">Quero Aprender Chinês</button>
+                    <button onclick="openModal('Mandarim Fundamentals - R$ 49,90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">Quero Aprender Chinês</button>
                 </div>
 
                 <div class="bg-slate-900 rounded-3xl p-8 border-2 border-red-500 relative transform md:-translate-y-4 shadow-2xl">
@@ -908,23 +919,23 @@
                     <h3 class="text-lg font-bold text-white mb-2">Acesso Vitalício</h3>
                     <div class="flex items-baseline gap-1 my-4 text-white">
                         <span class="text-sm font-bold">R$</span>
-                        <span class="text-5xl font-extrabold">19,90</span>
+                        <span class="text-5xl font-extrabold">97,00</span>
                     </div>
                     <p class="text-xs text-slate-400 mb-6 font-semibold uppercase">Pagamento único</p>
                     <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Certificado Incluso</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Certificado Incluído</li>
                         <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Todos os 21 Módulos</li>
                         <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> <strong>Acesso Vitalício</strong></li>
                         <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Atualizações Futuras</li>
                     </ul>
-                    <button onclick="openModal('Acesso Vitalício - R$ 19,90')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">OBTER ACESSO VITALÍCIO</button>
+                    <button onclick="openModal('Acesso Vitalício - R$ 97,00')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">GARANTIR ACESSO VITALÍCIO</button>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 border border-purple-200 relative hover:shadow-lg transition-all">
                     <h3 class="text-lg font-bold text-purple-900 mb-2">Mandarim + Inglês</h3>
                     <div class="flex items-baseline gap-1 my-4">
                         <span class="text-sm font-bold">R$</span>
-                        <span class="text-4xl font-extrabold text-slate-900">29,90</span>
+                        <span class="text-4xl font-extrabold text-slate-900">147,00</span>
                     </div>
                     <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pagamento único</p>
                     <ul class="space-y-3 text-sm text-slate-600 mb-8">
@@ -933,7 +944,7 @@
                         <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> 40+ Módulos no Total</li>
                         <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Acesso Vitalício</li>
                     </ul>
-                    <button onclick="openModal('Mandarim + Inglês - R$ 29,90')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">Quero Ambos os Cursos</button>
+                    <button onclick="openModal('Mandarim + Inglês - R$ 147,00')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">Quero os Dois Cursos</button>
                 </div>
 
             </div>
@@ -953,19 +964,19 @@
             <div class="space-y-4">
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
                     <summary class="font-bold list-none flex justify-between text-slate-800">Chinês e Mandarim são a mesma coisa? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">O Mandarim é o dialeto padrão da língua chinesa falado na China. É a versão ensinada neste curso e utilizada para negócios e comércio.</p>
+                    <p class="mt-4 text-sm text-slate-600">Mandarim é o dialeto padrão da língua chinesa falado na China. É a versão ensinada neste curso e usada para negócios e comércio.</p>
                 </details>
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
                     <summary class="font-bold list-none flex justify-between text-slate-800">O pagamento é único? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">Sim! Sem mensalidades. Você paga uma única vez e tem acesso de acordo com o plano escolhido.</p>
+                    <p class="mt-4 text-sm text-slate-600">Sim! Sem mensalidades. Você paga uma vez e tem acesso de acordo com o plano escolhido.</p>
                 </details>
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
                     <summary class="font-bold list-none flex justify-between text-slate-800">Como recebo o acesso? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de login para nossa plataforma de ensino.</p>
+                    <p class="mt-4 text-sm text-slate-600">Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de login para nossa plataforma de aprendizado.</p>
                 </details>
                 <details class="group bg-slate-50 p-4 rounded-xl border border-slate-200 cursor-pointer">
                     <summary class="font-bold list-none flex justify-between text-slate-800">O curso inclui certificado? <span>+</span></summary>
-                    <p class="mt-4 text-sm text-slate-600">Sim, ao completar as aulas, você pode gerar um certificado de conclusão para adicionar ao seu currículo.</p>
+                    <p class="mt-4 text-sm text-slate-600">Sim, ao concluir as aulas, você pode gerar um certificado de conclusão para adicionar ao seu currículo.</p>
                 </details>
             </div>
 
@@ -985,7 +996,7 @@
     </footer>
 
     <script>
-        // Função do Timer
+        // Timer function
         function updateTimer() {
             const now = new Date();
             let target = new Date();
@@ -1011,7 +1022,7 @@
         setInterval(updateTimer, 1000);
         updateTimer();
 
-        // Funções do Modal
+        // Modal functions
         function openModal(planName) {
             const modal = document.getElementById('leadModal');
             const selectedPlan = document.getElementById('selectedPlan');
@@ -1025,20 +1036,20 @@
             modal.classList.remove('active');
             document.body.style.overflow = '';
             
-            // Resetar formulário
+            // Reset form
             document.getElementById('leadForm').reset();
             document.getElementById('leadForm').style.display = 'block';
             document.getElementById('successMessage').classList.add('hidden');
         }
 
-        // Fechar modal ao clicar fora
+        // Close modal when clicking outside
         document.getElementById('leadModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeModal();
             }
         });
 
-        // Máscara de telefone
+        // Phone mask
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 11) value = value.slice(0, 11);
@@ -1054,7 +1065,7 @@
             e.target.value = value;
         });
 
-        // Envio do formulário
+        // Form submission
         document.getElementById('leadForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -1062,12 +1073,12 @@
             const btnText = document.getElementById('btnText');
             const btnSpinner = document.getElementById('btnSpinner');
             
-            // Desabilitar botão e mostrar loading
+            // Disable button and show loading
             submitBtn.disabled = true;
             btnText.textContent = 'Processando...';
             btnSpinner.classList.remove('hidden');
             
-            // Coletar dados do formulário
+            // Collect form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
@@ -1078,36 +1089,35 @@
             };
             
             try {
-                // Simulação de envio (Substituir pela URL real do Webhook)
-                const WEBHOOK_URL = 'URL_DO_SEU_WEBHOOK_AQUI'; 
+                // TODO: Replace with your actual webhook URL
+                const WEBHOOK_URL = 'SUA_URL_DE_WEBHOOK_AQUI';
                 
-                // Simula delay de rede
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                
-                // Se tivesse um backend real:
-                /* const response = await fetch(WEBHOOK_URL, {
+                const response = await fetch(WEBHOOK_URL, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
                     body: JSON.stringify(formData)
                 });
-                if (!response.ok) throw new Error('Erro na rede');
-                */
                 
-                // Sucesso
-                document.getElementById('leadForm').style.display = 'none';
-                document.getElementById('successMessage').classList.remove('hidden');
-                
-                // Redirecionar após 3 segundos
-                setTimeout(() => {
-                    // Substitua pelo link do seu checkout
-                    window.location.href = '#checkout'; 
-                }, 3000);
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('leadForm').style.display = 'none';
+                    document.getElementById('successMessage').classList.remove('hidden');
+                    
+                    // Redirect after 3 seconds (you can change the URL)
+                    setTimeout(() => {
+                        window.location.href = 'https://pay.hotmart.com/SEU_LINK_DO_PRODUTO';
+                    }, 3000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
                 
             } catch (error) {
-                console.error('Erro:', error);
-                alert('Ocorreu um erro ao processar sua inscrição. Por favor, tente novamente.');
+                console.error('Error:', error);
+                alert('Ocorreu um erro ao processar seu cadastro. Por favor, tente novamente.');
                 
-                // Reabilitar botão
+                // Re-enable button
                 submitBtn.disabled = false;
                 btnText.textContent = 'Garantir Minha Vaga Agora';
                 btnSpinner.classList.add('hidden');
