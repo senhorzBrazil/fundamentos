@@ -680,6 +680,7 @@
             </div>
         </div>
     </section>
+    
      <section class="py-16 bg-white border-t border-slate-100 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
@@ -890,66 +891,85 @@
             <div class="text-center mb-16">
                 <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Oferta por Tempo Limitado</span>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4">Escolha Seu Plano</h2>
-                <p class="text-slate-600 mt-4">Até 23 de dezembro, invista menos de R$ 0,50 por dia.</p>
+                <p class="text-slate-600 mt-4">Invista no seu futuro pelo preço de um café.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 items-end">
                 
-                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative hover:border-slate-300 transition-all">
-                    <h3 class="text-lg font-bold text-slate-700 mb-2">Mandarim Fundamentals</h3>
-                    <div class="flex items-baseline gap-1 my-4">
-                        <span class="text-sm font-bold">R$</span>
-                        <span class="text-4xl font-extrabold text-slate-900">49,90</span>
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative hover:border-slate-300 transition-all group hover:shadow-xl">
+                    <h3 class="text-lg font-bold text-slate-700 mb-2">Plano Anual</h3>
+                    <p class="text-sm text-slate-500 mb-4 h-10">Para quem quer começar agora com o menor investimento.</p>
+                    
+                    <div class="my-6 pt-4 border-t border-slate-100">
+                        <p class="text-xs text-slate-500 font-bold uppercase mb-1">12x de</p>
+                        <div class="flex items-baseline gap-1 text-slate-900">
+                            <span class="text-2xl font-bold">R$</span>
+                            <span class="text-6xl font-extrabold tracking-tighter">9,70</span>
+                        </div>
+                        <p class="text-sm text-slate-500 font-medium mt-2">ou R$ 97,00 à vista</p>
                     </div>
-                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pagamento único</p>
+
                     <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Certificado</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 20+ Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Suporte da Plataforma</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">✔</span> 12 meses de Acesso</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✔</span> Acesso por 1 Ano</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✔</span> Certificado Incluso</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✔</span> 20+ Módulos</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✔</span> Suporte da Plataforma</li>
                     </ul>
-                    <button onclick="openModal('Mandarim Fundamentals - R$ 49,90')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 transition-all text-center">Quero Aprender Chinês</button>
+                    <button onclick="openModal('Plano Anual - 12x 9,70')" class="block w-full bg-white border-2 border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 hover:border-red-200 hover:text-red-600 transition-all text-center">Selecionar Anual</button>
                 </div>
 
                 <div class="bg-slate-900 rounded-3xl p-8 border-2 border-red-500 relative transform md:-translate-y-4 shadow-2xl">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Mais Popular</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Acesso Vitalício</h3>
-                    <div class="flex items-baseline gap-1 my-4 text-white">
-                        <span class="text-sm font-bold">R$</span>
-                        <span class="text-5xl font-extrabold">97,00</span>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-lg shadow-red-600/40">Recomendado</div>
+                    
+                    <h3 class="text-xl font-bold text-white mb-2">Acesso Vitalício</h3>
+                    <p class="text-sm text-slate-400 mb-4 h-10">Acesso para sempre e todas as atualizações futuras.</p>
+                    
+                    <div class="my-6 pt-4 border-t border-slate-800">
+                        <p class="text-xs text-red-400 font-bold uppercase mb-1">12x de</p>
+                        <div class="flex items-baseline gap-1 text-white">
+                            <span class="text-2xl font-bold">R$</span>
+                            <span class="text-6xl font-extrabold tracking-tighter">16,70</span>
+                        </div>
+                        <p class="text-sm text-slate-400 font-medium mt-2">ou R$ 167,00 à vista</p>
                     </div>
-                    <p class="text-xs text-slate-400 mb-6 font-semibold uppercase">Pagamento único</p>
+
                     <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Certificado Incluído</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Todos os 21 Módulos</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> <strong>Acesso Vitalício</strong></li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-400">✔</span> Atualizações Futuras</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400 font-bold">✔</span> <strong>Acesso Vitalício</strong></li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400 font-bold">✔</span> Certificado Incluso</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400 font-bold">✔</span> Todos os 21 Módulos</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-400 font-bold">✔</span> Atualizações Futuras Grátis</li>
                     </ul>
-                    <button onclick="openModal('Acesso Vitalício - R$ 97,00')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow">GARANTIR ACESSO VITALÍCIO</button>
+                    <button onclick="openModal('Vitalício - 12x 16,70')" class="block w-full bg-red-600 text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30 text-center animate-pulse-slow text-lg">GARANTIR VITALÍCIO</button>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 border border-purple-200 relative hover:shadow-lg transition-all">
+                <div class="bg-gradient-to-b from-purple-50 to-white rounded-3xl p-8 border border-purple-200 relative hover:shadow-xl hover:border-purple-300 transition-all">
                     <h3 class="text-lg font-bold text-purple-900 mb-2">Mandarim + Inglês</h3>
-                    <div class="flex items-baseline gap-1 my-4">
-                        <span class="text-sm font-bold">R$</span>
-                        <span class="text-4xl font-extrabold text-slate-900">147,00</span>
+                    <p class="text-sm text-slate-500 mb-4 h-10">Leve os dois idiomas com acesso vitalício e economize.</p>
+                    
+                    <div class="my-6 pt-4 border-t border-purple-100">
+                        <p class="text-xs text-purple-600 font-bold uppercase mb-1">12x de</p>
+                        <div class="flex items-baseline gap-1 text-slate-900">
+                            <span class="text-2xl font-bold">R$</span>
+                            <span class="text-6xl font-extrabold tracking-tighter">21,70</span>
+                        </div>
+                        <p class="text-sm text-slate-500 font-medium mt-2">ou R$ 217,00 à vista</p>
                     </div>
-                    <p class="text-xs text-slate-500 mb-6 font-semibold uppercase">Pagamento único</p>
+
                     <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Curso de Mandarim</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Curso de Inglês</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> 40+ Módulos no Total</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">✔</span> Acesso Vitalício</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500 font-bold">✔</span> <strong>2 Cursos Completos</strong></li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500 font-bold">✔</span> Acesso Vitalício aos dois</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500 font-bold">✔</span> 40+ Módulos Totais</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-500 font-bold">✔</span> Certificado Duplo</li>
                     </ul>
-                    <button onclick="openModal('Mandarim + Inglês - R$ 147,00')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center">Quero os Dois Cursos</button>
+                    <button onclick="openModal('Combo Duplo - 12x 21,70')" class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition-all text-center shadow-lg shadow-purple-200">Quero os Dois Cursos</button>
                 </div>
 
             </div>
 
             <div class="mt-12 text-center">
-                <div class="inline-flex items-center gap-2 text-slate-500 text-sm">
+                <div class="inline-flex items-center gap-2 text-slate-500 text-sm bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
                     <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span>Transação 100% Segura via Hotmart</span>
+                    <span>Pagamento 100% Seguro via Hotmart</span>
                 </div>
             </div>
         </div>
