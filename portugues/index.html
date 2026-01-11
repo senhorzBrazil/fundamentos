@@ -1063,11 +1063,12 @@ function openModal(planName) {
 }
 
         // Close modal when clicking outside
-        document.getElementById('leadModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
+        function closeModal() {
+    const modal = document.getElementById('leadModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+        
 
         // Phone mask
         document.getElementById('phone').addEventListener('input', function(e) {
