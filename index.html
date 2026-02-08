@@ -1,4 +1,5 @@
 
+
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -240,14 +241,29 @@
     </div>
 
     <!-- Top Banner -->
-    <div class="bg-slate-900 text-white text-xs md:text-sm font-semibold py-3 text-center px-4 sticky top-0 z-[60] shadow-md">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
-            <span>⚡ Este preço ficará disponível até: <span id="top-timer" class="text-yellow-400 font-bold tabular-nums ml-1 text-base">CARREGANDO...</span></span>
-            <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-colors">
+    <div class="bg-slate-900 text-white py-2 md:py-4 px-4 sticky top-0 z-[60] shadow-lg border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-row items-center justify-between md:justify-center md:gap-12">
+        
+        <div class="flex items-center gap-3">
+            <span class="hidden sm:inline text-xl animate-pulse">⚡</span>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-3">
+                <span class="text-[10px] md:text-sm uppercase font-bold text-slate-400 tracking-wider">
+                    Oferta encerra em:
+                </span>
+                <span id="top-timer" class="text-yellow-400 font-black tabular-nums text-sm md:text-xl drop-shadow-[0_0_8px_rgba(250,204,21,0.3)]">
+                    00:00:00
+                </span>
+            </div>
+        </div>
+
+        <div class="flex-shrink-0">
+            <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-4 md:px-8 py-2 md:py-2.5 rounded-full text-[11px] md:text-sm font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-lg shadow-red-600/20 block">
                 Garantir minha vaga
             </a>
         </div>
+
     </div>
+</div>
 
     <!-- Navigation -->
     <nav class="sticky top-[3.5rem] z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
@@ -255,12 +271,10 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">M</div>
-                    <span class="font-bold text-slate-900 tracking-tight text-lg">Mandarim<span class="text-red-600">Fundamentals</span></span>
+                    <span class="font-bold text-slate-900 tracking-tight text-lg">Fundamentos do<span class="text-red-600"> Mandarim</span></span>
                 </div>
                 <div class="hidden md:block">
-                    <a href="#pricing" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                        Começar Agora
-                    </a>
+                    
                 </div>
             </div>
         </div>
@@ -296,7 +310,7 @@
             </p>
             
             <div class="mt-2 text-red-600 font-bold text-lg animate-pulse">
-                De <span class="line-through text-slate-400">R$ 497,00</span> → <span class="text-2xl">R$ 49,90</span> (pagamento único)
+                De <span class="line-through text-slate-400">R$ 297,00</span> → <span class="text-2xl">R$ 47,90</span> (pagamento único)
             </div>
 
             <div onclick="openVideoModal('xBlJ0OIxuZs')" class="mt-10 relative max-w-3xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-white bg-black aspect-video group cursor-pointer">
@@ -720,7 +734,7 @@
                     <div class="flex justify-center mb-2">
                         <span class="text-yellow-400 text-lg">★★★★★</span>
                     </div>
-                    <p class="font-bold text-slate-900 text-lg italic uppercase tracking-tighter">"Aulas direto ao ponto"</p>
+                    <p class="font-bold text-slate-900 text-lg italic uppercase tracking-tighter">"Aluno Gabriel"</p>
                 </div>
             </div>
 
@@ -739,7 +753,7 @@
                     <div class="flex justify-center mb-2">
                         <span class="text-yellow-400 text-lg">★★★★★</span>
                     </div>
-                    <p class="font-bold text-slate-900 text-lg italic uppercase tracking-tighter">"Melhor investimento"</p>
+                    <p class="font-bold text-slate-900 text-lg italic uppercase tracking-tighter">"Aluno Leonardo"</p>
                 </div>
             </div>
 
@@ -758,7 +772,7 @@
                     <div class="flex justify-center mb-2">
                         <span class="text-yellow-400 text-lg">★★★★★</span>
                     </div>
-                    <p class="font-bold text-slate-900 text-lg italic uppercase tracking-tighter">"Surpreendente e fácil"</p>
+                    <p class="font-bold text-slate-900 text-lg italic uppercase tracking-tighter">"Aluno Gabriel"</p>
                 </div>
             </div>
 
@@ -925,23 +939,110 @@
     </div>
 
     <!-- Price Comparison -->
-    <section class="py-16 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h3 class="text-xl font-bold text-slate-600 mb-6">Se você entrasse SEM essa promoção, pagaria:</h3>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 inline-block text-left w-full md:w-auto">
-                <ul class="space-y-3 mb-6 text-slate-500">
-                    <li class="flex justify-between gap-8"><span>📘 Curso Mandarim Fundamentals</span> <span class="font-bold line-through">R$ 597,00</span></li>
-                    <li class="flex justify-between gap-8"><span>📄 Apostila do Curso</span> <span class="font-bold line-through">R$ 29,90</span></li>
-                    <li class="flex justify-between gap-8"><span>💬 Suporte Direto</span> <span class="font-bold line-through">R$ 497,00</span></li>
-                </ul>
-                <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                    <span class="text-lg font-bold text-slate-900">Valor Total:</span>
-                    <span class="text-2xl font-extrabold text-red-400 line-through">R$ 1.123,90</span>
+   <section class="py-12 md:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+        <h3 class="text-lg md:text-xl font-bold text-slate-600 mb-8 uppercase tracking-widest">
+            Se você entrasse <span class="text-red-500 underline decoration-2 underline-offset-4">SEM</span> essa promoção:
+        </h3>
+        
+        <div class="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-200 inline-block text-left w-full max-w-md mx-auto relative overflow-hidden transition-transform hover:scale-[1.01]">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] rotate-[-15deg] select-none">
+                <span class="text-[10rem] font-black italic">OLD</span>
+            </div>
+
+            <ul class="space-y-4 mb-8 text-slate-500 relative z-10">
+                <li class="flex justify-between items-center gap-4 border-b border-slate-50 pb-2">
+                    <span class="text-sm md:text-base font-medium">📘 Curso Mandarim Fundamentals</span> 
+                    <span class="font-bold line-through text-slate-400 text-sm italic">R$ 297,00</span>
+                </li>
+                <li class="flex justify-between items-center gap-4 border-b border-slate-50 pb-2">
+                    <span class="text-sm md:text-base font-medium">📄 Apostila Digital (PDF)</span> 
+                    <span class="font-bold line-through text-slate-400 text-sm italic">R$ 29,90</span>
+                </li>
+                <li class="flex justify-between items-center gap-4">
+                    <span class="text-sm md:text-base font-medium">💬 Suporte Direto</span> 
+                    <span class="font-bold line-through text-slate-400 text-sm italic">R$ 197,00</span>
+                </li>
+            </ul>
+
+            <div class="border-t-4 border-dotted border-slate-200 pt-6 flex justify-between items-center relative z-10">
+                <span class="text-base md:text-lg font-black text-slate-900 uppercase">Valor Total:</span>
+                <div class="text-right">
+                    <span class="text-2xl md:text-4xl font-black text-red-500/40 line-through tracking-tighter block leading-none">R$ 524,90</span>
                 </div>
             </div>
-            <p class="mt-6 text-2xl font-bold text-red-600">❌ Mas você não vai pagar isso.</p>
         </div>
-    </section>
+
+        <div class="mt-10">
+            <p class="text-2xl md:text-5xl font-black text-red-600 tracking-tighter uppercase italic leading-tight">
+                ❌ Mas hoje você não vai <br class="hidden md:block"> pagar nem metade disso!
+            </p>
+        </div>
+
+        <div class="mt-12 bg-white/50 backdrop-blur-sm p-6 rounded-3xl border border-slate-200 inline-block shadow-sm">
+            <p class="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">A oferta encerra em definitivo:</p>
+            
+            <div id="countdown-feb" class="flex gap-2 md:gap-5 font-black text-slate-800 tabular-nums">
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-900 text-white rounded-xl md:rounded-2xl w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-lg">
+                        <span id="days" class="text-2xl md:text-4xl">00</span>
+                    </div>
+                    <span class="text-[10px] uppercase text-slate-400 mt-2 font-bold">Dias</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-900 text-white rounded-xl md:rounded-2xl w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-lg text-yellow-400">
+                        <span id="hours" class="text-2xl md:text-4xl">00</span>
+                    </div>
+                    <span class="text-[10px] uppercase text-slate-400 mt-2 font-bold">Horas</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-900 text-white rounded-xl md:rounded-2xl w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-lg">
+                        <span id="minutes" class="text-2xl md:text-4xl">00</span>
+                    </div>
+                    <span class="text-[10px] uppercase text-slate-400 mt-2 font-bold">Minutos</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-red-600 text-white rounded-xl md:rounded-2xl w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-lg shadow-red-500/20">
+                        <span id="seconds" class="text-2xl md:text-4xl">00</span>
+                    </div>
+                    <span class="text-[10px] uppercase text-red-500 mt-2 font-black animate-pulse text-center">Segs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function startCountdown() {
+        // Alvo: Último dia de Fevereiro (28) às 23:59:59
+        const target = new Date("February 28, 2026 23:59:59").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const dist = target - now;
+
+            if (dist < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown-feb").innerHTML = "<p class='text-red-600 font-black text-xl'>OFERTA ENCERRADA</p>";
+                return;
+            }
+
+            // Cálculos
+            const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+            const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((dist % (1000 * 60)) / 1000);
+
+            // Inserção (com zero à esquerda)
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+
+        }, 1000);
+    }
+    startCountdown();
+</script>
 
     <!-- Pricing Section -->
     <section id="pricing" class="py-24 px-4 relative">
@@ -1109,45 +1210,47 @@
     </div>
 
     <!-- Upsell Modal -->
-    <div id="upsellModal" class="modal-overlay">
-        <div class="modal-content max-w-lg">
-            <div class="relative">
-                <div class="bg-white rounded-3xl border-4 border-yellow-400 text-center relative shadow-2xl overflow-hidden">
-                    <div class="bg-green-600 text-white font-black px-6 py-2 text-sm uppercase tracking-widest">✨ CUPOM DESBLOQUEADO ✨</div>
+   <div id="upsellModal" class="modal-overlay">
+    <div class="modal-content max-w-lg mx-4 md:mx-auto">
+        <div class="relative">
+            <div class="bg-white rounded-2xl md:rounded-3xl border-2 md:border-4 border-yellow-400 text-center relative shadow-2xl overflow-hidden">
+                <div class="bg-green-600 text-white font-black px-4 md:px-6 py-2 text-xs md:text-sm uppercase tracking-widest">✨ CUPOM DESBLOQUEADO ✨</div>
+                
+                <div class="p-4 md:p-8">
+                    <h3 class="text-xl md:text-3xl font-black mb-2 tracking-tighter leading-tight px-2">ESPERA! VOCÊ GANHOU UM UPGRADE!</h3>
+                    <p id="upsellSubheadline" class="text-sm md:text-base text-slate-600 mb-4 md:mb-6 italic leading-tight px-2"></p>
                     
-                    <div class="p-8">
-                        <h3 class="text-3xl font-black mb-2 tracking-tighter leading-tight">ESPERA! VOCÊ GANHOU UM UPGRADE!</h3>
-                        <p id="upsellSubheadline" class="text-base text-slate-600 mb-6 italic leading-tight"></p>
-                        
-                        <div class="bg-slate-50 rounded-2xl p-6 mb-6 border-2 border-dashed border-slate-200">
-                            <div class="flex items-center justify-center gap-4 my-4">
-                                <div class="text-center">
-                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Sua Parcela</p>
-                                    <p id="parcelaDe" class="text-xl text-slate-400 line-through font-bold"></p>
-                                </div>
-                                <div class="text-2xl text-slate-300">➔</div>
-                                <div class="text-center">
-                                    <p class="text-[10px] text-green-600 font-black uppercase">Nova Parcela</p>
-                                    <p id="parcelaPara" class="text-5xl text-green-600 font-black tracking-tighter"></p>
-                                </div>
+                    <div class="bg-slate-50 rounded-xl md:rounded-2xl p-4 md:p-6 mb-4 md:mb-6 border-2 border-dashed border-slate-200">
+                        <div class="flex items-center justify-center gap-3 md:gap-4 my-3 md:my-4">
+                            <div class="text-center flex-1">
+                                <p class="text-[9px] md:text-[10px] text-slate-400 font-bold uppercase">Sua Parcela</p>
+                                <p id="parcelaDe" class="text-lg md:text-xl text-slate-400 line-through font-bold"></p>
                             </div>
-                            <p class="text-xs text-slate-500 font-bold">Por apenas <span id="difValor" class="text-green-600 text-sm"></span> a mais por mês.</p>
+                            <div class="text-xl md:text-2xl text-slate-300">➔</div>
+                            <div class="text-center flex-1">
+                                <p class="text-[9px] md:text-[10px] text-green-600 font-black uppercase">Nova Parcela</p>
+                                <p id="parcelaPara" class="text-3xl md:text-5xl text-green-600 font-black tracking-tighter"></p>
+                            </div>
                         </div>
-
-                        <div id="upsellBenefits" class="text-left space-y-3 text-sm font-bold text-slate-700 bg-white p-4 rounded-xl shadow-sm mb-6 border border-slate-100"></div>
-
-                        <button id="upsellConfirmBtn" class="block w-full bg-green-500 text-white font-black py-5 rounded-2xl hover:bg-green-600 transition-all text-xl shadow-xl transform hover:scale-105 uppercase tracking-tighter">Aceitar Cupom e Fazer Upgrade</button>
-                        
-                        <button id="upsellDeclineBtn" class="mt-6 w-full py-2 text-gray-400 font-bold hover:text-red-500 transition-all text-[10px] uppercase tracking-widest italic underline">
-                            Não, prefiro manter o plano anterior
-                        </button>
-                        
-                        <p class="mt-6 text-[10px] text-slate-400 uppercase font-bold tracking-widest">Oferta expira em: <span id="timer">05:00</span></p>
+                        <p class="text-xs text-slate-500 font-bold">Por apenas <span id="difValor" class="text-green-600 text-sm"></span> a mais por mês.</p>
                     </div>
+                    
+                    <div id="upsellBenefits" class="text-left space-y-2 md:space-y-3 text-xs md:text-sm font-bold text-slate-700 bg-white p-3 md:p-4 rounded-xl shadow-sm mb-4 md:mb-6 border border-slate-100"></div>
+                    
+                    <button id="upsellConfirmBtn" class="block w-full bg-green-500 text-white font-black py-4 md:py-5 rounded-xl md:rounded-2xl hover:bg-green-600 transition-all text-lg md:text-xl shadow-xl transform hover:scale-105 uppercase tracking-tighter">
+                        Aceitar Cupom e Fazer Upgrade
+                    </button>
+                    
+                    <button id="upsellDeclineBtn" class="mt-4 md:mt-6 w-full py-2 text-gray-400 font-bold hover:text-red-500 transition-all text-[9px] md:text-[10px] uppercase tracking-widest italic underline">
+                        Não, prefiro manter o plano anterior
+                    </button>
+                    
+                    <p class="mt-4 md:mt-6 text-[9px] md:text-[10px] text-slate-400 uppercase font-bold tracking-widest">Oferta expira em: <span id="timer">05:00</span></p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- FAQ Section -->
     <section class="pb-24 pt-12 px-4 bg-white">
@@ -1193,29 +1296,47 @@
         // TIMER FUNCTION
         // ====================
         function updateTimer() {
-            const now = new Date();
-            let target = new Date();
-            target.setHours(23, 59, 59, 999);
+    const now = new Date().getTime();
+    // Define a data alvo: 28 de Fevereiro de 2026 às 23:59:00
+    const target = new Date("February 28, 2026 23:59:00").getTime();
+    
+    const diff = target - now;
 
-            const diff = target - now;
-            if (diff <= 0) return;
+    // Se o tempo acabar
+    if (diff <= 0) {
+        const displayEncerrado = "OFERTA ENCERRADA";
+        if(document.getElementById('top-timer')) document.getElementById('top-timer').innerText = displayEncerrado;
+        return;
+    }
 
-            const days = "00";
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    // Cálculos de tempo
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
 
-            const dStr = days.toString().padStart(2, '0');
-            const hStr = hours.toString().padStart(2, '0');
-            const mStr = minutes.toString().padStart(2, '0');
-            const sStr = seconds.toString().padStart(2, '0');
+    // Formatação com zero à esquerda (01, 02, etc)
+    const dStr = d.toString().padStart(2, '0');
+    const hStr = h.toString().padStart(2, '0');
+    const mStr = m.toString().padStart(2, '0');
+    const sStr = s.toString().padStart(2, '0');
 
-            const topTimer = document.getElementById('top-timer');
-            if(topTimer) topTimer.innerText = `${dStr} Dias : ${hStr} Horas : ${mStr} Min : ${sStr} Seg`;
-        }
+    // 1. Atualiza a Barra do Topo (Se existir)
+    const topTimer = document.getElementById('top-timer');
+    if(topTimer) {
+        topTimer.innerText = `${dStr}d : ${hStr}h : ${mStr}m : ${sStr}s`;
+    }
 
-        setInterval(updateTimer, 1000);
-        updateTimer();
+    // 2. Atualiza os blocos do cronômetro grande (Se existirem)
+    if(document.getElementById('days')) document.getElementById('days').innerText = dStr;
+    if(document.getElementById('hours')) document.getElementById('hours').innerText = hStr;
+    if(document.getElementById('minutes')) document.getElementById('minutes').innerText = mStr;
+    if(document.getElementById('seconds')) document.getElementById('seconds').innerText = sStr;
+}
+
+// Executa a cada segundo
+setInterval(updateTimer, 1000);
+updateTimer();
 
         // ====================
         // MODAL FUNCTIONS
