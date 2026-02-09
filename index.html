@@ -1170,7 +1170,7 @@
 
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-1.5">Por onde conheceu a Karina?</label>
-                            <select required class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl bg-white text-slate-600 transition-all text-sm">
+                            <select id="sourceSimple" required class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl bg-white text-slate-600 transition-all text-sm">
                                 <option value="">Selecione uma opção</option>
                                 <option value="Instagram">Instagram</option>
                                 <option value="YouTube">YouTube</option>
@@ -1181,7 +1181,7 @@
 
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-1.5">Há quanto tempo conhece ela?</label>
-                            <select required class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl bg-white text-slate-600 transition-all text-sm">
+                            <select id="knownTimeSimple" required class="form-input w-full px-3 py-2.5 border-2 border-slate-200 rounded-xl bg-white text-slate-600 transition-all text-sm">
                                 <option value="">Selecione uma opção</option>
                                 <option value="Menos de 1 semana">Menos de 1 semana</option>
                                 <option value="Algumas semanas">Algumas semanas</option>
@@ -1493,42 +1493,104 @@ updateTimer();
         });
 
         // Simple form submission with upsell logic
-        document.getElementById('leadFormSimple').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Close lead modal
-            closeLeadModalSimple();
-            
-            // Show upsell based on selected plan
-            if (currentPlanoID === 'SEMESTRAL') {
-                // FLUXO A: De Semestral para Vitalício Mandarim
-                showUpsell(
-                    "Identificamos que seu acesso expira em breve!",
-                    "R$ 8,99", 
-                    "R$ 13,13", 
-                    "R$ 4,14", 
-                    "https://pay.hotmart.com/L42057766K?off=4hqsg4cp&checkoutMode=10",
-                    "https://pay.hotmart.com/P88274309E?off=6vuf42mf&checkoutMode=10&bid=1714885060954",
-                    ["✅ ACESSO VITALÍCIO: O curso é seu para sempre.", "✅ SEM MENSALIDADE: Pague uma vez e pronto."]
-                );
-            } else if (currentPlanoID === 'VITALICIO') {
-                // FLUXO B: De Vitalício Mandarim para Combo Vitalício
-                showUpsell(
-                    "Por que levar apenas um se você pode ter os dois?",
-                    "R$ 15,30", 
-                    "R$ 17,27", 
-                    "R$ 1,97", 
-                    "https://pay.hotmart.com/T90411431Q?off=dkey5zei&checkoutMode=10&bid=1770122832899",
-                    "https://pay.hotmart.com/L42057766K?off=pm04y85r",
-                    ["✅ MANDARIM + INGLÊS: Vitalícios.", "✅ UPGRADE ÚNICO: Economia máxima por mês."]
-                );
-            } else {
-                // COMBO - Go directly to checkout
-                window.location.href = "https://pay.hotmart.com/T90411431Q?off=znggpv7w&checkoutMode=10&bid=1770122341611";
-            }
+        // ==========================
+// WEBHOOK + LOGS DE DEBUG (leadFormSimple)
+// ==========================
+document.getElementById('leadFormSimple').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    console.log("🔵 [DEBUG] leadFormSimple submit -> coletando dados...");
+
+    const submitBtn = document.getElementById('submitBtnSimple');
+    const btnText = document.getElementById('btnTextSimple');
+
+    // Disable button and show loading
+    submitBtn.disabled = true;
+    const originalText = btnText.textContent;
+    btnText.textContent = 'Processando...';
+
+    const plano = document.getElementById('planoIDSimple').value;
+
+    const formData = {
+        name: document.getElementById('nameSimple').value,
+        email: document.getElementById('emailSimple').value,
+        phone: document.getElementById('phoneSimple').value,
+        countryCode: "+55",
+        plan: plano,
+        tag: "mandarim-" + String(plano).toLowerCase(),
+        source: document.getElementById('sourceSimple')?.value || "",
+        knownTime: document.getElementById('knownTimeSimple')?.value || "",
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer || "Direct",
+        pageName: "Landing Page Mandarim"
+    };
+
+    console.log("🟡 [DEBUG] Payload do webhook:", formData);
+
+    const WEBHOOK_URL = "https://hook.us2.make.com/5p9t43rtw5dem3ccq657ahzj2emcg21j";
+
+    try {
+        console.log("🟡 [DEBUG] Enviando webhook para:", WEBHOOK_URL);
+
+        const response = await fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
         });
 
-        function showUpsell(subtitle, de, para, diferenca, linkAceitar, linkRecusar, benefits) {
+        const responseText = await response.text().catch(() => "");
+        console.log("🟢 [SUCESSO] Webhook enviado com sucesso!", {
+            status: response.status,
+            response: responseText
+        });
+
+    } catch (error) {
+        console.error("🔴 [ERRO] Falha ao enviar webhook:", error);
+        console.warn("⚠️ [DEBUG] Continuando fluxo mesmo com erro no webhook (não bloquear usuário).");
+    } finally {
+        // Continue para upsell independente da resposta do webhook
+        console.log("🔵 [DEBUG] Fechando modal e continuando para upsell/checkout...");
+
+        // Close lead modal
+        closeLeadModalSimple();
+
+        // Show upsell based on selected plan
+        if (currentPlanoID === 'SEMESTRAL') {
+            // FLUXO A: De Semestral para Vitalício Mandarim
+            showUpsell(
+                "Identificamos que seu acesso expira em breve!",
+                "R$ 8,99",
+                "R$ 13,13",
+                "R$ 4,14",
+                "https://pay.hotmart.com/L42057766K?off=4hqsg4cp&checkoutMode=10",
+                "https://pay.hotmart.com/P88274309E?off=6vuf42mf&checkoutMode=10&bid=1714885060954",
+                ["✅ ACESSO VITALÍCIO: O curso é seu para sempre.", "✅ SEM MENSALIDADE: Pague uma vez e pronto."]
+            );
+        } else if (currentPlanoID === 'VITALICIO') {
+            // FLUXO B: De Vitalício Mandarim para Combo Vitalício
+            showUpsell(
+                "Por que levar apenas um se você pode ter os dois?",
+                "R$ 15,30",
+                "R$ 17,27",
+                "R$ 1,97",
+                "https://pay.hotmart.com/T90411431Q?off=dkey5zei&checkoutMode=10&bid=1770122832899",
+                "https://pay.hotmart.com/L42057766K?off=pm04y85r",
+                ["✅ MANDARIM + INGLÊS: Vitalícios.", "✅ UPGRADE ÚNICO: Economia máxima por mês."]
+            );
+        } else {
+            // COMBO - Go directly to checkout
+            console.log("🟢 [DEBUG] Plano COMBO -> redirecionando para checkout...");
+            window.location.href = "https://pay.hotmart.com/T90411431Q?off=znggpv7w&checkoutMode=10&bid=1770122341611";
+        }
+
+        // Re-enable button
+        submitBtn.disabled = false;
+        btnText.textContent = originalText;
+        console.log("🔵 [DEBUG] leadFormSimple finalizado. Botão reativado.");
+    }
+});
+function showUpsell(subtitle, de, para, diferenca, linkAceitar, linkRecusar, benefits) {
             document.getElementById('upsellSubheadline').innerText = subtitle;
             document.getElementById('parcelaDe').innerText = de;
             document.getElementById('parcelaPara').innerText = para;
