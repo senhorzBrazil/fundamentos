@@ -1,5 +1,3 @@
-
-
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +5,27 @@
     <meta name="description" content="Mandarim Fundamentals -  do absoluto zero ao nível HSK 1.">
     
     <title>Mandarim Fundamentals - Aprenda Chinês Rápido</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '862583327816117');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=862583327816117&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
@@ -1055,15 +1074,15 @@
             <div class="grid md:grid-cols-3 gap-8 items-end">
                 
                 <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden">
-                    <div class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-4 inline-block tracking-tighter">Acesso Semestral</div>
+                    <div class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-[10px] font-black uppercase mb-4 inline-block tracking-tighter">Acesso Trimestral</div>
                     <h3 class="text-xl font-bold text-slate-700 mb-2">Plano Normal</h3>
                     <div class="my-6">
-                        <p class="text-sm text-slate-500 italic mb-1 font-bold">Acesso por 6 meses</p>
+                        <p class="text-sm text-slate-500 italic mb-1 font-bold">Acesso por 3 meses</p>
                         <p class="text-sm text-slate-500">6x de <span class="text-4xl font-extrabold text-slate-900">R$ 8,99</span></p>
                         <p class="text-xs font-bold text-slate-400">ou R$ 47,90 à vista</p>
                     </div>
                     <ul class="space-y-3 text-sm text-slate-600 mb-8 text-left border-t border-slate-100 pt-6 font-medium">
-                        <li class="flex items-center gap-2">❌ Perde acesso após 6 meses</li>
+                        <li class="flex items-center gap-2">❌ Perde acesso após  3meses</li>
                         <li class="flex items-center gap-2">✔ Certificado Digital</li>
                         <li class="flex items-center gap-2">✔ 20+ Módulos de Mandarim</li>
                     </ul>
@@ -1492,105 +1511,123 @@ updateTimer();
             e.target.value = value;
         });
 
-        // Simple form submission with upsell logic
         // ==========================
-// WEBHOOK + LOGS DE DEBUG (leadFormSimple)
-// ==========================
-document.getElementById('leadFormSimple').addEventListener('submit', async function(e) {
-    e.preventDefault();
+        // FORM SUBMISSION WITH FACEBOOK PIXEL LEAD EVENT
+        // ==========================
+        document.getElementById('leadFormSimple').addEventListener('submit', async function(e) {
+            e.preventDefault();
 
-    console.log("🔵 [DEBUG] leadFormSimple submit -> coletando dados...");
+            console.log("🔵 [DEBUG] leadFormSimple submit -> coletando dados...");
 
-    const submitBtn = document.getElementById('submitBtnSimple');
-    const btnText = document.getElementById('btnTextSimple');
+            const submitBtn = document.getElementById('submitBtnSimple');
+            const btnText = document.getElementById('btnTextSimple');
 
-    // Disable button and show loading
-    submitBtn.disabled = true;
-    const originalText = btnText.textContent;
-    btnText.textContent = 'Processando...';
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            const originalText = btnText.textContent;
+            btnText.textContent = 'Processando...';
 
-    const plano = document.getElementById('planoIDSimple').value;
+            const plano = document.getElementById('planoIDSimple').value;
 
-    const formData = {
-        name: document.getElementById('nameSimple').value,
-        email: document.getElementById('emailSimple').value,
-        phone: document.getElementById('phoneSimple').value,
-        countryCode: "+55",
-        plan: plano,
-        tag: "mandarim-" + String(plano).toLowerCase(),
-        source: document.getElementById('sourceSimple')?.value || "",
-        knownTime: document.getElementById('knownTimeSimple')?.value || "",
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        referrer: document.referrer || "Direct",
-        pageName: "Landing Page Mandarim"
-    };
+            const formData = {
+                name: document.getElementById('nameSimple').value,
+                email: document.getElementById('emailSimple').value,
+                phone: document.getElementById('phoneSimple').value,
+                countryCode: "+55",
+                plan: plano,
+                tag: "mandarim-" + String(plano).toLowerCase(),
+                source: document.getElementById('sourceSimple')?.value || "",
+                knownTime: document.getElementById('knownTimeSimple')?.value || "",
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                referrer: document.referrer || "Direct",
+                pageName: "Landing Page Mandarim"
+            };
 
-    console.log("🟡 [DEBUG] Payload do webhook:", formData);
+            console.log("🟡 [DEBUG] Payload do webhook:", formData);
 
-    const WEBHOOK_URL = "https://hook.us2.make.com/5p9t43rtw5dem3ccq657ahzj2emcg21j";
+            // ====================
+            // DISPARAR EVENTO LEAD DO FACEBOOK PIXEL
+            // ====================
+            try {
+                console.log("🟡 [DEBUG] Disparando evento Lead do Facebook Pixel...");
+                
+                fbq('track', 'Lead', {
+                    content_name: plano,
+                    content_category: 'Mandarim Fundamentals',
+                    value: currentPlanPrice.replace(',', '.'),
+                    currency: 'BRL'
+                });
+                
+                console.log("🟢 [SUCESSO] Evento Lead disparado com sucesso!");
+            } catch (error) {
+                console.error("🔴 [ERRO] Falha ao disparar evento Lead:", error);
+            }
 
-    try {
-        console.log("🟡 [DEBUG] Enviando webhook para:", WEBHOOK_URL);
+            const WEBHOOK_URL = "https://hook.us2.make.com/5p9t43rtw5dem3ccq657ahzj2emcg21j";
 
-        const response = await fetch(WEBHOOK_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
+            try {
+                console.log("🟡 [DEBUG] Enviando webhook para:", WEBHOOK_URL);
+
+                const response = await fetch(WEBHOOK_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+
+                const responseText = await response.text().catch(() => "");
+                console.log("🟢 [SUCESSO] Webhook enviado com sucesso!", {
+                    status: response.status,
+                    response: responseText
+                });
+
+            } catch (error) {
+                console.error("🔴 [ERRO] Falha ao enviar webhook:", error);
+                console.warn("⚠️ [DEBUG] Continuando fluxo mesmo com erro no webhook (não bloquear usuário).");
+            } finally {
+                // Continue para upsell independente da resposta do webhook
+                console.log("🔵 [DEBUG] Fechando modal e continuando para upsell/checkout...");
+
+                // Close lead modal
+                closeLeadModalSimple();
+
+                // Show upsell based on selected plan
+                if (currentPlanoID === 'SEMESTRAL') {
+                    // FLUXO A: De Semestral para Vitalício Mandarim
+                    showUpsell(
+                        "Identificamos que seu acesso expira em breve!",
+                        "R$ 8,99",
+                        "R$ 13,13",
+                        "R$ 4,14",
+                        "https://pay.hotmart.com/L42057766K?off=4hqsg4cp&checkoutMode=10",
+                        "https://pay.hotmart.com/P88274309E?off=wygtpdoh&checkoutMode=10&bid=1771065046588",
+                        ["✅ ACESSO VITALÍCIO: O curso é seu para sempre.", "✅ SEM MENSALIDADE: Pague uma vez e pronto."]
+                    );
+                } else if (currentPlanoID === 'VITALICIO') {
+                    // FLUXO B: De Vitalício Mandarim para Combo Vitalício
+                    showUpsell(
+                        "Por que levar apenas um se você pode ter os dois?",
+                        "R$ 15,30",
+                        "R$ 17,27",
+                        "R$ 1,97",
+                        "https://pay.hotmart.com/T90411431Q?off=dkey5zei&checkoutMode=10&bid=1770122832899",
+                        "https://pay.hotmart.com/L42057766K?off=pm04y85r",
+                        ["✅ MANDARIM + INGLÊS: Vitalícios.", "✅ UPGRADE ÚNICO: Economia máxima por mês."]
+                    );
+                } else {
+                    // COMBO - Go directly to checkout
+                    console.log("🟢 [DEBUG] Plano COMBO -> redirecionando para checkout...");
+                    window.location.href = "https://pay.hotmart.com/T90411431Q?off=znggpv7w&checkoutMode=10&bid=1770122341611";
+                }
+
+                // Re-enable button
+                submitBtn.disabled = false;
+                btnText.textContent = originalText;
+                console.log("🔵 [DEBUG] leadFormSimple finalizado. Botão reativado.");
+            }
         });
 
-        const responseText = await response.text().catch(() => "");
-        console.log("🟢 [SUCESSO] Webhook enviado com sucesso!", {
-            status: response.status,
-            response: responseText
-        });
-
-    } catch (error) {
-        console.error("🔴 [ERRO] Falha ao enviar webhook:", error);
-        console.warn("⚠️ [DEBUG] Continuando fluxo mesmo com erro no webhook (não bloquear usuário).");
-    } finally {
-        // Continue para upsell independente da resposta do webhook
-        console.log("🔵 [DEBUG] Fechando modal e continuando para upsell/checkout...");
-
-        // Close lead modal
-        closeLeadModalSimple();
-
-        // Show upsell based on selected plan
-        if (currentPlanoID === 'SEMESTRAL') {
-            // FLUXO A: De Semestral para Vitalício Mandarim
-            showUpsell(
-                "Identificamos que seu acesso expira em breve!",
-                "R$ 8,99",
-                "R$ 13,13",
-                "R$ 4,14",
-                "https://pay.hotmart.com/L42057766K?off=4hqsg4cp&checkoutMode=10",
-                "https://pay.hotmart.com/P88274309E?off=6vuf42mf&checkoutMode=10&bid=1714885060954",
-                ["✅ ACESSO VITALÍCIO: O curso é seu para sempre.", "✅ SEM MENSALIDADE: Pague uma vez e pronto."]
-            );
-        } else if (currentPlanoID === 'VITALICIO') {
-            // FLUXO B: De Vitalício Mandarim para Combo Vitalício
-            showUpsell(
-                "Por que levar apenas um se você pode ter os dois?",
-                "R$ 15,30",
-                "R$ 17,27",
-                "R$ 1,97",
-                "https://pay.hotmart.com/T90411431Q?off=dkey5zei&checkoutMode=10&bid=1770122832899",
-                "https://pay.hotmart.com/L42057766K?off=pm04y85r",
-                ["✅ MANDARIM + INGLÊS: Vitalícios.", "✅ UPGRADE ÚNICO: Economia máxima por mês."]
-            );
-        } else {
-            // COMBO - Go directly to checkout
-            console.log("🟢 [DEBUG] Plano COMBO -> redirecionando para checkout...");
-            window.location.href = "https://pay.hotmart.com/T90411431Q?off=znggpv7w&checkoutMode=10&bid=1770122341611";
-        }
-
-        // Re-enable button
-        submitBtn.disabled = false;
-        btnText.textContent = originalText;
-        console.log("🔵 [DEBUG] leadFormSimple finalizado. Botão reativado.");
-    }
-});
-function showUpsell(subtitle, de, para, diferenca, linkAceitar, linkRecusar, benefits) {
+        function showUpsell(subtitle, de, para, diferenca, linkAceitar, linkRecusar, benefits) {
             document.getElementById('upsellSubheadline').innerText = subtitle;
             document.getElementById('parcelaDe').innerText = de;
             document.getElementById('parcelaPara').innerText = para;
