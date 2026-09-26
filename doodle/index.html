@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light only">
-<meta name="description" content="Mandarim Fundamentals - do absoluto zero ao nível HSK 1.">
-<title>Mandarim Fundamentals - Aprenda Chinês Rápido</title>
+<meta name="description" content="Fundamentos do Mandarim - do absoluto zero ao nível HSK 1.">
+<title>Fundamentos do Mandarim - Aprenda Chinês Rápido</title>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -148,7 +148,7 @@ fbq('track', 'PageView');
   .hz-note { display: block; font-family: var(--hand); font-size: 15px; color: var(--ink-soft); text-align: center; margin-top: 2px; }
 
   .video { position: relative; display: block; width: 100%; max-width: 780px; margin: 0 auto; aspect-ratio: 16 / 9; padding: 10px; cursor: pointer; background: none; border: 0; font: inherit; color: inherit; --skfill: var(--card); }
-  .video .frame { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 14px 22px 12px 26px / 24px 12px 22px 14px; background: #000; }
+  .video .frame { display: block; position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 14px 22px 12px 26px / 24px 12px 22px 14px; background: #000; }
   .video img { width: 100%; height: 100%; object-fit: cover; opacity: .72; transition: opacity .2s; }
   .video:hover img { opacity: .9; }
   .play { position: absolute; left: 50%; top: 50%; width: 96px; height: 96px; transform: translate(-50%, -50%); transition: transform .2s; }
@@ -193,9 +193,9 @@ fbq('track', 'PageView');
   .feat .n { flex: 0 0 auto; font-family: var(--marker); font-size: 30px; color: var(--red); line-height: 1.1; }
   .feat h4 { font-size: 21px; }
   .feat p { margin: 2px 0 0; font-size: 18px; color: var(--ink-soft); line-height: 1.45; }
-  .lesson-bar { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 18px 12px; background: linear-gradient(transparent, rgba(0,0,0,.85)); color: #fff; }
-  .lesson-bar b { font-size: 18px; }
-  .prog { height: 6px; background: rgba(255,255,255,.3); border-radius: 4px; margin-top: 8px; overflow: hidden; }
+  .lesson-bar { display: block; text-align: left; position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 18px 12px; background: linear-gradient(transparent, rgba(0,0,0,.85)); color: #fff; }
+  .lesson-bar b { display: block; font-size: 18px; line-height: 1.25; }
+  .prog { display: block; height: 6px; background: rgba(255,255,255,.3); border-radius: 4px; margin-top: 8px; overflow: hidden; }
   .prog i { display: block; width: 33%; height: 100%; background: var(--red); }
   .times { display: flex; justify-content: space-between; font-size: 13px; opacity: .8; margin-top: 2px; font-variant-numeric: tabular-nums; }
   .hint { text-align: center; color: var(--ink-soft); font-size: 17px; margin-top: 14px; }
@@ -394,6 +394,10 @@ fbq('track', 'PageView');
     .sticker { right: -6px; }
     .video .cap { font-size: 14px; left: 12px; bottom: 10px; }
     .video .play { width: 64px; height: 64px; }
+    .board .video .play { top: 34%; width: 54px; height: 54px; }
+    .lesson-bar { padding: 10px 12px 8px; }
+    .lesson-bar b { font-size: 14px; }
+    .times { font-size: 12px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -407,7 +411,7 @@ fbq('track', 'PageView');
 <svg class="defs" aria-hidden="true">
   <!-- contorno irregular fixo -->
   <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
-  <!-- contorno que treme (line boil), usado só em poucos elementos -->
+  <!-- segunda variação de contorno irregular (parada) -->
   <filter id="boil"><feTurbulence id="boilNoise" type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="1" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
   <symbol id="play" viewBox="0 0 100 100"><path d="M50 5 C 76 4, 96 24, 95 50 C 96 76, 74 96, 49 95 C 23 96, 4 75, 5 49 C 4 25, 25 6, 52 6" fill="#d72638" stroke="#141414" stroke-width="5" stroke-linecap="round"/><path d="M40 31 L70 50 L40 69 Z" fill="#fff" stroke="#141414" stroke-width="4" stroke-linejoin="round"/></symbol>
   <symbol id="check" viewBox="0 0 26 26"><path d="M3 14 C 6 16, 8 19, 10 22 C 13 15, 17 9, 23 3" fill="none" stroke="#d72638" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -513,7 +517,7 @@ fbq('track', 'PageView');
     <p>Você não precisa se mudar para a China. Você não precisa de anos de estudo. Você não precisa ser "bom em idiomas."</p>
     <p>O que você precisa é de um <span class="mark"><b>ponto de partida.</b></span></p>
     <p>Um método que remove a confusão. Um caminho que te leva do zero → comunicação real. Um sistema construído para adultos com vidas ocupadas.</p>
-    <p class="red"><b>É por isso que o Mandarim Fundamentals existe.</b></p>
+    <p class="red"><b>É por isso que o Fundamentos do Mandarim existe.</b></p>
 
     <h3><span>De "Eu Não Consigo" para "Eu Consigo Falar"</span></h3>
     <p>No início, parece impossível. Os sons são novos. A escrita parece intimidante.</p>
@@ -532,7 +536,7 @@ fbq('track', 'PageView');
       <h3 style="margin-top:0">A Melhor Época Para Começar Foi Anos Atrás.<br><span class="mark">A Segunda Melhor Época É Agora.</span></h3>
       <p style="margin-top:18px">Você não precisa de motivação. Você precisa de impulso. E o impulso começa com uma decisão.</p>
       <div class="go">
-        <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Entre no Mandarim Fundamentals hoje</span></a>
+        <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Entre no Fundamentos do Mandarim hoje</span></a>
         <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Comece a aprender agora</span></a>
         <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Esteja pronto quando a oportunidade bater silenciosamente</span></a>
       </div>
@@ -692,7 +696,7 @@ fbq('track', 'PageView');
     <h3 style="text-transform:uppercase;letter-spacing:1.5px;font-size:22px;color:var(--ink-soft)">Se você entrasse <span class="red under">SEM</span> essa promoção:</h3>
     <div class="receipt sketch">
       <ul>
-        <li><span>Curso Mandarim Fundamentals</span><span class="strike">R$ 297,00</span></li>
+        <li><span>Curso Fundamentos do Mandarim</span><span class="strike">R$ 297,00</span></li>
         <li><span>Apostila Digital (PDF)</span><span class="strike">R$ 29,90</span></li>
         <li><span>Suporte Direto</span><span class="strike">R$ 197,00</span></li>
       </ul>
@@ -700,7 +704,7 @@ fbq('track', 'PageView');
     </div>
     <p class="nope">❌ Mas hoje você não vai pagar nem metade disso!</p>
     <div class="clock-box sketch boil">
-      <p>A condição do Mandarim Fundamentals vai até <span data-deadline-long>31 de agosto</span>:</p>
+      <p>A condição do Fundamentos do Mandarim vai até <span data-deadline-long>31 de agosto</span>:</p>
       <div class="units" id="countdown-feb">
         <div class="unit"><b class="sketch" id="days">00</b><small>Dias</small></div>
         <div class="unit"><b class="sketch alt" id="hours">00</b><small>Horas</small></div>
@@ -887,13 +891,6 @@ fbq('track', 'PageView');
   setInterval(updateTimer, 1000);
   updateTimer();
 
-  // "line boil": os poucos contornos marcados com .boil tremem trocando a semente do ruído
-  (function () {
-    const n = document.getElementById('boilNoise');
-    if (!n || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
-    let s = 1;
-    setInterval(() => { s = (s % 5) + 1; n.setAttribute('seed', s); }, 140);
-  })();
 
   // ====================
   // PRICING MODAL & UPSELL SYSTEM
