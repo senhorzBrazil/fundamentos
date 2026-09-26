@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="description" content="Mandarim Fundamentals - do absoluto zero ao nível HSK 1.">
+<title>Mandarim Fundamentals - Aprenda Chinês Rápido</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '862583327816117');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=862583327816117&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Permanent+Marker&family=ZCOOL+KuaiLe&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='3' y='3' width='34' height='34' rx='7' fill='%23d72638' stroke='%23141414' stroke-width='3'/%3E%3Ctext x='20' y='29' font-family='Arial' font-weight='900' font-size='22' text-anchor='middle' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E">
+
+<style>
+  /* Estilo doodle (rabisco de marcador). Tema claro fixo por escolha: o modo escuro do celular não inverte a página. */
+  :root {
+    color-scheme: light;
+    --paper: #f6f4ee;
+    --paper-2: #efeadf;
+    --card: #fffdf8;
+    --ink: #141414;
+    --ink-soft: #45433d;
+    --red: #d72638;          /* caneta vermelha (cor da marca) */
+    --blush: #fbdde0;        /* fundo claro da marca */
+    --yellow: #ffe45c;       /* marca-texto */
+    --green: #1f9d55;
+    --hand: 'Kalam', 'Comic Sans MS', 'Segoe Print', cursive;
+    --marker: 'Permanent Marker', 'Kalam', 'Comic Sans MS', cursive;
+    --cjk: 'ZCOOL KuaiLe', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --wobble: 255px 18px 225px 16px / 16px 225px 18px 255px;
+    --wobble-2: 18px 225px 16px 255px / 255px 16px 225px 18px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--hand); font-size: 20px; line-height: 1.55;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .5; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .58 0 0 0 0 .52 0 0 0 .28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+  .narrow { max-width: 760px; }
+  svg.defs { position: absolute; width: 0; height: 0; }
+  [hidden] { display: none !important; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+  /* ── traço à mão ── */
+  .sketch { position: relative; isolation: isolate; }
+  .sketch::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
+    border: 3.5px solid var(--sk, var(--ink)); border-radius: var(--wobble);
+    background: var(--skfill, transparent); filter: url(#rough);
+  }
+  .sketch.alt::before { border-radius: var(--wobble-2); }
+  .boil::before, svg.boil { filter: url(#boil); }
+  .rough { filter: url(#rough); }
+  .mark {
+    background: linear-gradient(100deg, transparent 1%, var(--yellow) 3%, var(--yellow) 96%, transparent 99%) 0 62% / 100% 72% no-repeat;
+    padding: 0 .18em; margin: 0 -.06em;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .under {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 60 4, 120 12, 180 7 S 270 5, 297 8' fill='none' stroke='%23d72638' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") 0 100% / 100% .42em no-repeat;
+    padding-bottom: .1em; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .strike { position: relative; white-space: nowrap; color: var(--ink-soft); }
+  .strike::after {
+    content: ""; position: absolute; left: -4px; right: -4px; top: 50%; height: .5em; transform: translateY(-50%);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M2 14 C 30 8, 60 12, 98 4' fill='none' stroke='%23d72638' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  }
+  .red { color: var(--red); }
+
+  /* ── tipografia ── */
+  h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+  h1 { font-family: var(--marker); font-weight: 400; font-size: clamp(40px, 6.4vw, 78px); line-height: 1.08; }
+  h2 { font-family: var(--hand); font-weight: 700; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.12; }
+  h3 { font-family: var(--hand); font-weight: 700; font-size: clamp(24px, 2.6vw, 30px); line-height: 1.2; }
+  .eyebrow { display: inline-block; font-weight: 700; font-size: 18px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); }
+  .lede { font-size: clamp(20px, 2.1vw, 24px); color: var(--ink-soft); }
+  section { position: relative; z-index: 1; padding-block: 72px; }
+
+  /* ── botões ── */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-family: var(--hand); font-weight: 700; font-size: 22px; line-height: 1.2; text-decoration: none; text-align: center;
+    color: var(--ink); cursor: pointer; border: 0; background: transparent; padding: 14px 30px;
+    --sk: var(--ink); --skfill: var(--yellow); transition: transform .15s ease;
+  }
+  .btn::after { content: ""; position: absolute; inset: 6px -6px -6px 6px; z-index: -2; border-radius: var(--wobble); background: var(--ink); opacity: .9; filter: url(#rough); }
+  .btn:hover { transform: rotate(-1.2deg) translateY(-2px); }
+  .btn:active { transform: translate(3px, 3px); }
+  .btn.red-btn { color: #fff; --skfill: var(--red); }
+  .btn.green-btn { color: #fff; --skfill: var(--green); }
+  .btn.block { display: flex; width: 100%; }
+  .btn:disabled { opacity: .6; cursor: wait; }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline: 3px dashed var(--red); outline-offset: 5px; }
+  .link-arrow { font-weight: 700; color: var(--red); text-decoration: none; }
+  .link-arrow:hover { text-decoration: underline wavy; }
+
+  .sparks { stroke: var(--red); stroke-width: 4.5; stroke-linecap: round; fill: none; }
+
+  /* ── barra do topo ── */
+  .topbar { position: sticky; top: 0; z-index: 60; background: var(--ink); color: var(--paper); padding: 10px 0; padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
+  .topbar .wrap { display: flex; align-items: center; justify-content: center; gap: 12px 40px; flex-wrap: wrap; }
+  .topbar .when { font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: .8; }
+  .topbar .clock { font-family: var(--marker); color: var(--yellow); font-size: 22px; font-variant-numeric: tabular-nums; margin-left: 8px; }
+  .topbar .btn { font-size: 17px; padding: 6px 22px; --sk: var(--paper); }
+  .topbar .btn::after { display: none; }
+
+  .nav { display: flex; align-items: center; gap: 12px; padding-block: 18px; }
+  .logo-m { width: 42px; height: 42px; display: grid; place-items: center; font-family: var(--marker); font-size: 24px; color: #fff; --skfill: var(--red); }
+  .nav .name { font-weight: 700; font-size: 22px; }
+
+  /* ── hero ── */
+  .hero { text-align: center; padding-block: 36px 70px; }
+  .proof { display: inline-flex; align-items: center; gap: 12px; padding: 6px 20px 6px 8px; margin-bottom: 26px; --skfill: var(--card); font-weight: 700; font-size: 17px; }
+  .avatars { display: flex; }
+  .avatars img, .avatars span { width: 36px; height: 36px; border-radius: 50%; border: 2.5px solid var(--ink); object-fit: cover; margin-left: -10px; background: var(--blush); }
+  .avatars img:first-child { margin-left: 0; }
+  .avatars span { display: grid; place-items: center; font-size: 11px; font-weight: 700; color: var(--red); }
+  .hero h1 { max-width: 16ch; margin: 0 auto 22px; }
+  .hero .lede { max-width: 44ch; margin: 0 auto 36px; }
+  .hanzi { font-family: var(--cjk); color: var(--red); position: absolute; font-size: clamp(56px, 6vw, 96px); line-height: 1; opacity: .9; pointer-events: none; }
+  .hz-1 { left: 1%; top: 640px; transform: rotate(-10deg); }
+  .hz-2 { right: 1%; top: 760px; transform: rotate(8deg); }
+  .hz-note { display: block; font-family: var(--hand); font-size: 15px; color: var(--ink-soft); text-align: center; margin-top: 2px; }
+
+  .video { position: relative; display: block; width: 100%; max-width: 780px; margin: 0 auto; aspect-ratio: 16 / 9; padding: 10px; cursor: pointer; background: none; border: 0; font: inherit; color: inherit; --skfill: var(--card); }
+  .video .frame { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 14px 22px 12px 26px / 24px 12px 22px 14px; background: #000; }
+  .video img { width: 100%; height: 100%; object-fit: cover; opacity: .72; transition: opacity .2s; }
+  .video:hover img { opacity: .9; }
+  .play { position: absolute; left: 50%; top: 50%; width: 96px; height: 96px; transform: translate(-50%, -50%); transition: transform .2s; }
+  .video:hover .play { transform: translate(-50%, -50%) scale(1.08) rotate(-4deg); }
+  .video .cap { position: absolute; left: 18px; bottom: 16px; color: #fff; font-weight: 700; font-size: 19px; text-shadow: 0 2px 8px rgba(0,0,0,.7); display: flex; gap: 8px; align-items: center; }
+  .tape { position: absolute; width: 110px; height: 30px; background: rgba(255, 228, 92, .75); top: -14px; z-index: 3; filter: url(#rough); }
+  .tape.l { left: 8%; transform: rotate(-6deg); }
+  .tape.r { right: 8%; transform: rotate(5deg); }
+
+  /* ── oportunidade ── */
+  .two { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .stack > * + * { margin-top: 18px; }
+  .stat { padding: 34px 28px; text-align: center; transform: rotate(2deg); --skfill: var(--card); }
+  .stat .k { font-size: 16px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-soft); }
+  .stat .v { font-family: var(--marker); font-size: clamp(40px, 5vw, 58px); line-height: 1.1; margin: 8px 0; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; padding: 3px 16px; --skfill: #dff3e6; --sk: var(--green); color: var(--green); }
+
+  /* ── história ── */
+  .story { font-size: clamp(20px, 2vw, 23px); }
+  .story p { margin: 0 0 16px; }
+  .story h3 { margin: 48px 0 14px; }
+  .story h3 span { background: linear-gradient(transparent 62%, var(--blush) 62%); }
+  .aside { border-left: 5px solid var(--red); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 1.08em; color: var(--ink-soft); filter: url(#rough); }
+  .aside span { filter: none; }
+  .dots { list-style: none; padding: 0; margin: 26px 0; }
+  .dots li { display: flex; gap: 14px; align-items: baseline; margin-bottom: 8px; }
+  .dots li::before { content: ""; flex: 0 0 12px; height: 12px; border: 3px solid var(--red); border-radius: 50% 40% 55% 45%; transform: translateY(-2px); }
+  .dots li.strong { font-weight: 700; }
+  .dots li.strong::before { background: var(--red); }
+  .inside { display: block; text-align: center; font-family: var(--marker); font-size: clamp(28px, 3.6vw, 40px); padding: 22px 16px; margin: 26px 0; --skfill: var(--blush); --sk: var(--red); }
+  .decide { margin-top: 56px; padding-top: 40px; position: relative; }
+  .decide::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 12' preserveAspectRatio='none'%3E%3Cpath d='M2 7 C 100 2, 200 11, 300 6 S 500 3, 598 7' fill='none' stroke='%23141414' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat; }
+  .go { display: flex; flex-direction: column; gap: 14px; margin-top: 22px; }
+  .go a { display: flex; align-items: center; gap: 14px; font-weight: 700; text-decoration: none; }
+  .go a svg { flex: 0 0 48px; transition: transform .2s; }
+  .go a:hover svg { transform: translateX(6px); }
+  .go a:hover span { color: var(--red); }
+
+  /* ── prévia ── */
+  .board { padding: 56px 44px; --skfill: #fff5f5; --sk: var(--red); }
+  .feat { display: flex; gap: 16px; padding: 16px 20px; margin-top: 16px; --skfill: var(--card); }
+  .feat .n { flex: 0 0 auto; font-family: var(--marker); font-size: 30px; color: var(--red); line-height: 1.1; }
+  .feat h4 { font-size: 21px; }
+  .feat p { margin: 2px 0 0; font-size: 18px; color: var(--ink-soft); line-height: 1.45; }
+  .lesson-bar { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 18px 12px; background: linear-gradient(transparent, rgba(0,0,0,.85)); color: #fff; }
+  .lesson-bar b { font-size: 18px; }
+  .prog { height: 6px; background: rgba(255,255,255,.3); border-radius: 4px; margin-top: 8px; overflow: hidden; }
+  .prog i { display: block; width: 33%; height: 100%; background: var(--red); }
+  .times { display: flex; justify-content: space-between; font-size: 13px; opacity: .8; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .hint { text-align: center; color: var(--ink-soft); font-size: 17px; margin-top: 14px; }
+
+  /* ── depoimentos ── */
+  .center { text-align: center; }
+  .stars { color: #e8b400; font-size: 26px; letter-spacing: 3px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+  .quote { padding: 24px 22px; --skfill: var(--card); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+  .quote:nth-child(odd) { transform: rotate(-1deg); }
+  .quote:nth-child(even) { transform: rotate(1deg); }
+  .quote p { margin: 0; font-size: 19px; line-height: 1.45; }
+  .who { display: flex; align-items: center; gap: 12px; }
+  .ini { width: 44px; height: 44px; display: grid; place-items: center; font-weight: 700; font-size: 16px; --skfill: var(--blush); --sk: var(--red); }
+  .who b { display: block; font-size: 17px; line-height: 1.2; }
+  .who small { font-size: 15px; color: var(--ink-soft); }
+
+  /* ── conteúdo ── */
+  .chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+  .chips span { font-weight: 700; font-size: 17px; padding: 4px 18px; --skfill: var(--card); }
+  .mods { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; margin-top: 18px; }
+  .mods div { display: flex; gap: 10px; align-items: center; font-size: 19px; }
+  .mods svg { flex: 0 0 26px; }
+  .sheet { position: relative; padding: 12px; transform: rotate(2deg); --skfill: var(--card); max-width: 420px; margin: 0 auto; }
+  .sheet img { width: 100%; aspect-ratio: 1414 / 2000; object-fit: cover; border-radius: 6px; }
+  .sheet .badge { position: absolute; right: -10px; bottom: 26px; padding: 8px 18px; --skfill: var(--card); transform: rotate(-3deg); line-height: 1.25; }
+  .badge small { display: block; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); }
+  .badge b { font-size: 18px; }
+
+  /* ── professora ── */
+  .teacher { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; }
+  .polaroid { position: relative; padding: 14px 14px 56px; --skfill: #fff; transform: rotate(-2.5deg); max-width: 360px; margin: 0 auto; }
+  .polaroid img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; }
+  .polaroid figcaption { position: absolute; left: 22px; bottom: 12px; text-align: left; font-family: var(--cjk); font-size: 24px; }
+  .sticker { position: absolute; right: -22px; bottom: -18px; padding: 12px 18px; text-align: center; transform: rotate(6deg); --skfill: var(--yellow); line-height: 1.1; }
+  .sticker b { display: block; font-family: var(--marker); font-size: 30px; }
+  .sticker small { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .teacher h2 small { font-weight: 400; color: var(--ink-soft); font-size: .6em; }
+
+  /* ── vídeos de depoimento ── */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 44px; }
+  .reel { padding: 10px; --skfill: var(--card); }
+  .reel iframe { display: block; width: 100%; aspect-ratio: 9 / 16; border: 0; border-radius: 12px 20px 12px 18px; background: #111; }
+  .reel-name { text-align: center; margin-top: 14px; }
+  .reel-name b { display: block; font-size: 20px; }
+
+  /* ── canal ── */
+  .channel { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding: 18px 26px; --skfill: var(--card); }
+  .channel .me { display: flex; align-items: center; gap: 16px; }
+  .channel img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--ink); }
+  .channel h3 { font-size: 26px; }
+  .channel .meta { font-size: 16px; color: var(--ink-soft); display: flex; gap: 6px 14px; flex-wrap: wrap; }
+  .sub-btn { font-weight: 700; font-size: 18px; padding: 8px 22px; display: inline-flex; gap: 8px; align-items: center; --skfill: var(--ink); color: #fff; }
+  .thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 34px; }
+  .thumb { background: none; border: 0; padding: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+  .thumb .pic { position: relative; padding: 8px; --skfill: var(--card); }
+  .thumb .pic > div { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 10px; background: #000; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .thumb:hover img { transform: scale(1.05); }
+  .thumb .play { width: 58px; height: 58px; }
+  .dur { position: absolute; right: 8px; bottom: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 14px; font-weight: 700; padding: 0 7px; border-radius: 4px; font-variant-numeric: tabular-nums; }
+  .thumb h4 { font-size: 19px; line-height: 1.3; margin-top: 12px; }
+  .thumb small { display: block; font-size: 15px; color: var(--ink-soft); line-height: 1.35; }
+
+  /* ── comparação de preço ── */
+  .receipt { max-width: 500px; margin: 30px auto 0; padding: 30px 32px 26px; text-align: left; --skfill: #fff; transform: rotate(-1deg); }
+  .receipt li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 2px dashed #d9d4c7; font-size: 19px; }
+  .receipt ul { list-style: none; margin: 0; padding: 0; }
+  .receipt li:last-child { border-bottom: 0; }
+  .receipt .total { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 12px; padding-top: 16px; border-top: 3px solid var(--ink); font-weight: 700; font-size: 20px; text-transform: uppercase; }
+  .receipt .total .strike { font-family: var(--marker); font-size: clamp(28px, 4vw, 38px); color: #b7b2a6; }
+  .nope { font-family: var(--marker); color: var(--red); font-size: clamp(30px, 4.6vw, 52px); line-height: 1.12; margin: 44px auto 0; max-width: 18ch; }
+  .clock-box { display: inline-block; margin-top: 40px; padding: 22px 28px; --skfill: var(--card); }
+  .clock-box p { margin: 0 0 14px; font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); }
+  .units { display: flex; gap: 14px; justify-content: center; }
+  .unit { text-align: center; }
+  .unit b { display: grid; place-items: center; width: 76px; height: 76px; font-family: var(--marker); font-size: 36px; font-weight: 400; font-variant-numeric: tabular-nums; --skfill: var(--ink); color: #fff; }
+  .unit:nth-child(2) b { color: var(--yellow); }
+  .unit:last-child b { --skfill: var(--red); }
+  .unit small { display: block; margin-top: 6px; font-size: 14px; font-weight: 700; text-transform: uppercase; color: var(--ink-soft); }
+  .ended { font-family: var(--marker); color: var(--red); font-size: 26px; }
+
+  /* ── planos ── */
+  .ptag { display: inline-block; padding: 4px 20px; font-weight: 700; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; --skfill: var(--blush); --sk: var(--red); color: var(--red); }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; align-items: end; text-align: left; }
+  .plan { padding: 30px 26px 26px; --skfill: var(--card); display: flex; flex-direction: column; }
+  .plan.hot { --skfill: #fff7cf; --sk: var(--red); padding-top: 44px; transform: translateY(-18px); }
+  .plan.hot::before { border-width: 5px; }
+  .ribbon { position: absolute; top: -20px; right: 18px; font-family: var(--marker); font-size: 18px; padding: 4px 16px; color: #fff; --skfill: var(--red); transform: rotate(4deg); }
+  .kind { align-self: flex-start; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 1px 12px; --skfill: var(--paper-2); }
+  .plan.hot .kind { --skfill: #dff3e6; --sk: var(--green); color: var(--green); }
+  .plan.combo .kind { --skfill: #ece3fb; --sk: #6b3fd4; color: #6b3fd4; }
+  .plan h3 { margin: 14px 0 6px; font-size: 27px; }
+  .plan .for { font-size: 16px; font-weight: 700; color: var(--ink-soft); margin: 0; }
+  .plan.hot .for { color: var(--red); text-transform: uppercase; letter-spacing: 1px; }
+  .price { margin: 14px 0 4px; font-size: 18px; color: var(--ink-soft); }
+  .price b { font-family: var(--marker); font-weight: 400; font-size: 46px; color: var(--ink); line-height: 1; }
+  .plan.hot .price b { font-size: 54px; }
+  .cash { font-size: 16px; font-weight: 700; color: var(--ink-soft); margin: 0; }
+  .plan ul { list-style: none; padding: 18px 0 0; margin: 18px 0 26px; border-top: 2px dashed #d9d4c7; flex: 1; }
+  .plan li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: 18px; line-height: 1.35; }
+  .plan li svg { flex: 0 0 22px; margin-top: 2px; }
+
+  /* ── garantia ── */
+  .guarantee { display: grid; grid-template-columns: auto 1fr; gap: 50px; align-items: center; padding: 48px 46px; --skfill: var(--card); }
+  .stamp { width: 210px; height: 210px; display: grid; place-content: center; text-align: center; transform: rotate(-12deg); line-height: 1; }
+  .stamp svg { position: absolute; inset: 0; }
+  .stamp b { font-family: var(--marker); font-size: 84px; font-weight: 400; position: relative; }
+  .stamp small { position: relative; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
+  .stamp small.r { color: var(--red); font-size: 20px; letter-spacing: 2px; }
+  .guarantee h2 { font-size: clamp(28px, 3.6vw, 42px); }
+  .guarantee p { margin: 14px 0 0; color: var(--ink-soft); }
+  .checks { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .checks span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: .5px; padding: 4px 16px; --skfill: #fff; }
+
+  /* ── faq ── */
+  details { padding: 16px 24px; margin-bottom: 16px; --skfill: var(--card); }
+  summary { font-weight: 700; font-size: 21px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 14px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: var(--marker); color: var(--red); font-size: 28px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 10px 0 2px; color: var(--ink-soft); font-size: 19px; }
+  .help { text-align: center; margin-top: 44px; }
+  .help p { color: var(--ink-soft); margin: 0 0 16px; }
+
+  footer { position: relative; z-index: 1; text-align: center; padding-block: 44px 56px; border-top: 3px solid var(--ink); background: var(--paper-2); }
+  footer b { display: block; font-family: var(--marker); font-weight: 400; font-size: 26px; }
+  footer p { margin: 4px 0 0; font-size: 16px; color: var(--ink-soft); }
+
+  /* ── modais ── */
+  .overlay { position: fixed; inset: 0; z-index: 9998; background: rgba(20, 20, 20, .72); display: none; align-items: center; justify-content: center; padding: 16px; }
+  .overlay.active { display: flex; animation: fade .25s ease-out; }
+  @keyframes fade { from { opacity: 0; } }
+  .dialog { position: relative; width: 100%; max-width: 440px; max-height: 92vh; overflow-y: auto; padding: 30px 28px 24px; --skfill: var(--paper); animation: up .3s ease-out; }
+  .dialog.wide { max-width: 520px; }
+  @keyframes up { from { transform: translateY(40px) rotate(-1deg); opacity: 0; } }
+  .x { position: absolute; top: 12px; right: 14px; background: none; border: 0; cursor: pointer; font-family: var(--marker); font-size: 26px; line-height: 1; color: var(--ink-soft); padding: 4px 8px; }
+  .dialog h3 { text-align: center; font-size: 30px; }
+  .dialog .sub { text-align: center; color: var(--ink-soft); margin: 4px 0 18px; font-size: 18px; }
+  .fld { margin-bottom: 14px; }
+  .fld label { display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px; }
+  .fld .box { padding: 2px 16px; --skfill: #fff; }
+  .fld input, .fld select { width: 100%; border: 0; background: transparent; font: inherit; font-size: 19px; padding: 10px 0; color: var(--ink); outline: none; }
+  .fld .box:focus-within { --sk: var(--red); }
+  .safe { text-align: center; font-size: 15px; color: var(--ink-soft); margin: 14px 0 0; }
+  .unlock { display: block; text-align: center; font-family: var(--marker); font-size: 18px; color: #fff; padding: 6px 12px; margin: -6px auto 16px; max-width: 320px; --skfill: var(--green); }
+  .swap { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 18px; margin: 16px 0; --skfill: #fff; --sk: var(--ink-soft); }
+  .swap small { display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); }
+  .swap .de { font-size: 22px; font-weight: 700; }
+  .swap .para { font-family: var(--marker); font-size: 44px; color: var(--green); line-height: 1.05; }
+  .swap .para-l { color: var(--green); }
+  .diff { text-align: center; font-weight: 700; font-size: 17px; margin: 0 0 14px; }
+  .diff span { color: var(--green); }
+  #upsellBenefits p { margin: 0 0 6px; font-weight: 700; font-size: 17px; }
+  .decline { display: block; width: 100%; margin-top: 16px; background: none; border: 0; cursor: pointer; font: inherit; font-size: 15px; color: var(--ink-soft); text-decoration: underline wavy; }
+  .expires { text-align: center; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); margin: 14px 0 0; }
+  .vmodal { position: fixed; inset: 0; z-index: 100; background: rgba(20,20,20,.9); display: none; align-items: center; justify-content: center; padding: 16px; }
+  .vmodal.open { display: flex; }
+  .vbox { position: relative; width: 100%; max-width: 960px; aspect-ratio: 16 / 9; padding: 8px; --skfill: #000; --sk: var(--paper); }
+  .vbox iframe { width: 100%; height: 100%; border: 0; border-radius: 10px; }
+  .vbox .x { top: -44px; right: 0; color: var(--paper); }
+
+  /* ── entrada ── */
+  .reveal { animation: rise .7s cubic-bezier(.22,1,.36,1) both; }
+  .d1 { animation-delay: .1s; } .d2 { animation-delay: .22s; } .d3 { animation-delay: .34s; } .d4 { animation-delay: .46s; }
+  @keyframes rise { from { transform: translateY(18px); opacity: .001; } }
+  .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1s cubic-bezier(.65,0,.35,1) .5s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  @media (max-width: 900px) {
+    .two, .teacher { grid-template-columns: 1fr; gap: 40px; }
+    .grid4 { grid-template-columns: 1fr 1fr; }
+    .grid3, .thumbs { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+    .plans { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+    .plan.hot { transform: none; order: -1; }
+    .guarantee { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 40px 26px; }
+    .checks { justify-content: center; }
+    .board { padding: 40px 22px; }
+  }
+  @media (max-width: 1180px) { .hz-1, .hz-2 { display: none; } }
+  @media (max-width: 560px) {
+    body { font-size: 18px; }
+    .grid4, .mods { grid-template-columns: 1fr; }
+    section { padding-block: 54px; }
+    .unit b { width: 62px; height: 62px; font-size: 30px; }
+    .units { gap: 10px; }
+    .receipt { padding: 24px 20px; }
+    .receipt li { font-size: 17px; }
+    .topbar .when { font-size: 12px; }
+    .topbar .clock { font-size: 18px; }
+    .sticker { right: -6px; }
+    .video .cap { font-size: 14px; left: 12px; bottom: 10px; }
+    .video .play { width: 64px; height: 64px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal, .overlay.active, .dialog { animation: none; }
+    .draw { animation: none; stroke-dashoffset: 0; }
+  }
+</style>
+</head>
+<body>
+
+<svg class="defs" aria-hidden="true">
+  <!-- contorno irregular fixo -->
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <!-- contorno que treme (line boil), usado só em poucos elementos -->
+  <filter id="boil"><feTurbulence id="boilNoise" type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="1" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <symbol id="play" viewBox="0 0 100 100"><path d="M50 5 C 76 4, 96 24, 95 50 C 96 76, 74 96, 49 95 C 23 96, 4 75, 5 49 C 4 25, 25 6, 52 6" fill="#d72638" stroke="#141414" stroke-width="5" stroke-linecap="round"/><path d="M40 31 L70 50 L40 69 Z" fill="#fff" stroke="#141414" stroke-width="4" stroke-linejoin="round"/></symbol>
+  <symbol id="check" viewBox="0 0 26 26"><path d="M3 14 C 6 16, 8 19, 10 22 C 13 15, 17 9, 23 3" fill="none" stroke="#d72638" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="check-g" viewBox="0 0 26 26"><path d="M3 14 C 6 16, 8 19, 10 22 C 13 15, 17 9, 23 3" fill="none" stroke="#1f9d55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="cross" viewBox="0 0 26 26"><path d="M5 5 C 10 10, 16 16, 21 22 M21 4 C 16 10, 10 16, 5 21" fill="none" stroke="#d72638" stroke-width="4" stroke-linecap="round"/></symbol>
+  <symbol id="star" viewBox="0 0 26 26"><path d="M13 2 L16 10 L24 10 L18 15 L20 23 L13 18 L6 23 L8 15 L2 10 L10 10 Z" fill="#ffe45c" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/></symbol>
+  <symbol id="arrow" viewBox="0 0 48 30"><path d="M3 20 C 14 6, 30 6, 42 15 M31 6 L43 15 L33 25" fill="none" stroke="#141414" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- Barra do topo -->
+<div class="topbar">
+  <div class="wrap">
+    <div><span class="when">Condição válida até <span data-deadline-short>31/08</span> — encerra em:</span><span class="clock" id="top-timer">00:00:00</span></div>
+    <a href="#pricing" class="btn sketch red-btn">Garantir minha vaga</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <nav class="nav">
+    <span class="logo-m sketch" aria-hidden="true">M</span>
+    <span class="name">Fundamentos do <span class="red">Mandarim</span></span>
+  </nav>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="wrap">
+    <span class="hanzi hz-1" aria-hidden="true">你好<span class="hz-note">nǐ hǎo · olá</span></span>
+    <span class="hanzi hz-2" aria-hidden="true">中文<span class="hz-note">zhōngwén · chinês</span></span>
+
+    <div class="proof sketch reveal">
+      <span class="avatars">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=72&h=72" alt="Aluno">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=72&h=72" alt="Aluno">
+        <span>+3mil</span>
+      </span>
+      Alunos matriculados
+    </div>
+
+    <h1 class="reveal d1">Aprenda Mandarim com o <span class="mark">Método usado por mais de 3.000 Alunos</span></h1>
+    <p class="lede reveal d2">Você quer sair do zero absoluto e chegar ao nível HSK 1? Participe do primeiro curso acessível para qualquer pessoa que deseja aprender o idioma mais falado do mundo.</p>
+
+    <button class="video sketch boil reveal d3" type="button" onclick="openVideoModal('xBlJ0OIxuZs')" aria-label="Assistir à explicação em vídeo">
+      <span class="tape l"></span><span class="tape r"></span>
+      <span class="frame">
+        <img src="https://img.youtube.com/vi/xBlJ0OIxuZs/maxresdefault.jpg" alt="Vídeo Explicativo">
+        <svg class="play"><use href="#play"/></svg>
+        <span class="cap">
+          <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 16 C 4 8, 8 4, 13 4 C 18 4, 22 8, 22 16 M4 15 L4 21 L8 21 L8 15 Z M22 15 L22 21 L18 21 L18 15 Z" fill="#fff" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          Assista à explicação em vídeo
+        </span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<!-- Oportunidade -->
+<section>
+  <div class="wrap two">
+    <div class="stack">
+      <span class="eyebrow">A Oportunidade Silenciosa</span>
+      <h2>Você sabia que a China é o <span class="mark">maior parceiro comercial</span> do Brasil?</h2>
+      <p class="lede">A parceria entre os dois países movimenta quase <b>US$ 18 bilhões por ano</b>.</p>
+      <p class="lede">É um mercado enorme. Mas pouquíssimas pessoas estão aproveitando isso por causa da barreira do idioma.</p>
+      <p class="lede" style="color:var(--ink)"><b>O que aprender chinês tem a ver com o seu futuro?</b></p>
+      <a href="#pricing" class="link-arrow">Garanta sua vaga no mercado do futuro →</a>
+    </div>
+    <div>
+      <div class="stat sketch boil">
+        <div class="k">Volume de Comércio Bilateral</div>
+        <div class="v">US$ 18 Bilhões+</div>
+        <span class="chip sketch">
+          <svg width="22" height="18" viewBox="0 0 22 18" aria-hidden="true"><path d="M2 15 L8 9 L12 12 L20 3 M14 3 L20 3 L20 9" fill="none" stroke="#1f9d55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Crescendo Anualmente
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- História -->
+<section>
+  <div class="wrap narrow story">
+    <div class="center" style="margin-bottom:44px">
+      <h2>Uma Porta Silenciosa Está Aberta —<br><span class="red">E A Maioria Das Pessoas <span class="under">Nunca Vai Perceber</span></span></h2>
+    </div>
+
+    <p><b>Toda geração tem um momento como este.</b></p>
+    <p>Uma mudança que acontece silenciosamente.</p>
+    <p>Sem manchetes.<br>Sem avisos.</p>
+    <p class="aside"><span>E quando as pessoas finalmente percebem… já é tarde demais.</span></p>
+    <p>Neste momento, a China está reformulando os negócios globais, a tecnologia e a cultura.</p>
+    <p>E enquanto a maioria das pessoas continua focando nas mesmas habilidades antigas…</p>
+    <p><b>Um pequeno grupo está fazendo algo diferente.</b></p>
+    <p>Eles estão aprendendo Mandarim.</p>
+    <ul class="dots">
+      <li>Não porque é "fácil."</li>
+      <li>Não porque é "popular."</li>
+      <li class="strong">Mas porque isso muda como as oportunidades te encontram.</li>
+    </ul>
+
+    <h3><span>A Maioria Das Pessoas Espera. Outras Se Preparam.</span></h3>
+    <p>Você não precisa se mudar para a China. Você não precisa de anos de estudo. Você não precisa ser "bom em idiomas."</p>
+    <p>O que você precisa é de um <span class="mark"><b>ponto de partida.</b></span></p>
+    <p>Um método que remove a confusão. Um caminho que te leva do zero → comunicação real. Um sistema construído para adultos com vidas ocupadas.</p>
+    <p class="red"><b>É por isso que o Mandarim Fundamentals existe.</b></p>
+
+    <h3><span>De "Eu Não Consigo" para "Eu Consigo Falar"</span></h3>
+    <p>No início, parece impossível. Os sons são novos. A escrita parece intimidante.</p>
+    <p>Mas então algo muda.</p>
+    <p>Você reconhece palavras. Você entende frases simples.<br><b>Você fala — e alguém te entende.</b></p>
+    <p>Esse momento muda tudo. Porque agora você não está mais fora da conversa.</p>
+    <span class="inside sketch boil">"Você está dentro."</span>
+
+    <h3><span>Isso Não É Sobre Idioma. É Sobre Posicionamento.</span></h3>
+    <p>Mandarim não é apenas um idioma. <b>É uma vantagem estratégica.</b></p>
+    <p>Nos negócios. Em viagens. Na cultura. Na sua carreira.</p>
+    <p>Enquanto a maioria das pessoas compete pelas mesmas oportunidades… Você entra em ambientes onde poucos conseguem se comunicar.</p>
+    <p>E essa diferença se acumula com o tempo.</p>
+
+    <div class="decide">
+      <h3 style="margin-top:0">A Melhor Época Para Começar Foi Anos Atrás.<br><span class="mark">A Segunda Melhor Época É Agora.</span></h3>
+      <p style="margin-top:18px">Você não precisa de motivação. Você precisa de impulso. E o impulso começa com uma decisão.</p>
+      <div class="go">
+        <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Entre no Mandarim Fundamentals hoje</span></a>
+        <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Comece a aprender agora</span></a>
+        <a href="#pricing"><svg width="48" height="30"><use href="#arrow"/></svg><span class="under">Esteja pronto quando a oportunidade bater silenciosamente</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Prévia -->
+<section>
+  <div class="wrap">
+    <div class="board sketch alt">
+      <div class="two">
+        <div>
+          <button class="video sketch" type="button" style="padding:8px" aria-label="Prévia da Aula 01">
+            <span class="frame">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80" alt="Prévia da Aula de Mandarim">
+              <svg class="play"><use href="#play"/></svg>
+              <span class="lesson-bar">
+                <b>Aula 01: Os 4 Tons e Saudações Básicas</b>
+                <span class="prog"><i></i></span>
+                <span class="times"><span>04:20</span><span>12:45</span></span>
+              </span>
+            </span>
+          </button>
+          <p class="hint">☝ Clique para assistir a uma prévia de 5 minutos do Módulo 1</p>
+        </div>
+        <div>
+          <span class="eyebrow">Veja por Dentro</span>
+          <h2 style="margin-top:6px">Experimente o Método <span class="mark">Antes de Se Comprometer</span></h2>
+          <p class="lede" style="margin:16px 0 8px">Nós não apenas ensinamos listas de palavras. Ensinamos a <b>lógica</b> por trás do idioma para que você possa construir suas próprias frases desde o Dia 1.</p>
+          <div class="feat sketch"><span class="n">01</span><div><h4>Pronúncia Nativa</h4><p>Ouça exatamente como os tons devem soar de uma falante nativa que entende as dificuldades dos brasileiros.</p></div></div>
+          <div class="feat sketch alt"><span class="n">02</span><div><h4>Ajudas de Memória Visual</h4><p>Esqueça os livros chatos de gramática. Usamos recursos visuais na tela para fixar os caracteres na sua memória instantaneamente.</p></div></div>
+          <div class="feat sketch"><span class="n">03</span><div><h4>Aplicação Prática</h4><p>Você não vai aprender "A maçã é vermelha." Você vai aprender "Onde fica o banheiro?" e "Quanto custa isso?" imediatamente.</p></div></div>
+          <div style="margin-top:28px"><a href="#pricing" class="btn sketch">Comece Seu Curso Completo Agora →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos escritos -->
+<section>
+  <div class="wrap center">
+    <h2>O que nossos alunos dizem?</h2>
+    <div style="margin-top:10px"><span class="stars" aria-hidden="true">★★★★★</span> <span style="color:var(--ink-soft);font-size:17px">(Mais de 3.000 Alunos)</span></div>
+    <div class="grid4" style="text-align:left">
+      <figure class="quote sketch" style="margin:0"><p>"Tenho 59 anos, sou enfermeira... Ontem pedi minha comida em chinês e fiz novos amigos. Não tenho como agradecer!"</p><figcaption class="who"><span class="ini sketch">MA</span><span><b>Maria Aparecida</b><small>Aluna</small></span></figcaption></figure>
+      <figure class="quote sketch alt" style="margin:0"><p>"Estou amando estudar chinês. Admiro muito a cultura chinesa."</p><figcaption class="who"><span class="ini sketch">LO</span><span><b>Luciana Oliveira</b><small>Aluna</small></span></figcaption></figure>
+      <figure class="quote sketch" style="margin:0"><p>"Comprei o curso e estou estudando. Recomendo muito."</p><figcaption class="who"><span class="ini sketch">FL</span><span><b>Fernando Lúcio</b><small>Aluno</small></span></figcaption></figure>
+      <figure class="quote sketch alt" style="margin:0"><p>"Essa foi a melhor compra que eu já fiz 🙏"</p><figcaption class="who"><span class="ini sketch">MF</span><span><b>Maria Fernanda</b><small>Aluna</small></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Conteúdo -->
+<section>
+  <div class="wrap">
+    <div class="center" style="margin-bottom:44px">
+      <span class="eyebrow">Materiais &amp; Conteúdo</span>
+      <h2 style="margin-top:6px">O que está <span class="mark">incluído?</span></h2>
+      <div class="chips"><span class="sketch">21 Módulos</span><span class="sketch alt">Apostila em PDF</span><span class="sketch">Suporte Vitalício</span></div>
+    </div>
+    <div class="two">
+      <div>
+        <h3>Currículo do Curso</h3>
+        <div class="mods">
+          <div><svg width="26" height="26"><use href="#check"/></svg>Introdução</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Primeiro Contato</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Nomes &amp; Nacionalidade</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Números &amp; Tempo</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Meses &amp; Semanas</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Classificadores</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Estrutura de Frases</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Família</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Profissões &amp; Trabalho</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Compras</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Lugares &amp; Direções</div>
+          <div><svg width="26" height="26"><use href="#check"/></svg>Paquera &amp; Casual</div>
+        </div>
+      </div>
+      <div>
+        <div class="sheet sketch">
+          <span class="tape l"></span>
+          <img src="../folha.png" alt="Prévia do Material do Curso" loading="lazy">
+          <div class="badge sketch alt"><small>Formato</small><b>PDF de Alta Qualidade</b></div>
+        </div>
+        <p class="hint">Visualize em qualquer dispositivo (Celular, Tablet ou PC)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Professora -->
+<section style="background:var(--paper-2)">
+  <div class="wrap teacher">
+    <figure class="polaroid sketch" style="margin-inline:auto">
+      <span class="tape l"></span>
+      <img src="../Karina_cunha.jpg" alt="Karina Cunha - Shi Zhen Mei" loading="lazy">
+      <figcaption>石珍美</figcaption>
+      <div class="sticker sketch boil"><b>+10 Anos</b><small>de Experiência</small></div>
+    </figure>
+    <div>
+      <span class="eyebrow">Quem será sua professora?</span>
+      <h2 style="margin:6px 0 20px">Shi Zhen Mei <small>(Karina Cunha)</small></h2>
+      <p class="lede" style="color:var(--ink)">Linguista com mais de 10 anos de experiência ensinando e traduzindo Mandarim. Ela se mudou para a China aos 2 anos de idade, foi totalmente educada em escolas chinesas e é formada em Administração de Empresas pela <span class="mark"><b>Universidade de Nacionalidades de Yunnan</b></span>.</p>
+      <p class="lede" style="color:var(--ink);margin-top:16px">Fundadora do canal "Dominando o Mandarim", ela é a referência em educação de idioma chinês para falantes de português.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos em vídeo -->
+<section>
+  <div class="wrap center">
+    <span class="ptag sketch">Resultados Reais</span>
+    <h2 style="margin-top:16px">Alguns depoimentos de quem já estudou com a <span class="under red">Karina</span></h2>
+    <p class="lede" style="margin:14px auto 0;max-width:40ch"><i>"O método que transforma o aprendizado em algo simples e acessível."</i></p>
+    <div class="grid3">
+      <div><div class="reel sketch"><iframe src="https://www.youtube.com/embed/VDXXuJ8v5AQ" title="Depoimento Aluno 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="reel-name"><span class="stars" aria-hidden="true">★★★★★</span><b>"Aluno Gabriel"</b></div></div>
+      <div><div class="reel sketch alt"><iframe src="https://www.youtube.com/embed/OpMPYQ8WEyQ" title="Depoimento Aluno 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="reel-name"><span class="stars" aria-hidden="true">★★★★★</span><b>"Aluno Leonardo"</b></div></div>
+      <div><div class="reel sketch"><iframe src="https://www.youtube.com/embed/y9-VaerNXtA" title="Depoimento Aluno 3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="reel-name"><span class="stars" aria-hidden="true">★★★★★</span><b>"Aluno Gabriel"</b></div></div>
+    </div>
+    <div style="margin-top:52px"><a href="#pricing" class="btn sketch red-btn">QUERO ESTUDAR COM A KARINA →</a></div>
+  </div>
+</section>
+
+<!-- Canal -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="channel sketch alt">
+      <div class="me">
+        <img src="../Karina_cunha.jpg" alt="Avatar do Canal" loading="lazy">
+        <div>
+          <h3>Dominando o Mandarim</h3>
+          <div class="meta"><span>@DominandooMandarim</span><span>143 mil inscritos</span><span>424 vídeos</span></div>
+        </div>
+      </div>
+      <span class="sub-btn sketch">
+        <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><rect x="1" y="1" width="20" height="14" rx="4" fill="#d72638"/><path d="M9 5 L14 8 L9 11 Z" fill="#fff"/></svg>
+        Inscrever-se
+      </span>
+    </div>
+    <div class="thumbs">
+      <button class="thumb" type="button" onclick="openVideoModal('QrpltPjbJ_w')"><div class="pic sketch"><div><img src="https://img.youtube.com/vi/QrpltPjbJ_w/maxresdefault.jpg" alt="Miniatura" loading="lazy"><svg class="play"><use href="#play"/></svg><span class="dur">15:42</span></div></div><h4>Chinês conta como é ser pobre</h4><small>Dominando o Mandarim<br>Documentário</small></button>
+      <button class="thumb" type="button" onclick="openVideoModal('3B_OxxHDVtY')"><div class="pic sketch alt"><div><img src="https://img.youtube.com/vi/3B_OxxHDVtY/maxresdefault.jpg" alt="Miniatura" loading="lazy"><svg class="play"><use href="#play"/></svg><span class="dur">14:22</span></div></div><h4>CHINESES FALAM sobre AMOR e TRAIÇÃO</h4><small>Dominando o Mandarim<br>Entrevista de Rua</small></button>
+      <button class="thumb" type="button" onclick="openVideoModal('H_woWccLOQY')"><div class="pic sketch"><div><img src="https://img.youtube.com/vi/H_woWccLOQY/maxresdefault.jpg" alt="Miniatura" loading="lazy"><svg class="play"><use href="#play"/></svg><span class="dur">18:05</span></div></div><h4>MÉDICA CHINESA fala sobre DIFICULDADES de VIVER NA CHINA</h4><small>Dominando o Mandarim<br>Cultura</small></button>
+    </div>
+    <div class="center" style="margin-top:44px">
+      <p style="color:var(--ink-soft);margin:0 0 10px">Gostou do método de ensino? No curso completo, você vai muito mais longe.</p>
+      <a href="#pricing" class="link-arrow">Ver todos os módulos do curso →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Comparação de preço -->
+<section style="background:var(--paper-2)">
+  <div class="wrap center">
+    <h3 style="text-transform:uppercase;letter-spacing:1.5px;font-size:22px;color:var(--ink-soft)">Se você entrasse <span class="red under">SEM</span> essa promoção:</h3>
+    <div class="receipt sketch">
+      <ul>
+        <li><span>Curso Mandarim Fundamentals</span><span class="strike">R$ 297,00</span></li>
+        <li><span>Apostila Digital (PDF)</span><span class="strike">R$ 29,90</span></li>
+        <li><span>Suporte Direto</span><span class="strike">R$ 197,00</span></li>
+      </ul>
+      <div class="total"><span>Valor Total:</span><span class="strike">R$ 524,90</span></div>
+    </div>
+    <p class="nope">❌ Mas hoje você não vai pagar nem metade disso!</p>
+    <div class="clock-box sketch boil">
+      <p>A condição do Mandarim Fundamentals vai até <span data-deadline-long>31 de agosto</span>:</p>
+      <div class="units" id="countdown-feb">
+        <div class="unit"><b class="sketch" id="days">00</b><small>Dias</small></div>
+        <div class="unit"><b class="sketch alt" id="hours">00</b><small>Horas</small></div>
+        <div class="unit"><b class="sketch" id="minutes">00</b><small>Minutos</small></div>
+        <div class="unit"><b class="sketch alt" id="seconds">00</b><small>Segs</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Planos -->
+<section id="pricing">
+  <div class="wrap center">
+    <span class="ptag sketch">Condição válida até <span data-deadline-long>31 de agosto</span></span>
+    <h2 style="margin-top:16px">Escolha seu caminho no <span class="mark">Mandarim</span></h2>
+    <div class="plans">
+      <div class="plan sketch">
+        <span class="kind sketch">Acesso Trimestral</span>
+        <h3>Plano Normal</h3>
+        <p class="for"><i>Acesso por 3 meses</i></p>
+        <p class="price">6x de <b>R$ 8,99</b></p>
+        <p class="cash">ou R$ 47,90 à vista</p>
+        <ul>
+          <li><svg width="22" height="22"><use href="#cross"/></svg>Perde acesso após 3 meses</li>
+          <li><svg width="22" height="22"><use href="#check"/></svg>Certificado Digital</li>
+          <li><svg width="22" height="22"><use href="#check"/></svg>20+ Módulos de Mandarim</li>
+        </ul>
+        <button class="btn sketch red-btn block" type="button" onclick="openPricingModal('SEMESTRAL', '47,90', '8,99')">Quero este Plano</button>
+      </div>
+
+      <div class="plan hot sketch boil">
+        <span class="ribbon sketch">Mais Vendido</span>
+        <span class="kind sketch">Acesso Vitalício</span>
+        <h3>Mandarim Vitalício</h3>
+        <p class="for">Para Sempre / Sem Mensalidade</p>
+        <p class="price">12x de <b>R$ 15,30</b></p>
+        <p class="cash">ou R$ 147,90 à vista</p>
+        <ul>
+          <li><svg width="22" height="22"><use href="#star"/></svg><b>Acesso para a vida toda</b></li>
+          <li><svg width="22" height="22"><use href="#check-g"/></svg>Nova Área de Membros VIP</li>
+          <li><svg width="22" height="22"><use href="#check-g"/></svg>Todas as Atualizações Futuras</li>
+        </ul>
+        <button class="btn sketch green-btn block" type="button" onclick="openPricingModal('VITALICIO', '147,90', '15,30')">Garantir Vitalício</button>
+      </div>
+
+      <div class="plan combo sketch alt">
+        <span class="kind sketch">Combo Vitalício</span>
+        <h3>Mandarim + Inglês</h3>
+        <p class="for">Acesso Vitalício em ambos</p>
+        <p class="price">12x de <b>R$ 20,37</b></p>
+        <p class="cash">ou R$ 197,00 à vista</p>
+        <ul>
+          <li><svg width="22" height="22"><use href="#check"/></svg><b>Mandarim + Inglês Vitalícios</b></li>
+          <li><svg width="22" height="22"><use href="#check"/></svg>Área de Membros Completa</li>
+        </ul>
+        <button class="btn sketch block" type="button" onclick="openPricingModal('COMBO', '197,00', '20,37')">Quero os Dois Vitalícios</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Garantia -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="guarantee sketch alt">
+      <div class="stamp" aria-hidden="true">
+        <svg class="boil" viewBox="0 0 210 210"><circle cx="105" cy="105" r="96" fill="#fff" stroke="#141414" stroke-width="5"/><circle cx="105" cy="105" r="82" fill="none" stroke="#d72638" stroke-width="3" stroke-dasharray="6 7"/></svg>
+        <b>7</b><small>Dias de</small><small class="r">Garantia</small>
+      </div>
+      <div>
+        <h2>Risco Zero: <span class="mark">Satisfação Garantida</span> ou seu dinheiro de volta.</h2>
+        <p>Eu quero que você se sinta <b>100% seguro</b> com a sua decisão. Por isso, ofereço uma garantia incondicional de 7 dias.</p>
+        <p>Se por qualquer motivo você achar que o curso não é para você, basta nos enviar um e-mail dentro desse prazo. <b>Nós devolveremos cada centavo, sem perguntas, sem burocracia e sem ressentimentos.</b></p>
+        <div class="checks">
+          <span class="sketch"><svg width="20" height="20"><use href="#check-g"/></svg>Reembolso Integral</span>
+          <span class="sketch alt"><svg width="20" height="20"><use href="#check-g"/></svg>Acesso Imediato</span>
+          <span class="sketch"><svg width="20" height="20"><use href="#check-g"/></svg>Compra Segura</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap narrow">
+    <h2 class="center" style="margin-bottom:28px">Perguntas Frequentes</h2>
+    <details class="sketch"><summary>Chinês e Mandarim são a mesma coisa?</summary><p>Mandarim é o dialeto padrão da língua chinesa falado na China. É a versão ensinada neste curso e usada para negócios e comércio.</p></details>
+    <details class="sketch alt"><summary>O pagamento é único?</summary><p>Sim! Sem mensalidades. Você paga uma vez e tem acesso de acordo com o plano escolhido.</p></details>
+    <details class="sketch"><summary>Como recebo o acesso?</summary><p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de login para nossa plataforma de aprendizado.</p></details>
+    <details class="sketch alt"><summary>O curso inclui certificado?</summary><p>Sim, ao concluir as aulas, você pode gerar um certificado de conclusão para adicionar ao seu currículo.</p></details>
+    <div class="help">
+      <p>Precisa de ajuda ou tem dúvidas?</p>
+      <a href="#" class="btn sketch green-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        Falar com Suporte Humano
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>Mestres do Mandarim</b>
+  <p>© 2024 Todos os direitos reservados.</p>
+</footer>
+
+<!-- Modal de vídeo -->
+<div id="videoModal" class="vmodal" onclick="if (event.target === this) closeVideoModal()">
+  <div class="vbox sketch">
+    <button class="x" type="button" onclick="closeVideoModal()" aria-label="Fechar vídeo">✕</button>
+    <iframe id="youtubePlayer" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Modal de cadastro -->
+<div id="leadModalSimple" class="overlay">
+  <div class="dialog sketch" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+    <button class="x" type="button" onclick="closeLeadModalSimple()" aria-label="Fechar">✕</button>
+    <h3 id="leadTitle">Quase lá!</h3>
+    <p class="sub">Preencha seus dados para garantir sua vaga</p>
+    <form id="leadFormSimple">
+      <input type="hidden" id="planoIDSimple" name="plan" value="">
+      <div class="fld"><label for="nameSimple">Nome Completo</label><div class="box sketch"><input type="text" id="nameSimple" name="name" required placeholder="Digite seu nome completo" autocomplete="name"></div></div>
+      <div class="fld"><label for="emailSimple">E-mail</label><div class="box sketch alt"><input type="email" id="emailSimple" name="email" required placeholder="seu@email.com" autocomplete="email"></div></div>
+      <div class="fld"><label for="phoneSimple">WhatsApp (DDD + Número)</label><div class="box sketch"><input type="tel" id="phoneSimple" name="phone" required placeholder="(XX) XXXXX-XXXX" autocomplete="tel-national"></div></div>
+      <div class="fld"><label for="sourceSimple">Por onde conheceu a Karina?</label><div class="box sketch alt"><select id="sourceSimple" required><option value="">Selecione uma opção</option><option value="Instagram">Instagram</option><option value="YouTube">YouTube</option><option value="Anúncio">Anúncio</option><option value="Indicação">Indicação</option></select></div></div>
+      <div class="fld"><label for="knownTimeSimple">Há quanto tempo conhece ela?</label><div class="box sketch"><select id="knownTimeSimple" required><option value="">Selecione uma opção</option><option value="Menos de 1 semana">Menos de 1 semana</option><option value="Algumas semanas">Algumas semanas</option><option value="1 a 3 meses">1 a 3 meses</option><option value="Mais de 1 ano">Mais de 1 ano</option></select></div></div>
+      <button type="submit" id="submitBtnSimple" class="btn sketch green-btn block" style="margin-top:8px"><span id="btnTextSimple">Continuar para Pagamento</span></button>
+      <p class="safe">🔒 Seus dados estão seguros e não serão compartilhados</p>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de upsell -->
+<div id="upsellModal" class="overlay">
+  <div class="dialog wide sketch" role="dialog" aria-modal="true" aria-labelledby="upTitle" style="--sk: #e8b400; text-align:center">
+    <span class="unlock sketch">✨ CUPOM DESBLOQUEADO ✨</span>
+    <h3 id="upTitle">ESPERA! VOCÊ GANHOU UM UPGRADE!</h3>
+    <p id="upsellSubheadline" class="sub"><i></i></p>
+    <div class="swap sketch alt">
+      <div><small>Sua Parcela</small><span class="de strike" id="parcelaDe"></span></div>
+      <svg width="48" height="30" aria-hidden="true"><use href="#arrow"/></svg>
+      <div><small class="para-l">Nova Parcela</small><span class="para" id="parcelaPara"></span></div>
+    </div>
+    <p class="diff">Por apenas <span id="difValor"></span> a mais por mês.</p>
+    <div id="upsellBenefits" style="text-align:left;margin-bottom:18px"></div>
+    <button id="upsellConfirmBtn" class="btn sketch green-btn block" type="button" style="font-size:22px">Aceitar Cupom e Fazer Upgrade</button>
+    <button id="upsellDeclineBtn" class="decline" type="button">Não, prefiro manter o plano anterior</button>
+    <p class="expires">Oferta expira em: <span id="timer">05:00</span></p>
+  </div>
+</div>
+
+<script>
+  // ====================
+  // PRAZO: último dia do mês corrente às 23:59:59 (calculado automaticamente)
+  // ====================
+  const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const hoje = new Date();
+  const fimDoMes = new Date(hoje.getFullYear(), hoje.getMonth() + 1, 0, 23, 59, 59);
+  const target = fimDoMes.getTime();
+  const dd = String(fimDoMes.getDate()).padStart(2, '0');
+  const mm = String(fimDoMes.getMonth() + 1).padStart(2, '0');
+  document.querySelectorAll('[data-deadline-short]').forEach(el => el.textContent = dd + '/' + mm);
+  document.querySelectorAll('[data-deadline-long]').forEach(el => el.textContent = fimDoMes.getDate() + ' de ' + MESES[fimDoMes.getMonth()]);
+
+  function updateTimer() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      document.getElementById('top-timer').innerText = 'OFERTA ENCERRADA';
+      document.getElementById('countdown-feb').innerHTML = "<p class='ended'>OFERTA ENCERRADA</p>";
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const p = n => String(n).padStart(2, '0');
+    document.getElementById('top-timer').innerText = `${p(d)}d : ${p(h)}h : ${p(m)}m : ${p(s)}s`;
+    document.getElementById('days').innerText = p(d);
+    document.getElementById('hours').innerText = p(h);
+    document.getElementById('minutes').innerText = p(m);
+    document.getElementById('seconds').innerText = p(s);
+  }
+  setInterval(updateTimer, 1000);
+  updateTimer();
+
+  // "line boil": os poucos contornos marcados com .boil tremem trocando a semente do ruído
+  (function () {
+    const n = document.getElementById('boilNoise');
+    if (!n || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    let s = 1;
+    setInterval(() => { s = (s % 5) + 1; n.setAttribute('seed', s); }, 140);
+  })();
+
+  // ====================
+  // PRICING MODAL & UPSELL SYSTEM
+  // ====================
+  let currentPlanoID = "";
+  let currentPlanPrice = "";
+  let currentPlanInstallment = "";
+
+  function openPricingModal(id, preco, parcela) {
+    currentPlanoID = id;
+    currentPlanPrice = preco;
+    currentPlanInstallment = parcela;
+    document.getElementById('planoIDSimple').value = id;
+    const submitBtn = document.getElementById('submitBtnSimple');
+    submitBtn.classList.toggle('green-btn', id !== 'SEMESTRAL');
+    submitBtn.classList.toggle('red-btn', id === 'SEMESTRAL');
+    document.getElementById('leadModalSimple').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => document.getElementById('nameSimple').focus(), 50);
+  }
+
+  function closeLeadModalSimple() {
+    document.getElementById('leadModalSimple').classList.remove('active');
+    document.body.style.overflow = '';
+    document.getElementById('leadFormSimple').reset();
+  }
+
+  document.getElementById('leadModalSimple').addEventListener('click', function (e) {
+    if (e.target === this) closeLeadModalSimple();
+  });
+
+  document.getElementById('phoneSimple').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 11) value = value.slice(0, 11);
+    if (value.length > 6) value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+    else if (value.length > 2) value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+    else if (value.length > 0) value = value.replace(/^(\d{0,2})/, '($1');
+    e.target.value = value;
+  });
+
+  document.getElementById('leadFormSimple').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submitBtnSimple');
+    const btnText = document.getElementById('btnTextSimple');
+    submitBtn.disabled = true;
+    const originalText = btnText.textContent;
+    btnText.textContent = 'Processando...';
+
+    const plano = document.getElementById('planoIDSimple').value;
+    const formData = {
+      name: document.getElementById('nameSimple').value,
+      email: document.getElementById('emailSimple').value,
+      phone: document.getElementById('phoneSimple').value,
+      countryCode: "+55",
+      plan: plano,
+      tag: "mandarim-" + String(plano).toLowerCase(),
+      source: document.getElementById('sourceSimple')?.value || "",
+      knownTime: document.getElementById('knownTimeSimple')?.value || "",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      referrer: document.referrer || "Direct",
+      pageName: "Landing Page Mandarim",
+      pageVariant: "doodle"
+    };
+
+    try {
+      fbq('track', 'Lead', {
+        content_name: plano,
+        content_category: 'Mandarim Fundamentals',
+        value: currentPlanPrice.replace(',', '.'),
+        currency: 'BRL'
+      });
+    } catch (error) { console.error('Falha ao disparar evento Lead:', error); }
+
+    const WEBHOOK_URL = "https://hook.us2.make.com/5p9t43rtw5dem3ccq657ahzj2emcg21j";
+    try {
+      await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) });
+    } catch (error) {
+      console.error('Falha ao enviar webhook (fluxo continua):', error);
+    } finally {
+      closeLeadModalSimple();
+      if (currentPlanoID === 'SEMESTRAL') {
+        showUpsell(
+          "Identificamos que seu acesso expira em breve!",
+          "R$ 8,99", "R$ 13,13", "R$ 4,14",
+          "https://pay.hotmart.com/L42057766K?off=4hqsg4cp&checkoutMode=10",
+          "https://pay.hotmart.com/P88274309E?off=wygtpdoh&checkoutMode=10&bid=1771065046588",
+          ["✅ ACESSO VITALÍCIO: O curso é seu para sempre.", "✅ SEM MENSALIDADE: Pague uma vez e pronto."]
+        );
+      } else if (currentPlanoID === 'VITALICIO') {
+        showUpsell(
+          "Por que levar apenas um se você pode ter os dois?",
+          "R$ 15,30", "R$ 17,27", "R$ 1,97",
+          "https://pay.hotmart.com/T90411431Q?off=dkey5zei&checkoutMode=10&bid=1770122832899",
+          "https://pay.hotmart.com/L42057766K?off=pm04y85r",
+          ["✅ MANDARIM + INGLÊS: Vitalícios.", "✅ UPGRADE ÚNICO: Economia máxima por mês."]
+        );
+      } else {
+        window.location.href = "https://pay.hotmart.com/T90411431Q?off=znggpv7w&checkoutMode=10&bid=1770122341611";
+      }
+      submitBtn.disabled = false;
+      btnText.textContent = originalText;
+    }
+  });
+
+  function showUpsell(subtitle, de, para, diferenca, linkAceitar, linkRecusar, benefits) {
+    document.querySelector('#upsellSubheadline i').innerText = subtitle;
+    document.getElementById('parcelaDe').innerText = de;
+    document.getElementById('parcelaPara').innerText = para;
+    document.getElementById('difValor').innerText = diferenca;
+    document.getElementById('upsellBenefits').innerHTML = benefits.map(b => `<p>${b}</p>`).join('');
+    document.getElementById('upsellConfirmBtn').onclick = () => window.location.href = linkAceitar;
+    document.getElementById('upsellDeclineBtn').onclick = () => window.location.href = linkRecusar;
+    document.getElementById('upsellModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    startUpsellTimer(300);
+  }
+
+  function startUpsellTimer(duration) {
+    let t = duration;
+    const display = document.getElementById('timer');
+    const interval = setInterval(function () {
+      const m = parseInt(t / 60, 10), s = parseInt(t % 60, 10);
+      display.textContent = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+      if (--t < 0) clearInterval(interval);
+    }, 1000);
+  }
+
+  // ====================
+  // VÍDEO
+  // ====================
+  function openVideoModal(videoId) {
+    document.getElementById('youtubePlayer').src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    document.getElementById('videoModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal() {
+    document.getElementById('youtubePlayer').src = '';
+    document.getElementById('videoModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeVideoModal(); closeLeadModalSimple(); }
+  });
+</script>
+</body>
+</html>
